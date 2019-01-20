@@ -31,6 +31,10 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-fugitive'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'vim-syntastic/syntastic'
+Plugin 'nvie/vim-flake8'
+Plugin 'kien/ctrlp.vim' 
 
 set splitbelow
 set splitright
@@ -43,3 +47,20 @@ set foldlevel=99
 nnoremap <space> za
 set clipboard=unnamed
 
+let python_highlight_all=1
+syntax on
+
+if has('gui_running')
+  set background=dark
+  colorscheme solarized
+else
+  colorscheme zenburn
+endif
+
+call togglebg#map("<F5>")
+
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+
+set nu
+
+autocmd vimenter * NERDTree
