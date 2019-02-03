@@ -1,6 +1,6 @@
 # set common path
 export WORKSPACE=$HOME/workspace
-export DEV=$WORKSPCE/dev
+export DEV=$WORKSPACE/dev
 
 # set GO path
 export GOPATH=$DEV/go-lang/getting-started

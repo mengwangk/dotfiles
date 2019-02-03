@@ -79,7 +79,8 @@ set_prompt()
     local reset_color="\[\033[0m\]"
     local end="$reset_color $ "
 
-    PS1="$PS1$path$end"
+    #PS1="$PS1$path$end"
+    PS1="$git$path$end"
 }
 
 

@@ -5,3 +5,7 @@ fi
 if [ -f ~/.bash/prompt.sh ]; then
     source ~/.bash/prompt.sh
 fi
+
+if [ -f ~/.bash/prompt.sh ]; then
+    source ~/.bash/aliases.sh
+fi
