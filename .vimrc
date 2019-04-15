@@ -9,6 +9,9 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 
 " let Vundle manage Vundle, required
+Plugin 'tmhedberg/SimpylFold'
+let g:SimpylFold_docstring_preview=1
+
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jnurmine/Zenburn'
 Plugin 'altercation/vim-colors-solarized'
@@ -19,6 +22,9 @@ Plugin 'vim-syntastic/syntastic'
 Plugin 'nvie/vim-flake8'
 Plugin 'kien/ctrlp.vim' 
 Plugin 'fatih/vim-go'
+Plugin 'powerline/powerline'
+Plugin 'jeetsukumaran/vim-indentwise'
+Plugin 'vim-scripts/indentpython.vim'
 
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
@@ -28,6 +34,8 @@ Plugin 'fatih/vim-go'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+set encoding=utf-8
 
 "split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -49,12 +57,7 @@ set clipboard=unnamed
 let python_highlight_all=1
 syntax on
 
-if has('gui_running')
-  set background=dark
-  colorscheme solarized
-else
-  colorscheme zenburn
-endif
+set background=dark
 
 call togglebg#map("<F5>")
 
