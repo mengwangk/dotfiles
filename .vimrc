@@ -26,6 +26,19 @@ Plugin 'powerline/powerline'
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
 
+" Auto complete
+Plugin 'roxma/nvim-yarp'
+Plugin 'ncm2/ncm2'
+
+" Fast python completion (use ncm2 if you want type info or snippet support)
+Plugin 'HansPinckaers/ncm2-jedi'
+" Words in buffer completion
+Plugin 'ncm2/ncm2-bufword'
+" Filepath completion
+Plugin 'ncm2/ncm2-path'
+
+" Plugin 'davidhalter/jedi-vim'   " jedi for python
+
 " add all your plugins here (note older versions of Vundle
 " used Bundle instead of Plugin)
 
@@ -33,6 +46,13 @@ Plugin 'vim-scripts/indentpython.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+" enable ncm2 for all buffers
+" autocmd BufEnter * call ncm2#enable_for_buffer()
+
+" IMPORTANT: :help Ncm2PopupOpen for more information
+set completeopt=noinsert,menuone,noselect
+
 filetype plugin indent on    " required
 
 set encoding=utf-8
