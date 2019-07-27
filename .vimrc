@@ -26,7 +26,7 @@ Plugin 'powerline/powerline'
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'rust-lang/rust.vim'
-
+Plugin 'majutsushi/tagbar'
 " Auto complete
 Plugin 'roxma/nvim-yarp'
 Plugin 'ncm2/ncm2'
@@ -88,5 +88,7 @@ set nu
 set pastetoggle=<F2>
 
 map <silent> <C-n> :NERDTreeToggle<CR>
+
+let g:rustfmt_autosave = 1
 
 autocmd vimenter * NERDTree
