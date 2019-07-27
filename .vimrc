@@ -25,6 +25,7 @@ Plugin 'fatih/vim-go'
 Plugin 'powerline/powerline'
 Plugin 'jeetsukumaran/vim-indentwise'
 Plugin 'vim-scripts/indentpython.vim'
+Plugin 'rust-lang/rust.vim'
 
 " Auto complete
 Plugin 'roxma/nvim-yarp'
@@ -48,7 +49,7 @@ Plugin 'ncm2/ncm2-path'
 call vundle#end()            " required
 
 " enable ncm2 for all buffers
-" autocmd BufEnter * call ncm2#enable_for_buffer()
+"autocmd BufEnter * call ncm2#enable_for_buffer()
 
 " IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
