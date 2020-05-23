@@ -16,6 +16,7 @@ Plugin 'VundleVim/Vundle.vim'
 " plugin on GitHub repo
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim' 
+Plugin 'powerline/powerline'
 
 " let Vundle manage Vundle, required
 " Plugin 'tmhedberg/SimpylFold'
@@ -29,7 +30,6 @@ Plugin 'kien/ctrlp.vim'
 "Plugin 'vim-syntastic/syntastic'
 "Plugin 'nvie/vim-flake8'
 "Plugin 'fatih/vim-go'
-"Plugin 'powerline/powerline'
 "Plugin 'jeetsukumaran/vim-indentwise'
 "Plugin 'vim-scripts/indentpython.vim'
 "Plugin 'rust-lang/rust.vim'
@@ -65,6 +65,7 @@ filetype plugin indent on    " required
 
 set encoding=utf-8
 set clipboard=unnamed
+set ts=4
 
 "split navigations
 "nnoremap <C-J> <C-W><C-J>
