@@ -64,6 +64,7 @@ filetype plugin indent on    " required
 "set completeopt=noinsert,menuone,noselect
 
 set encoding=utf-8
+set clipboard=unnamed
 
 "split navigations
 "nnoremap <C-J> <C-W><C-J>
@@ -80,7 +81,6 @@ set encoding=utf-8
 
 " Enable folding with the spacebar
 "nnoremap <space> za
-"set clipboard=unnamed
 
 "let python_highlight_all=1
 "syntax on
