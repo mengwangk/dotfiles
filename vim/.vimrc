@@ -1,71 +1,59 @@
-set nocompatible              " required
-filetype off                  " required
+set nocompatible
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+call plug#begin('~/.vim/plugged')
 
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-
-" The following are examples of different formats supported.
-" Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim' 
-Plugin 'powerline/powerline'
+Plug 'tpope/vim-fugitive'
 
-" let Vundle manage Vundle, required
-" Plugin 'tmhedberg/SimpylFold'
-" let g:SimpylFold_docstring_preview=1
+Plug 'kien/ctrlp.vim' 
 
-"Plugin 'gmarik/Vundle.vim'
-"Plugin 'jnurmine/Zenburn'
-"Plugin 'altercation/vim-colors-solarized'
-"Plugin 'scrooloose/nerdtree'
-"Plugin 'jistr/vim-nerdtree-tabs'
-"Plugin 'vim-syntastic/syntastic'
-"Plugin 'nvie/vim-flake8'
-"Plugin 'fatih/vim-go'
-"Plugin 'jeetsukumaran/vim-indentwise'
-"Plugin 'vim-scripts/indentpython.vim'
-"Plugin 'rust-lang/rust.vim'
-"Plugin 'majutsushi/tagbar'
-" Auto complete
-"Plugin 'roxma/nvim-yarp'
-"Plugin 'ncm2/ncm2'
+Plug 'tpope/vim-surround'
 
-" Fast python completion (use ncm2 if you want type info or snippet support)
-" Plugin 'HansPinckaers/ncm2-jedi'
-" Words in buffer completion
-" Plugin 'ncm2/ncm2-bufword'
-" Filepath completion
-" Plugin 'ncm2/ncm2-path'
+Plug 'tpope/vim-commentary'
 
-" Plugin 'davidhalter/jedi-vim'   " jedi for python
+Plug 'preservim/nerdtree'
 
-" add all your plugins here (note older versions of Vundle
-" used Bundle instead of Plugin)
+Plug 'christoomey/vim-titlecase'
 
-" ...
+Plug 'lifepillar/vim-solarized8'
 
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
+Plug 'vim-syntastic/syntastic'
 
-filetype plugin indent on    " required
+" To pip install powerline-status
+Plug 'powerline/powerline'
 
-" enable ncm2 for all buffers
-"autocmd BufEnter * call ncm2#enable_for_buffer()
+" To install prettier
+Plug 'prettier/vim-prettier'
 
-" IMPORTANT: :help Ncm2PopupOpen for more information
-"set completeopt=noinsert,menuone,noselect
+" Initialize plugin system
+call plug#end()
+
+filetype plugin indent on
 
 set encoding=utf-8
 set clipboard=unnamed
-set ts=4
+set relativenumber
+set ignorecase
+set autoindent
+
+" Tab control
+set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set tabstop=4		" the visible width of tabs
+set softtabstop=4	" edit as if the tabs are 4 characters wide 
+set shiftwidth=4	" number of spaces to use for indent and unindent
+set shiftround		" round indent to a multiple of 'shiftwidth'
+
+" Map C-n to NerdTree
+map <C-n> :NERDTreeToggle<CR>
+
+" Ignored files
+let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+let NERDTreeShowHidden=1
+
+" CtrlP to search hidden files
+let g:ctrlp_show_hidden = 1
 
 "split navigations
 "nnoremap <C-J> <C-W><C-J>
@@ -76,27 +64,18 @@ set ts=4
 "set splitbelow
 "set splitright
 
-" Enable folding
-"set foldmethod=indent
-"set foldlevel=99
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 
-" Enable folding with the spacebar
-"nnoremap <space> za
+" Syntastic syntax checker
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
-"let python_highlight_all=1
-"syntax on
-
-"set background=dark
-
-"call togglebg#map("<F5>")
-
-"let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-
-"set nu
-"set pastetoggle=<F2>
-
-"map <silent> <C-n> :NERDTreeToggle<CR>
-
-"let g:rustfmt_autosave = 1
+" Color scheme
+set background=dark
+colorscheme solarized8
 
 "autocmd vimenter * NERDTree
