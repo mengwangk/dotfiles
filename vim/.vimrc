@@ -1,4 +1,4 @@
-Set nocompatible
+set nocompatible
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -33,6 +33,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Initialize plugin system
 call plug#end()
 
+syntax enable
 filetype plugin indent on
 
 set encoding=utf-8
