@@ -49,6 +49,7 @@ set clipboard=unnamed
 set relativenumber
 set ignorecase
 set autoindent
+set smartindent
 
 " Tab control
 set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
