@@ -36,6 +36,14 @@ call plug#end()
 syntax enable
 filetype plugin indent on
 
+" https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
 set encoding=utf-8
 set clipboard=unnamed
 set relativenumber
