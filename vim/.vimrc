@@ -21,8 +21,8 @@ Plug 'lifepillar/vim-solarized8'
 
 Plug 'vim-syntastic/syntastic'
 
-" To pip install powerline-status
-Plug 'powerline/powerline'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " To install prettier
 Plug 'prettier/vim-prettier'
@@ -73,6 +73,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
 
 " Color scheme
 set background=dark
