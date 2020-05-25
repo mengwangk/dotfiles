@@ -1,4 +1,4 @@
-set nocompatible
+Set nocompatible
 
 " curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
@@ -15,7 +15,7 @@ Plug 'tpope/vim-commentary'
 
 Plug 'preservim/nerdtree'
 
-Plug 'christoomey/vim-titlecase'
+" Plug 'christoomey/vim-titlecase'
 
 Plug 'lifepillar/vim-solarized8'
 
