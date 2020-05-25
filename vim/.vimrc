@@ -50,6 +50,7 @@ set relativenumber
 set ignorecase
 set autoindent
 set smartindent
+set showcmd
 
 " Tab control
 set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
@@ -73,9 +74,8 @@ let g:ctrlp_show_hidden = 1
 "nnoremap <C-K> <C-W><C-K>
 "nnoremap <C-L> <C-W><C-L>
 "nnoremap <C-H> <C-W><C-H>
-
-"set splitbelow
-"set splitright
+"
+set splitright
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -102,9 +102,8 @@ let g:netrw_liststyle=3     " tree view
 let g:netrw_winsize = 25
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-" augroup ProjectDrawer
-" 	autocmd!
-" 	autocmd VimEnter * :Vexplore
-" augroup END
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netrw-browse-maps| for more mappings
 
 "autocmd vimenter * NERDTree
