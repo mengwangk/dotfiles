@@ -90,6 +90,7 @@ let g:syntastic_check_on_wq = 0
 
 " Airline
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='simple'
 
 " Color scheme
 set background=dark
