@@ -52,6 +52,7 @@ set autoindent
 set smartindent
 set showcmd
 set noswapfile
+set termwinsize=10x0
 
 " Tab control
 set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
