@@ -30,6 +30,9 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 " Go language
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 " Initialize plugin system
 call plug#end()
 
