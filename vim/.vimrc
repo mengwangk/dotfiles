@@ -21,8 +21,9 @@ Plug 'lifepillar/vim-solarized8'
 
 Plug 'vim-syntastic/syntastic'
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'itchyny/lightline.vim'
+" Plug 'vim-airline/vim-airline'
+" Plug 'vim-airline/vim-airline-themes'
 
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -93,8 +94,12 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Airline
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme='simple'
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme='simple'
+"
+" lightline
+set laststatus=2
+set noshowmode
 
 " Color scheme
 set background=dark
