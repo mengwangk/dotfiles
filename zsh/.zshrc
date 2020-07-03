@@ -26,3 +26,7 @@ if [ -z "$TMUX" ]; then
 else
 	export TERM=tmux-256color
 fi
+
+set -o vi
+bindkey -v
+bindkey '^R' history-incremental-search-backward
