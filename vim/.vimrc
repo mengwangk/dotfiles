@@ -130,4 +130,5 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 "     autocmd!
 "     autocmd TextYankPost * if v:event.operator ==# 'y' | call Osc52Yank() | endif
 " augroup END
-
+map <leader>vimrc :tabe ~/.vim/.vimrc<cr>
+autocmd bufwritepost .vimrc source $MYVIMRC
