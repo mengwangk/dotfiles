@@ -65,8 +65,8 @@ set softtabstop=4	" edit as if the tabs are 4 characters wide
 set shiftwidth=4	" number of spaces to use for indent and unindent
 set shiftround		" round indent to a multiple of 'shiftwidth'
 
-" Map C-n to NerdTree
-map <C-n> :NERDTreeToggle<CR>
+" Map C-b to NerdTree
+map <C-b> :NERDTreeToggle<CR>
 
 " Ignored files
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
