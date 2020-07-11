@@ -130,5 +130,19 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 "     autocmd!
 "     autocmd TextYankPost * if v:event.operator ==# 'y' | call Osc52Yank() | endif
 " augroup END
-map <leader>vimrc :tabe ~/.vim/.vimrc<cr>
+
+"  Map key for .vimrc
+map <leader>vimrc :tabe ~/.vimrc<cr>
+
+" Function to source only if file exists 
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+
+" Source coc file
+call SourceIfExists("~/.vim/coc.vim")
+
+" Source .vimrc automatically
 autocmd bufwritepost .vimrc source $MYVIMRC
