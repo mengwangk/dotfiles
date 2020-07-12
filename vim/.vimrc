@@ -34,6 +34,10 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Use release branch (recommend)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Rust
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+
 " Initialize plugin system
 call plug#end()
 
