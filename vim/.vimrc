@@ -70,7 +70,7 @@ set shiftwidth=4	" number of spaces to use for indent and unindent
 set shiftround		" round indent to a multiple of 'shiftwidth'
 
 " Map C-b to NerdTree
-map <C-b> :NERDTreeToggle<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Ignored files
 let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
