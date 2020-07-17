@@ -17,7 +17,8 @@ Plug 'preservim/nerdtree'
 
 " Plug 'christoomey/vim-titlecase'
 
-Plug 'lifepillar/vim-solarized8'
+" Plug 'lifepillar/vim-solarized8'
+Plug 'morhetz/gruvbox'
 
 Plug 'vim-syntastic/syntastic'
 
@@ -61,6 +62,7 @@ set smartindent
 set showcmd
 set noswapfile
 set termwinsize=10x0
+set termguicolors
 
 " Tab control
 set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
@@ -87,7 +89,7 @@ let g:ctrlp_show_hidden = 1
 "
 set splitright
 
-set statusline+=%#warningmsg#
+set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
@@ -107,7 +109,8 @@ set noshowmode
 
 " Color scheme
 set background=dark
-colorscheme solarized8
+colorscheme default
+hi Pmenu ctermbg=black ctermfg=white
 
 " netrw
 let g:netrw_banner=0        " disable annoying banner
