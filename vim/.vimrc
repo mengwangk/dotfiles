@@ -52,6 +52,15 @@ set path+=**
 
 " Display all matching files when we tab complete
 set wildmenu
+if has("wildmenu")
+	set wildignore+=*.a,*.o
+	set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+	set wildignore+=.DS_Store,.git,.hg,.svn
+	set wildignore+=*~,*.swp,*.tmp
+	set wildignore+=**/node_modules/** 
+	set wildmenu
+	set wildmode=longest,list
+endif
 
 set encoding=utf-8
 set clipboard=unnamed
