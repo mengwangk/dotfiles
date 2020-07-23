@@ -70,7 +70,7 @@ set autoindent
 set smartindent
 set showcmd
 set noswapfile
-set termwinsize=10x0
+" set termwinsize=10x0
 set termguicolors
 
 " Tab control
@@ -120,6 +120,10 @@ set noshowmode
 set background=dark
 colorscheme default
 hi Pmenu ctermbg=black ctermfg=white
+
+" Column marker
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
 
 " netrw
 let g:netrw_banner=0        " disable annoying banner
