@@ -51,6 +51,9 @@ filetype plugin indent on
 " Search down into subfolders
 " Provides tab-completion for all file-related tasks
 set path+=**
+set wildignore+=**/node_modules/**
+set wildignore+=**/debug/**
+set wildignore+=**/target/**
 
 " Display all matching files when we tab complete
 set wildmenu
@@ -60,6 +63,8 @@ if has("wildmenu")
 	set wildignore+=.DS_Store,.git,.hg,.svn
 	set wildignore+=*~,*.swp,*.tmp
 	set wildignore+=**/node_modules/** 
+	set wildignore+=**/debug/**
+	set wildignore+=**/target/**
 	set wildmenu
 	set wildmode=longest,list
 endif
