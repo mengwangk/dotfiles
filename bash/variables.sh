@@ -1,4 +1,4 @@
-# Enviornment variable definitions
+# Environment variable definitions
 
 # Include the PATH definitions
 if [ -f $HOME/.bash/path.sh ]; then
