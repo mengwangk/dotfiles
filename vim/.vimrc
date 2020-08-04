@@ -55,18 +55,14 @@ set wildignore+=**/node_modules/**
 set wildignore+=**/debug/**
 set wildignore+=**/target/**
 set wildignore+=**/bin/**
+set wildignore+=*.a,*.o
+set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
+set wildignore+=.DS_Store,.git,.hg,.svn
+set wildignore+=*~,*.swp,*.tmp
 
 " Display all matching files when we tab complete
 set wildmenu
 if has("wildmenu")
-	set wildignore+=*.a,*.o
-	set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-	set wildignore+=.DS_Store,.git,.hg,.svn
-	set wildignore+=*~,*.swp,*.tmp
-	set wildignore+=**/node_modules/** 
-	set wildignore+=**/debug/**
-	set wildignore+=**/target/**
-	set wildignore+=**/bin/**
 	set wildmenu
 	set wildmode=longest,list
 endif
@@ -79,10 +75,22 @@ set autoindent
 set smartindent
 set showcmd
 set noswapfile
+set incsearch
 " set termwinsize=10x0
-set termguicolors
+" set termguicolors
 
-" Tab control
+"Cursor settings:
+"
+"  1 -> blinking block
+"  2 -> solid block 
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
+let &t_SI.="\e[5 q" "SI = INSERT mode
+let &t_SR.="\e[4 q" "SR = REPLACE mode
+let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+
 set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
 set tabstop=4		" the visible width of tabs
 set softtabstop=4	" edit as if the tabs are 4 characters wide 
@@ -134,11 +142,13 @@ set laststatus=2
 set noshowmode
 
 " Color scheme
+colorscheme gruvbox
 set background=dark
-colorscheme default
-hi Pmenu ctermbg=black ctermfg=white
+" set bg=dark
+" hi Pmenu ctermbg=black ctermfg=white
 
 " Column marker
+" set colorcolumn=80
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
