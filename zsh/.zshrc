@@ -1,32 +1,42 @@
-########################################################
-## Configuration
-#########################################################
+export SOFTWARE=$HOME/workspace/software
+export PATH=$PATH:$SOFTWARE
 
-COLOR_BLACK="\e[0;30m"
-COLOR_BLUE="\e[0;34m"
-COLOR_GREEN="\e[0;32m"
-COLOR_CYAN="\e[0;36m"
-COLOR_PINK="\e[0;35m"
-COLOR_RED="\e[0;31m"
-COLOR_PURPLE="\e[0;35m"
-COLOR_BROWN="\e[0;33m"
-COLOR_LIGHTGRAY="\e[0;37m"
-COLOR_DARKGRAY="\e[1;30m"
-COLOR_LIGHTBLUE="\e[1;34m"
-COLOR_LIGHTGREEN="\e[1;32m"
-COLOR_LIGHTCYAN="\e[1;36m"
-COLOR_LIGHTRED="\e[1;31m"
-COLOR_LIGHTPURPLE="\e[1;35m"
-COLOR_YELLOW="\e[1;33m"
-COLOR_WHITE="\e[1;37m"
-COLOR_NONE="\e[0m"
+export GOPATH=$HOME/workspace/development/go-lang
+export PATH=$GOPATH/bin:$PATH
 
-if [ -z "$TMUX" ]; then
-    export TERM=xterm-256color-italic
+export CPATH=/Library/Developer/CommandLineTools/usr/include/c++/v1
+export CGO_ENABLED=1; export CC=gcc;
+export PROMPT='%B%F{240}%1~%f%b %# '
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/mengwangk/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
 else
-	export TERM=tmux-256color
+    if [ -f "/Users/mengwangk/opt/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/mengwangk/opt/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/mengwangk/opt/anaconda3/bin:$PATH"
+    fi
 fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+FLUTTER_HOME=$HOME/workspace/software/flutter
+export PATH=$PATH:$FLUTTER_HOME/bin
+
+RUST_HOME=$HOME/.cargo
+export PATH=$PATH:$RUST_HOME/bin
 
 set -o vi
 bindkey -v
 bindkey '^R' history-incremental-search-backward
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# # Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f'
+
+# # To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"

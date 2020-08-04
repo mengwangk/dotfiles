@@ -7,7 +7,7 @@ call plug#begin('~/.vim/plugged')
 " plugin on GitHub repo
 Plug 'tpope/vim-fugitive'
 
-Plug 'kien/ctrlp.vim' 
+" Plug 'kien/ctrlp.vim' 
 
 Plug 'tpope/vim-surround'
 
@@ -54,6 +54,7 @@ set path+=**
 set wildignore+=**/node_modules/**
 set wildignore+=**/debug/**
 set wildignore+=**/target/**
+set wildignore+=**/bin/**
 
 " Display all matching files when we tab complete
 set wildmenu
@@ -65,6 +66,7 @@ if has("wildmenu")
 	set wildignore+=**/node_modules/** 
 	set wildignore+=**/debug/**
 	set wildignore+=**/target/**
+	set wildignore+=**/bin/**
 	set wildmenu
 	set wildmode=longest,list
 endif
@@ -87,7 +89,7 @@ set softtabstop=4	" edit as if the tabs are 4 characters wide
 set shiftwidth=4	" number of spaces to use for indent and unindent
 set shiftround		" round indent to a multiple of 'shiftwidth'
 
-" Map C-b to NerdTree
+" Map C-n to NerdTree
 map <C-n> :NERDTreeToggle<CR>
 
 " Ignored files
@@ -95,7 +97,15 @@ let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
 let NERDTreeShowHidden=1
 
 " CtrlP to search hidden files
-let g:ctrlp_show_hidden = 1
+" let g:ctrlp_show_hidden = 1
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$|pkg$|bin\|target\|debug$',
+"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+"   \ }
+
+" fzf 
+map <C-p> :Files<CR>
+" nnoremap <C-p> :<C-u>FZF<CR> 
 
 "split navigations
 "nnoremap <C-J> <C-W><C-J>
