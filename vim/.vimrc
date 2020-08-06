@@ -41,6 +41,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 
+" Snippet
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 " Initialize plugin system
