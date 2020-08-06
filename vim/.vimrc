@@ -169,6 +169,11 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 
 "autocmd vimenter * NERDTree
 
+" ultisnips	
+" let g:UltiSnipsExpandTrigger="<tab>"                                            
+" let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
+" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"  
+
 " function! Osc52Yank()
 "     let buffer=system('base64 -w0', @0)
 "     let buffer=substitute(buffer, "\n$", "", "")
