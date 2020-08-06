@@ -40,3 +40,6 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 
 # # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
+alias python='/Users/mengwangk/opt/anaconda3/bin/python'
+alias vim='/usr/local/Cellar/vim/8.2.1350/bin/vim'
