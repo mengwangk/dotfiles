@@ -82,6 +82,8 @@ set incsearch
 " set termwinsize=10x0
 " set termguicolors
 
+set pyxversion=3 " Python 3 neovim
+
 "Cursor settings:
 "
 "  1 -> blinking block
