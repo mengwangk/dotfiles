@@ -20,11 +20,13 @@ Plug 'junegunn/fzf.vim'
 " Plug 'christoomey/vim-titlecase'
 
 " Plug 'lifepillar/vim-solarized8'
-Plug 'morhetz/gruvbox'
+" Plug 'morhetz/gruvbox'
+Plug 'gruvbox-community/gruvbox'
 
 Plug 'vim-syntastic/syntastic'
 
 Plug 'itchyny/lightline.vim'
+
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 
@@ -43,6 +45,9 @@ Plug 'racer-rust/vim-racer'
 
 " Snippet
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+
+" any-jump
+Plug 'pechorin/any-jump.vim'
 
 " Initialize plugin system
 call plug#end()
@@ -145,8 +150,24 @@ let g:syntastic_check_on_wq = 0
 " lightline
 set laststatus=2
 set noshowmode
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \ },
+      \ 'component_function': {
+      \   'gitbranch': 'FugitiveHead'
+      \ },
+      \ }
 
-" Color scheme
+" gruvbox
+let g:gruvbox_contrast_dark='hard'
+if exists('+termguicolors')
+	set t_8f=^[[38;2;%lu;%lu;%lum
+	set t_8b=^[[48;2;%lu;%lu;%lum
+endif
+let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 set background=dark
 " set bg=dark
