@@ -49,6 +49,9 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " any-jump
 Plug 'pechorin/any-jump.vim'
 
+" gitgutter
+Plug 'airblade/vim-gitgutter'
+
 " Initialize plugin system
 call plug#end()
 
