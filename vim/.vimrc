@@ -154,13 +154,13 @@ set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
-" Syntastic syntax checker
+" syntastic syntax checker
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" Airline
+" airline
 " let g:airline#extensions#tabline#enabled = 1
 " let g:airline_theme='simple'
 "
@@ -209,23 +209,23 @@ let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
 "autocmd vimenter * NERDTree
 
 " Limelight
- " Color name (:help cterm-colors) or ANSI code
- let g:limelight_conceal_ctermfg = 'gray'
- let g:limelight_conceal_ctermfg = 240
+" Color name (:help cterm-colors) or ANSI code
+let g:limelight_conceal_ctermfg = 'gray'
+let g:limelight_conceal_ctermfg = 240
 
- " Color name (:help gui-colors) or RGB color
- let g:limelight_conceal_guifg = 'DarkGray'
- let g:limelight_conceal_guifg = '#777777'
+" Color name (:help gui-colors) or RGB color
+let g:limelight_conceal_guifg = 'DarkGray'
+let g:limelight_conceal_guifg = '#777777'
 
- " Default: 0.5
+" Default: 0.5
 let g:limelight_default_coefficient = 0.7
 
 " Number of preceding/following paragraphs to include (default: 0)
 let g:limelight_paragraph_span = 1
 
 " Beginning/end of paragraph
-"   When there's no empty line between the paragraphs
-"   and each paragraph starts with indentation
+" When there's no empty line between the paragraphs
+" and each paragraph starts with indentation
 let g:limelight_bop = '^\s'
 let g:limelight_eop = '\ze\n^\s'
 
