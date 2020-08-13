@@ -63,6 +63,9 @@ Plug 'joshdick/onedark.vim'
 " quick scope 
 Plug 'unblevable/quick-scope'       
 
+" vimspector for debugging
+Plug 'puremourning/vimspector'
+
 " Initialize plugin system
 call plug#end()
 
@@ -234,6 +237,9 @@ let g:limelight_priority = -1
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+
+" vimspector
+let g:vimspector_enable_mappings = 'HUMAN'
 
 " ultisnips	
 " let g:UltiSnipsExpandTrigger="<tab>"                                            
