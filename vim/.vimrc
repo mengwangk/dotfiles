@@ -60,6 +60,9 @@ Plug 'junegunn/limelight.vim'
 " onedark 
 Plug 'joshdick/onedark.vim'
 
+" quick scope 
+Plug 'unblevable/quick-scope'       
+
 " Initialize plugin system
 call plug#end()
 
