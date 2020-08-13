@@ -227,8 +227,13 @@ let g:limelight_bop = '^\s'
 let g:limelight_eop = '\ze\n^\s'
 
 " Highlighting priority (default: 10)
-"   Set it to -1 not to overrule hlsearch
+" Set it to -1 not to overrule hlsearch
 let g:limelight_priority = -1
+
+" quick-scope
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 
 " ultisnips	
 " let g:UltiSnipsExpandTrigger="<tab>"                                            
