@@ -98,6 +98,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+#----------  Custom settings -----------------
 export SOFTWARE=$HOME/workspace/software
 export PATH=$PATH:$SOFTWARE
 
@@ -106,21 +107,6 @@ export PATH=$GOPATH/bin:$PATH
 
 export CPATH=/Library/Developer/CommandLineTools/usr/include/c++/v1
 export CGO_ENABLED=1; export CC=gcc;
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/mengwangk/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/mengwangk/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/mengwangk/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/mengwangk/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
 
 FLUTTER_HOME=$HOME/workspace/software/flutter
 export PATH=$PATH:$FLUTTER_HOME/bin
@@ -139,5 +125,5 @@ export FZF_DEFAULT_COMMAND='fd --type f'
 # # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
-alias python='/Users/mengwangk/opt/anaconda3/bin/python'
-alias vim='/usr/local/Cellar/vim/8.2.1350/bin/vim'
+alias python='/usr/local/bin/python3'
+alias vim='/usr/local/bin/nvim'
