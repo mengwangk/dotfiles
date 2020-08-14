@@ -1,0 +1,18 @@
+{
+	"configurations": {
+		"<name>: Launch": {
+			"adapter": "debugpy",
+			"configuration": {
+				"name": "test: Launch",
+				"type": "python",
+				"request": "launch",
+				"cwd": "./",
+				"python": "/Users/mengwangk/opt/anaconda3/bin/python",
+				"stopOnEntry": true,
+				"console": "externalTerminal",
+				"debugOptions": [],
+				"program": "<path to main python file>"
+			}
+		}
+	}
+}

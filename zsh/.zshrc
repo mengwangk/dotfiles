@@ -104,6 +104,9 @@ export PATH=$PATH:$SOFTWARE
 export GOPATH=$HOME/workspace/development/go-lang
 export PATH=$GOPATH/bin:$PATH
 
+export CPATH=/Library/Developer/CommandLineTools/usr/include/c++/v1
+export CGO_ENABLED=1; export CC=gcc;
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/Users/mengwangk/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
