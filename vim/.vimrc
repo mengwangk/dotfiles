@@ -43,6 +43,8 @@ filetype plugin indent on
 set encoding=utf-8
 set clipboard=unnamed
 set relativenumber
+set number
+set number relativenumber
 set ignorecase
 set autoindent
 set smartindent
@@ -168,6 +170,8 @@ let g:vimspector_enable_mappings = 'HUMAN'
 
 " fzf
 nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
+
+" avoid the <ESC>?
 
 " Function to source only if file exists 
 function! SourceIfExists(file)
