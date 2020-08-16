@@ -8,4 +8,5 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
 stow -v vim -t ~/
 stow -v tmux -t ~/
 stow -v zsh -t ~/
+stow -v alacritty -t ~/
 
