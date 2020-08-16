@@ -4,73 +4,62 @@ set nocompatible
 "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 
-" plugin on GitHub repo
 Plug 'tpope/vim-fugitive'
-
-" Plug 'kien/ctrlp.vim' 
-
 Plug 'tpope/vim-surround'
-
 Plug 'tpope/vim-commentary'
-
-Plug 'preservim/nerdtree'
-
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'gruvbox-community/gruvbox'
+Plug 'vim-syntastic/syntastic'
+Plug 'itchyny/lightline.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'pechorin/any-jump.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
+Plug 'joshdick/onedark.vim'
+Plug 'unblevable/quick-scope'       
+Plug 'puremourning/vimspector'
 
+" Plug 'kien/ctrlp.vim' 
+" Plug 'preservim/nerdtree'
 " Plug 'christoomey/vim-titlecase'
-
 " Plug 'lifepillar/vim-solarized8'
 " Plug 'morhetz/gruvbox'
-Plug 'gruvbox-community/gruvbox'
-
-Plug 'vim-syntastic/syntastic'
-
-Plug 'itchyny/lightline.vim'
-
 " Plug 'vim-airline/vim-airline'
 " Plug 'vim-airline/vim-airline-themes'
 
-" post install (yarn install | npm install) then load plugin only for editing supported files
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
-" Go language
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
-" Use release branch (recommend)
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" Rust
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-
-" Snippet
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-
-" any-jump
-Plug 'pechorin/any-jump.vim'
-
-" gitgutter
-Plug 'airblade/vim-gitgutter'
-
-" goyo and limelight for writing
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
-
-" onedark 
-Plug 'joshdick/onedark.vim'
-
-" quick scope 
-Plug 'unblevable/quick-scope'       
-
-" vimspector for debugging
-Plug 'puremourning/vimspector'
-
-" Initialize plugin system
 call plug#end()
 
 syntax enable
 filetype plugin indent on
+
+set encoding=utf-8
+set clipboard=unnamed
+set relativenumber
+set ignorecase
+set autoindent
+set smartindent
+set showcmd
+set noswapfile
+set incsearch
+set pyxversion=3	" Python 3 neovim
+set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
+set tabstop=4		" the visible width of tabs
+set softtabstop=4	" edit as if the tabs are 4 characters wide 
+set shiftwidth=4	" number of spaces to use for indent and unindent
+set shiftround		" round indent to a multiple of 'shiftwidth'
+set splitright
+set statusline=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+" set termwinsize=10x0
+" set termguicolors
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
 " Search down into subfolders
@@ -92,22 +81,7 @@ if has("wildmenu")
 	set wildmode=longest,list
 endif
 
-set encoding=utf-8
-set clipboard=unnamed
-set relativenumber
-set ignorecase
-set autoindent
-set smartindent
-set showcmd
-set noswapfile
-set incsearch
-" set termwinsize=10x0
-" set termguicolors
-
-set pyxversion=3 " Python 3 neovim
-
 "Cursor settings:
-"
 "  1 -> blinking block
 "  2 -> solid block 
 "  3 -> blinking underscore
@@ -118,41 +92,13 @@ let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
-set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-set tabstop=4		" the visible width of tabs
-set softtabstop=4	" edit as if the tabs are 4 characters wide 
-set shiftwidth=4	" number of spaces to use for indent and unindent
-set shiftround		" round indent to a multiple of 'shiftwidth'
+" Column marker
+" set colorcolumn=80
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
 
-" Map C-n to NerdTree
-map <C-n> :NERDTreeToggle<CR>
-
-" Ignored files
-let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-let NERDTreeShowHidden=1
-
-" CtrlP to search hidden files
-" let g:ctrlp_show_hidden = 1
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$|pkg$|bin\|target\|debug$',
-"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-"   \ }
-
-" fzf 
-map <C-p> :Files<CR>
-" nnoremap <C-p> :<C-u>FZF<CR> 
-
-"split navigations
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
-"
-set splitright
-
-set statusline=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"  Map key for .vimrc
+map <leader>vimrc :tabe ~/.vimrc<cr>
 
 " syntastic syntax checker
 let g:syntastic_always_populate_loc_list = 1
@@ -160,10 +106,6 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-" airline
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='simple'
-"
 " lightline
 set laststatus=2
 set noshowmode
@@ -190,25 +132,7 @@ set background=dark
 " set bg=dark
 " hi Pmenu ctermbg=black ctermfg=white
 
-" Column marker
-" set colorcolumn=80
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
-
-" netrw
-let g:netrw_banner=0        " disable annoying banner
-let g:netrw_browse_split=4  " open in prior window
-let g:netrw_altv=1          " open splits to the right
-let g:netrw_liststyle=3     " tree view
-let g:netrw_winsize = 25
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-" - :edit a folder to open a file browser
-" - <CR>/v/t to open in an h-split/v-split/tab
-" - check |netrw-browse-maps| for more mappings
-"autocmd vimenter * NERDTree
-
-" Limelight
+" limelight
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
@@ -241,6 +165,65 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 " vimspector
 let g:vimspector_enable_mappings = 'HUMAN'
 
+" fzf
+nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
+
+" Function to source only if file exists 
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+
+" Source coc file
+call SourceIfExists("~/.vim/coc.vim")
+
+
+" Map C-n to NerdTree
+" map <C-n> :NERDTreeToggle<CR>
+
+" Ignored files
+" let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
+" let NERDTreeShowHidden=1
+
+" CtrlP to search hidden files
+" let g:ctrlp_show_hidden = 1
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$|pkg$|bin\|target\|debug$',
+"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+"   \ }
+
+" fzf 
+" nnoremap <C-p> :<C-u>FZF<CR> 
+
+"split navigations
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
+
+" airline
+" let g:airline#extensions#tabline#enabled = 1
+" let g:airline_theme='simple'
+
+
+" Source .vimrc automatically
+" autocmd bufwritepost .vimrc source $MYVIMRC
+
+" netrw
+" let g:netrw_banner=0        " disable annoying banner
+" let g:netrw_browse_split=4  " open in prior window
+" let g:netrw_altv=1          " open splits to the right
+" let g:netrw_liststyle=3     " tree view
+" let g:netrw_winsize = 25
+" let g:netrw_list_hide=netrw_gitignore#Hide()
+" let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
+" - :edit a folder to open a file browser
+" - <CR>/v/t to open in an h-split/v-split/tab
+" - check |netrw-browse-maps| for more mappings
+
+"autocmd vimenter * NERDTree
+"
 " ultisnips	
 " let g:UltiSnipsExpandTrigger="<tab>"                                            
 " let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
@@ -260,18 +243,3 @@ let g:vimspector_enable_mappings = 'HUMAN'
 "     autocmd TextYankPost * if v:event.operator ==# 'y' | call Osc52Yank() | endif
 " augroup END
 
-"  Map key for .vimrc
-map <leader>vimrc :tabe ~/.vimrc<cr>
-
-" Function to source only if file exists 
-function! SourceIfExists(file)
-  if filereadable(expand(a:file))
-    exe 'source' a:file
-  endif
-endfunction
-
-" Source coc file
-call SourceIfExists("~/.vim/coc.vim")
-
-" Source .vimrc automatically
-autocmd bufwritepost .vimrc source $MYVIMRC

@@ -1,0 +1,11 @@
+{
+	"languageserver": {
+		"go": {
+			"command": "gopls",
+			"rootPatterns": ["go.mod"],
+			"trace.server": "verbose",
+			"filetypes": ["go"]
+		}
+	},
+	"python.jediPath": "/Users/mengwangk/miniconda3/lib/python3.8/site-packages"
+}
