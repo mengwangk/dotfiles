@@ -117,12 +117,16 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'lineinfo', 'modified' ] ]
       \ },
       \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead'
+      \   'gitbranch': 'FugitiveHead',
+	  \   'lineinfo': "LineInfo",
       \ },
       \ }
+function! LineInfo()
+  return line('.') . '/' . line('$')
+endfunction
 
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
