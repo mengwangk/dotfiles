@@ -61,6 +61,7 @@ set splitright
 set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+set cursorline
 " set termwinsize=10x0
 " set termguicolors
 
@@ -183,6 +184,8 @@ endfunction
 " Source coc file
 call SourceIfExists("~/.vim/coc.vim")
 
+" https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
+autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " Map C-n to NerdTree
 " map <C-n> :NERDTreeToggle<CR>
