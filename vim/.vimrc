@@ -10,7 +10,6 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'gruvbox-community/gruvbox'
 Plug 'vim-syntastic/syntastic'
 Plug 'itchyny/lightline.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -23,7 +22,9 @@ Plug 'pechorin/any-jump.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
 Plug 'unblevable/quick-scope'       
 Plug 'puremourning/vimspector'
 
@@ -136,7 +137,7 @@ if exists('+termguicolors')
 endif
 let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
-set background=dark
+set background=dark cursorline termguicolors
 " set bg=dark
 " hi Pmenu ctermbg=black ctermfg=white
 
