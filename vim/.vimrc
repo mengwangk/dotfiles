@@ -26,6 +26,9 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'unblevable/quick-scope'       
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'konfekt/fastfold'
 
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim' 
