@@ -30,6 +30,7 @@ Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'konfekt/fastfold'
 Plug 'stsewd/fzf-checkout.vim'
+Plug 'mhinz/vim-startify'
 
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim' 
@@ -97,12 +98,11 @@ let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
-" Column marker
 " set colorcolumn=80
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
-"  Map key for .vimrc
+" map key for .vimrc
 map <leader>vimrc :tabe ~/.vimrc<cr>
 
 " syntastic syntax checker
@@ -155,13 +155,28 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 
-" fzf checkout
+" fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
+nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
+
+" fzf checkout
 nnoremap <leader>gc :GCheckout<CR>
 
-" fzf
-nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
+" startify
+let g:startify_change_to_vcs_root = 1
+let g:startify_session_persistence = 1
+let g:startify_lists = [
+          \ { 'type': 'files',     'header': ['   Files']            },
+          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+          \ { 'type': 'sessions',  'header': ['   Sessions']       },
+          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+          \ ]
+let g:startify_bookmarks = [
+            \ { 'b': '~/.bashrc' },
+            \ { 'v': '~/.vimrc' },
+            \ { 'z': '~/.zshrc' },
+            \ ]
 
 " avoid the <ESC>?
 
