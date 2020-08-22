@@ -106,6 +106,10 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
+" python
+autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+
 " syntastic syntax checker
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
