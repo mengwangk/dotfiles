@@ -8,6 +8,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
+Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-syntastic/syntastic'
@@ -31,6 +32,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'konfekt/fastfold'
 Plug 'stsewd/fzf-checkout.vim'
 Plug 'mhinz/vim-startify'
+Plug 'junegunn/gv.vim'
 
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim' 
