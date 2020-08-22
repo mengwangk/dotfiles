@@ -29,6 +29,7 @@ Plug 'unblevable/quick-scope'
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'konfekt/fastfold'
+Plug 'stsewd/fzf-checkout.vim'
 
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim' 
@@ -174,8 +175,10 @@ let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
 highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 
-" vimspector
-let g:vimspector_enable_mappings = 'HUMAN'
+" fzf checkout
+let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
+let $FZF_DEFAULT_OPTS='--reverse'
+nnoremap <leader>gc :GCheckout<CR>
 
 " fzf
 nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
