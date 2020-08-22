@@ -104,9 +104,6 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
-" map key for .vimrc
-map <leader>vimrc :tabe ~/.vimrc<cr>
-
 " syntastic syntax checker
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
