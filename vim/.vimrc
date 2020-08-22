@@ -67,12 +67,8 @@ set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set cursorline
-" set termwinsize=10x0
-" set termguicolors
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
-" Search down into subfolders
-" Provides tab-completion for all file-related tasks
 set path+=**
 set wildignore+=**/node_modules/**
 set wildignore+=**/debug/**
@@ -90,7 +86,7 @@ if has("wildmenu")
 	set wildmode=longest,list
 endif
 
-"Cursor settings:
+" Cursor settings:
 "  1 -> blinking block
 "  2 -> solid block 
 "  3 -> blinking underscore
@@ -142,32 +138,16 @@ endif
 let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 set background=dark cursorline termguicolors
-" set bg=dark
-" hi Pmenu ctermbg=black ctermfg=white
 
 " limelight
-" Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
 let g:limelight_conceal_ctermfg = 240
-
-" Color name (:help gui-colors) or RGB color
 let g:limelight_conceal_guifg = 'DarkGray'
 let g:limelight_conceal_guifg = '#777777'
-
-" Default: 0.5
 let g:limelight_default_coefficient = 0.7
-
-" Number of preceding/following paragraphs to include (default: 0)
 let g:limelight_paragraph_span = 1
-
-" Beginning/end of paragraph
-" When there's no empty line between the paragraphs
-" and each paragraph starts with indentation
 let g:limelight_bop = '^\s'
 let g:limelight_eop = '\ze\n^\s'
-
-" Highlighting priority (default: 10)
-" Set it to -1 not to overrule hlsearch
 let g:limelight_priority = -1
 
 " quick-scope
@@ -198,67 +178,4 @@ call SourceIfExists("~/.vim/coc.vim")
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
-" Map C-n to NerdTree
-" map <C-n> :NERDTreeToggle<CR>
-
-" Ignored files
-" let NERDTreeIgnore=['\.pyc$', '\~$'] "ignore files in NERDTree
-" let NERDTreeShowHidden=1
-
-" CtrlP to search hidden files
-" let g:ctrlp_show_hidden = 1
-" let g:ctrlp_custom_ignore = {
-"   \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$|pkg$|bin\|target\|debug$',
-"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-"   \ }
-
-" fzf 
-" nnoremap <C-p> :<C-u>FZF<CR> 
-
-"split navigations
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
-
-" airline
-" let g:airline#extensions#tabline#enabled = 1
-" let g:airline_theme='simple'
-
-
-" Source .vimrc automatically
-" autocmd bufwritepost .vimrc source $MYVIMRC
-
-" netrw
-" let g:netrw_banner=0        " disable annoying banner
-" let g:netrw_browse_split=4  " open in prior window
-" let g:netrw_altv=1          " open splits to the right
-" let g:netrw_liststyle=3     " tree view
-" let g:netrw_winsize = 25
-" let g:netrw_list_hide=netrw_gitignore#Hide()
-" let g:netrw_list_hide.=',\(^\|\s\s\)\zs\.\S\+'
-" - :edit a folder to open a file browser
-" - <CR>/v/t to open in an h-split/v-split/tab
-" - check |netrw-browse-maps| for more mappings
-
-"autocmd vimenter * NERDTree
-"
-" ultisnips	
-" let g:UltiSnipsExpandTrigger="<tab>"                                            
-" let g:UltiSnipsJumpForwardTrigger="<tab>"                                       
-" let g:UltiSnipsJumpBackwardTrigger="<s-tab>"  
-
-" function! Osc52Yank()
-"     let buffer=system('base64 -w0', @0)
-"     let buffer=substitute(buffer, "\n$", "", "")
-"     let buffer='\e]52;c;'.buffer.'\x07'
-"     silent exe "!echo -ne ".shellescape(buffer)." > ".shellescape("/dev/pts/0")
-" endfunction
-
-" command! Osc52CopyYank call Osc52Yank()
-
-" augroup Example
-"     autocmd!
-"     autocmd TextYankPost * if v:event.operator ==# 'y' | call Osc52Yank() | endif
-" augroup END
-
+" Osc52Yank?
