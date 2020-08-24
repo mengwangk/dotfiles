@@ -9,4 +9,4 @@ stow -v vim -t ~/
 stow -v tmux -t ~/
 stow -v zsh -t ~/
 stow -v alacritty -t ~/
-
+stow -v ranger -t ~/.config/ranger
