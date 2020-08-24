@@ -34,6 +34,7 @@ Plug 'stsewd/fzf-checkout.vim'
 Plug 'mhinz/vim-startify'
 Plug 'junegunn/gv.vim'
 Plug 'sheerun/vim-polyglot'
+Plug 'voldikss/vim-floaterm'
 
 " Plug 'dense-analysis/ale'
 " Plug 'puremourning/vimspector'
@@ -183,6 +184,9 @@ let g:startify_bookmarks = [
             \ { 'v': '~/.vimrc' },
             \ { 'z': '~/.zshrc' },
             \ ]
+
+" floaterm
+nnoremap <silent><nowait> <space>t  :<C-u>FloatermNew<cr>
 
 " avoid the <ESC>?
 
