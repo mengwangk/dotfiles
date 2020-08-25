@@ -36,6 +36,7 @@ Plug 'junegunn/gv.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'voldikss/vim-floaterm'
 
+" Plug 'ryanoasis/vim-devicons'
 " Plug 'dense-analysis/ale'
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim' 
@@ -187,6 +188,10 @@ let g:startify_bookmarks = [
 
 " floaterm
 nnoremap <silent><nowait> <space>t  :<C-u>FloatermNew<cr>
+
+" devicons
+" let g:webdevicons_enable = 1
+" let g:webdevicons_enable_startify = 1
 
 " avoid the <ESC>?
 
