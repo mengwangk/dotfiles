@@ -35,6 +35,7 @@ Plug 'mhinz/vim-startify'
 Plug 'junegunn/gv.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'voldikss/vim-floaterm'
+Plug 'vimwiki/vimwiki'
 
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'dense-analysis/ale'
@@ -189,9 +190,9 @@ let g:startify_bookmarks = [
 " floaterm
 nnoremap <silent><nowait> <space>t  :<C-u>FloatermNew<cr>
 
-" devicons
-" let g:webdevicons_enable = 1
-" let g:webdevicons_enable_startify = 1
+" vimwiki
+let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/',
+			\ 'syntax': 'markdown', 'ext': '.md'}]
 
 " avoid the <ESC>?
 
