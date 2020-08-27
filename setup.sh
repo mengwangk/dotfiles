@@ -10,3 +10,6 @@ stow -v tmux -t ~/
 stow -v zsh -t ~/
 stow -v alacritty -t ~/
 stow -v ranger -t ~/.config/ranger
+stow -v yabai -t ~/
+stow -v skhd -t ~/
+stow -v kitty -t ~/.config/kitty
