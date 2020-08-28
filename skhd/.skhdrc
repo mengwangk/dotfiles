@@ -1,14 +1,23 @@
 # open terminal
 cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance --instance-group ig -d ~ &> /dev/null
 
+# open vim
+cmd + shift - e : open /usr/local/bin/nvim
+
 # open chrome
-cmd - g : open /Applications/Google\ Chrome.app
+cmd + shift - g : open /Applications/Google\ Chrome.app
 
 # open vscode
-cmd - j : open /Applications/Visual\ Studio\ Code.app
+cmd + shift - v : open /Applications/Visual\ Studio\ Code.app
 
 # open ranger
-cmd - r : open ~/miniconda3/bin/ranger
+cmd + shift - r : open ~/miniconda3/bin/ranger
+
+# open qutebrowser
+cmd + shift - q : ~/workspace/development/dotfiles/scripts/qtb.sh
+
+# open tor
+cmd + shift - t : open /Applications/Tor\ Browser.app
 
 # focus window
 alt - x : yabai -m window --focus recent
