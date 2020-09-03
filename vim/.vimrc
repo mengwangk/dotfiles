@@ -35,6 +35,7 @@ Plug 'mhinz/vim-startify'
 Plug 'junegunn/gv.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'voldikss/vim-floaterm'
+Plug 'easymotion/vim-easymotion'
 
 " Plug 'vimwiki/vimwiki'
 " Plug 'ryanoasis/vim-devicons'
