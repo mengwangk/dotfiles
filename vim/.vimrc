@@ -37,6 +37,7 @@ Plug 'junegunn/gv.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'voldikss/vim-floaterm'
 Plug 'easymotion/vim-easymotion'
+Plug 'vim-test/vim-test'
 
 " Plug 'tpope/vim-endwise'
 " Plug 'vimwiki/vimwiki'
