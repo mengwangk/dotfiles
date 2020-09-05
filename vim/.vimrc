@@ -126,19 +126,18 @@ let g:syntastic_check_on_wq = 0
 set laststatus=2
 set noshowmode
 let g:lightline = {
-      \ 'colorscheme': 'wombat',
+      \ 'colorscheme': 'onedark',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'lineinfo', 'modified' ] ]
+      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
       \ },
+	  \ 'component': {
+	  \   'lineinfo': '%3l/%{line("$")}:%-2c', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}'
+	  \ }, 
       \ 'component_function': {
       \   'gitbranch': 'FugitiveHead',
-	  \   'lineinfo': "LineInfo",
-      \ },
+	  \ },
       \ }
-function! LineInfo()
-  return line('.') . '/' . line('$')
-endfunction
 
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
