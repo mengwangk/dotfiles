@@ -10,6 +10,7 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-dispatch'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'vim-syntastic/syntastic'
@@ -192,6 +193,21 @@ let g:startify_bookmarks = [
 
 " floaterm
 nnoremap <silent><nowait> <space>t  :<C-u>FloatermNew<cr>
+
+" vim-test
+nmap <silent> <leader>tn :TestNearest<CR>
+nmap <silent> <leader>tf :TestFile<CR>
+nmap <silent> <leader>ts :TestSuite<CR>
+nmap <silent> <leader>tl :TestLast<CR>
+nmap <silent> <leader>tv :TestVisit<CR>
+" let test#strategy = "floaterm"
+if has('nvim')
+	let test#strategy = "neovim"
+	let test#neovim#term_position = "belowright"
+else
+	let test#strategy = "vimterminal"
+	let test#vim#term_position = "belowright"
+endif
 
 " vimwiki
 " let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/',
