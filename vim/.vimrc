@@ -75,7 +75,7 @@ set tabstop=4		" the visible width of tabs
 set softtabstop=4	" edit as if the tabs are 4 characters wide 
 set shiftwidth=4	" number of spaces to use for indent and unindent
 set shiftround		" round indent to a multiple of 'shiftwidth'
-set splitright
+set splitright splitbelow
 set statusline=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -115,8 +115,15 @@ highlight ColorColumn ctermbg=magenta
 call matchadd('ColorColumn', '\%81v', 100)
 
 " python
-autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+if has('nvim')
+	autocmd FileType python map <buffer> <F9> :w<CR>:sp term://nodemon -e py %<CR>
+	autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:sp term://nodemon -e py %<CR>
+else
+	autocmd FileType python map <buffer> <F9> :w<CR>:term nodemon -e py %<CR>
+	autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:term nodemon -e py %<CR>
+endif
+autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 " syntastic syntax checker
 let g:syntastic_always_populate_loc_list = 1
