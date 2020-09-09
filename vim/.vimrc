@@ -39,6 +39,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'voldikss/vim-floaterm'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-test/vim-test'
+Plug 'editorconfig/editorconfig'
 
 " Plug 'tpope/vim-endwise'
 " Plug 'vimwiki/vimwiki'
@@ -215,6 +216,9 @@ else
 	let test#strategy = "vimterminal"
 	let test#vim#term_position = "belowright"
 endif
+
+" editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " vimwiki
 " let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/',
