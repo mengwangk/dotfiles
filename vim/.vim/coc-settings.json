@@ -7,6 +7,6 @@
 			"filetypes": ["go"]
 		}
 	},
-	"explorer.previewAction.onHover": false,
-	"python.jediPath": "/Users/mengwangk/miniconda3/lib/python3.8/site-packages"
+	"python.jediEnabled": false,
+	"explorer.previewAction.onHover": false
 }
