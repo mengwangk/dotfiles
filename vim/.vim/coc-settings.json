@@ -8,5 +8,8 @@
 		}
 	},
 	"python.jediEnabled": false,
+	"python.formatting.provider": "yapf",
+	"coc.preferences.formatOnType": true,
+	"coc.preferences.formatOnSaveFiletypes": ["python"],
 	"explorer.previewAction.onHover": false
 }
