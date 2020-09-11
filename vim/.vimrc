@@ -42,7 +42,9 @@ Plug 'vim-test/vim-test'
 Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
 Plug 'metakirby5/codi.vim'
+Plug 'dyng/ctrlsf.vim'
 
+" Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'tpope/vim-endwise'
 " Plug 'vimwiki/vimwiki'
 " Plug 'ryanoasis/vim-devicons'
