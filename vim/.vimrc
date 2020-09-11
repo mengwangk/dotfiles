@@ -40,6 +40,8 @@ Plug 'voldikss/vim-floaterm'
 Plug 'easymotion/vim-easymotion'
 Plug 'vim-test/vim-test'
 Plug 'editorconfig/editorconfig'
+Plug 'alvan/vim-closetag'
+Plug 'metakirby5/codi.vim'
 
 " Plug 'tpope/vim-endwise'
 " Plug 'vimwiki/vimwiki'
