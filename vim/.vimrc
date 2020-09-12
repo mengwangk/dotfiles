@@ -130,6 +130,14 @@ endif
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+" terminal 
+if has('nvim')
+	tnoremap <C-w>h <C-\><C-n><C-w>h
+	tnoremap <C-w>j <C-\><C-n><C-w>j
+	tnoremap <C-w>k <C-\><C-n><C-w>k
+	tnoremap <C-w>l <C-\><C-n><C-w>l
+endif
+
 " syntastic syntax checker
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
