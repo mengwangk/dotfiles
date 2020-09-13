@@ -18,7 +18,8 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
@@ -32,8 +33,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'konfekt/fastfold'
 
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'sheerun/vim-polyglot'
-" Plug 'dense-analysis/ale'
+Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'airblade/vim-gitgutter'
@@ -55,7 +55,9 @@ Plug 'vimwiki/vimwiki'
 
 Plug 'mhinz/vim-startify'
 
-Plug 'vim-syntastic/syntastic'
+" Plug 'itchyny/lightline.vim'
+" Plug 'sheerun/vim-polyglot'
+" Plug 'vim-syntastic/syntastic'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'tpope/vim-endwise'
 " Plug 'ryanoasis/vim-devicons'
@@ -65,8 +67,6 @@ Plug 'vim-syntastic/syntastic'
 " Plug 'christoomey/vim-titlecase'
 " Plug 'lifepillar/vim-solarized8'
 " Plug 'morhetz/gruvbox'
-" Plug 'vim-airline/vim-airline'
-" Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -94,7 +94,8 @@ set splitright splitbelow
 set statusline=%#warningmsg#
 set statusline+=%*
 set cursorline
-set statusline+=%{SyntasticStatuslineFlag()}
+set laststatus=2
+set noshowmode
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
 set path+=**
@@ -148,31 +149,12 @@ if has('nvim')
 	tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
 
-" syntastic syntax checker
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
 " ale
-" let g:ale_completion_enabled = 0
+let g:ale_disable_lsp = 1
+let g:airline#extensions#ale#enabled = 1
 
-" lightline
-set laststatus=2
-set noshowmode
-let g:lightline = {
-      \ 'colorscheme': 'onedark',
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ],
-      \             [ 'gitbranch', 'readonly', 'filename', 'modified' ] ]
-      \ },
-	  \ 'component': {
-	  \   'lineinfo': '%3l/%{line("$")}:%-2c', 'line': '%l', 'column': '%c', 'close': '%999X X ', 'winnr': '%{winnr()}'
-	  \ }, 
-      \ 'component_function': {
-      \   'gitbranch': 'FugitiveHead',
-	  \ },
-      \ }
+" airline
+let g:airline_theme='solarized dark'
 
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
@@ -233,7 +215,6 @@ nmap <silent> <leader>tf :TestFile<CR>
 nmap <silent> <leader>ts :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
-" let test#strategy = "floaterm"
 if has('nvim')
 	let test#strategy = "neovim"
 	let test#neovim#term_position = "belowright"
