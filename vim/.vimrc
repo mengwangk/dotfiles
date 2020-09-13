@@ -11,44 +11,54 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'vim-syntastic/syntastic'
-Plug 'itchyny/lightline.vim'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'pechorin/any-jump.vim'
-Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
-Plug 'gruvbox-community/gruvbox'
-Plug 'joshdick/onedark.vim'
-Plug 'arcticicestudio/nord-vim'
-Plug 'unblevable/quick-scope'       
-Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'konfekt/fastfold'
-Plug 'stsewd/fzf-checkout.vim'
-Plug 'mhinz/vim-startify'
-Plug 'junegunn/gv.vim'
-Plug 'sheerun/vim-polyglot'
-Plug 'voldikss/vim-floaterm'
-Plug 'easymotion/vim-easymotion'
+
+Plug 'itchyny/lightline.vim'
+
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 Plug 'vim-test/vim-test'
+
 Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
 Plug 'metakirby5/codi.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'dyng/ctrlsf.vim'
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'konfekt/fastfold'
 
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'sheerun/vim-polyglot'
+" Plug 'dense-analysis/ale'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'airblade/vim-gitgutter'
+Plug 'stsewd/fzf-checkout.vim'
+
+Plug 'pechorin/any-jump.vim'
+Plug 'unblevable/quick-scope'       
+Plug 'easymotion/vim-easymotion'
+Plug 'dyng/ctrlsf.vim'
+Plug 'voldikss/vim-floaterm'
+
+Plug 'gruvbox-community/gruvbox'
+Plug 'joshdick/onedark.vim'
+Plug 'arcticicestudio/nord-vim'
+
+Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+Plug 'vimwiki/vimwiki'
+
+Plug 'mhinz/vim-startify'
+
+Plug 'vim-syntastic/syntastic'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'tpope/vim-endwise'
 " Plug 'ryanoasis/vim-devicons'
-" Plug 'dense-analysis/ale'
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim' 
 " Plug 'preservim/nerdtree'
@@ -82,9 +92,9 @@ set shiftwidth=4	" number of spaces to use for indent and unindent
 set shiftround		" round indent to a multiple of 'shiftwidth'
 set splitright splitbelow
 set statusline=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set cursorline
+set statusline+=%{SyntasticStatuslineFlag()}
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
 set path+=**
@@ -143,6 +153,9 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" ale
+" let g:ale_completion_enabled = 0
 
 " lightline
 set laststatus=2
