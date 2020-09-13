@@ -126,10 +126,6 @@ let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
-" set colorcolumn=80
-highlight ColorColumn ctermbg=magenta
-call matchadd('ColorColumn', '\%81v', 100)
-
 " python
 if has('nvim')
 	autocmd FileType python map <buffer> <F9> :w<CR>:sp term://nodemon -e py %<CR>
@@ -177,6 +173,10 @@ let g:limelight_paragraph_span = 1
 let g:limelight_bop = '^\s'
 let g:limelight_eop = '\ze\n^\s'
 let g:limelight_priority = -1
+
+" color column
+highlight ColorColumn ctermbg=lightcyan guibg=blue
+call matchadd('ColorColumn', '\%81v\s*\zs\S', 120)
 
 " quick-scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
