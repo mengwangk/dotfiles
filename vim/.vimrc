@@ -42,11 +42,11 @@ Plug 'vim-test/vim-test'
 Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
 Plug 'metakirby5/codi.vim'
+Plug 'vimwiki/vimwiki'
 Plug 'dyng/ctrlsf.vim'
 
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'tpope/vim-endwise'
-" Plug 'vimwiki/vimwiki'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'dense-analysis/ale'
 " Plug 'puremourning/vimspector'
@@ -233,8 +233,9 @@ endif
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " vimwiki
-" let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/',
-" 			\ 'syntax': 'markdown', 'ext': '.md'}]
+let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/wiki',
+			\ 'syntax': 'markdown', 'ext': '.wiki'}]
+let g:vimwiki_global_ext = 0
 
 " avoid the <ESC>?
 
