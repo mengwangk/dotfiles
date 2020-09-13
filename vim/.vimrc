@@ -32,9 +32,9 @@ Plug 'metakirby5/codi.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'konfekt/fastfold'
 
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'stsewd/fzf-checkout.vim'
@@ -149,12 +149,12 @@ if has('nvim')
 	tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
 
+" airline
+let g:airline_solarized_bg='dark'
+
 " ale
 let g:ale_disable_lsp = 1
 let g:airline#extensions#ale#enabled = 1
-
-" airline
-let g:airline_theme='solarized dark'
 
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
