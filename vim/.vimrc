@@ -105,6 +105,7 @@ set statusline=%#warningmsg#
 set statusline+=%*
 set laststatus=2
 set cursorline
+set textwidth=100
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
 set path+=**
