@@ -30,6 +30,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'vim-test/vim-test'
 
 Plug 'editorconfig/editorconfig'
@@ -62,6 +63,7 @@ Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
 
+
 " Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Plug 'tpope/vim-obsession'
 " Plug 'junegunn/vim-emoji'
@@ -84,11 +86,12 @@ syntax enable
 filetype plugin indent on
 
 set encoding=utf-8
+set visualbell
 set clipboard=unnamed
 set relativenumber
 set number
 set number relativenumber
-set ignorecase
+set ignorecase smartcase
 set autoindent smartindent
 set showcmd
 set noshowmode
@@ -149,6 +152,7 @@ if has('nvim')
 	tnoremap <C-w>k <C-\><C-n><C-w>k
 	tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
+inoremap <C-s>  <C-O>:update<cr>
 
 " airline
 let g:airline_solarized_bg='dark'
@@ -232,6 +236,9 @@ let g:vimwiki_global_ext = 0
 " easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+
+" python-mode
+let g:pymode_options_colorcolumn = 0
 
 " Function to source only if file exists 
 function! SourceIfExists(file)
