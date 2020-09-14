@@ -17,6 +17,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
+Plug 'junegunn/vim-easy-align'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -52,9 +53,11 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
 Plug 'vimwiki/vimwiki'
+Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
 
+" Plug 'junegunn/vim-emoji'
 " Plug 'itchyny/lightline.vim'
 " Plug 'sheerun/vim-polyglot'
 " Plug 'vim-syntastic/syntastic'
@@ -224,6 +227,9 @@ let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/wiki',
 			\ 'syntax': 'markdown', 'ext': '.wiki'}]
 let g:vimwiki_global_ext = 0
 
+" easy-align
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 " Function to source only if file exists 
 function! SourceIfExists(file)
