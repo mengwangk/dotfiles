@@ -4,6 +4,7 @@ set nocompatible
 "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-commentary'
@@ -11,6 +12,9 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-dispatch'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-dadbod'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -18,6 +22,7 @@ Plug 'junegunn/gv.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-peekaboo'
 
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -57,6 +62,8 @@ Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
 
+" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
+" Plug 'tpope/vim-obsession'
 " Plug 'junegunn/vim-emoji'
 " Plug 'itchyny/lightline.vim'
 " Plug 'sheerun/vim-polyglot'
@@ -82,23 +89,18 @@ set relativenumber
 set number
 set number relativenumber
 set ignorecase
-set autoindent
-set smartindent
+set autoindent smartindent
 set showcmd
+set noshowmode
 set noswapfile
 set incsearch
 set pyxversion=3	
-set expandtab smarttab
-set tabstop=4		
-set softtabstop=4
-set shiftwidth=4
-set shiftround
+set expandtab smarttab tabstop=4 softtabstop=4 shiftwidth=4 shiftround
 set splitright splitbelow
 set statusline=%#warningmsg#
 set statusline+=%*
-set cursorline
 set laststatus=2
-set noshowmode
+set cursorline
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
 set path+=**
