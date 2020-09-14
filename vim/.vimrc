@@ -4,6 +4,7 @@ set nocompatible
 "     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-surround'
@@ -119,8 +120,8 @@ set wildignore+=*~,*.swp,*.tmp
 " Display all matching files when we tab complete
 set wildmenu
 if has("wildmenu")
-	set wildmenu
-	set wildmode=longest,list
+  set wildmenu
+  set wildmode=longest,list
 endif
 
 " Cursor settings:
@@ -136,21 +137,21 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 " python
 if has('nvim')
-	autocmd FileType python map <buffer> <F9> :w<CR>:sp term://nodemon -e py %<CR>
-	autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:sp term://nodemon -e py %<CR>
+  autocmd FileType python map <buffer> <F9> :w<CR>:sp term://nodemon -e py %<CR>
+  autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:sp term://nodemon -e py %<CR>
 else
-	autocmd FileType python map <buffer> <F9> :w<CR>:term nodemon -e py %<CR>
-	autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:term nodemon -e py %<CR>
+  autocmd FileType python map <buffer> <F9> :w<CR>:term nodemon -e py %<CR>
+  autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:term nodemon -e py %<CR>
 endif
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
 " terminal 
 if has('nvim')
-	tnoremap <C-w>h <C-\><C-n><C-w>h
-	tnoremap <C-w>j <C-\><C-n><C-w>j
-	tnoremap <C-w>k <C-\><C-n><C-w>k
-	tnoremap <C-w>l <C-\><C-n><C-w>l
+  tnoremap <C-w>h <C-\><C-n><C-w>h
+  tnoremap <C-w>j <C-\><C-n><C-w>j
+  tnoremap <C-w>k <C-\><C-n><C-w>k
+  tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
 inoremap <C-s>  <C-O>:update<cr>
 
@@ -164,9 +165,9 @@ let g:airline#extensions#ale#enabled = 1
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
 if exists('+termguicolors')
-	set t_8f=[38;2;%lu;%lu;%lum " Use <Ctr-V><Esc> for actual escape
-	set t_8b=[48;2;%lu;%lu;%lum
-	set termguicolors
+  set t_8f=[38;2;%lu;%lu;%lum " Use <Ctr-V><Esc> for actual escape
+  set t_8b=[48;2;%lu;%lu;%lum
+  set termguicolors
 endif
 let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
@@ -197,16 +198,16 @@ nnoremap <leader>gc :GCheckout<CR>
 let g:startify_change_to_vcs_root = 1
 let g:startify_session_persistence = 1
 let g:startify_lists = [
-          \ { 'type': 'files',     'header': ['   Files']            },
-          \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-          \ { 'type': 'sessions',  'header': ['   Sessions']       },
-          \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-          \ ]
+      \ { 'type': 'files',     'header': ['   Files']            },
+      \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
+      \ { 'type': 'sessions',  'header': ['   Sessions']       },
+      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
+      \ ]
 let g:startify_bookmarks = [
-            \ { 'b': '~/.bashrc' },
-            \ { 'v': '~/.vimrc' },
-            \ { 'z': '~/.zshrc' },
-            \ ]
+      \ { 'b': '~/.bashrc' },
+      \ { 'v': '~/.vimrc' },
+      \ { 'z': '~/.zshrc' },
+      \ ]
 
 " floaterm
 nnoremap <silent><nowait> <space>t  :<C-u>FloatermNew<cr>
@@ -218,11 +219,11 @@ nmap <silent> <leader>ts :TestSuite<CR>
 nmap <silent> <leader>tl :TestLast<CR>
 nmap <silent> <leader>tv :TestVisit<CR>
 if has('nvim')
-	let test#strategy = "neovim"
-	let test#neovim#term_position = "belowright"
+  let test#strategy = "neovim"
+  let test#neovim#term_position = "belowright"
 else
-	let test#strategy = "vimterminal"
-	let test#vim#term_position = "belowright"
+  let test#strategy = "vimterminal"
+  let test#vim#term_position = "belowright"
 endif
 
 " editorconfig
