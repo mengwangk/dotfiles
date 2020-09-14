@@ -192,7 +192,7 @@ let $FZF_DEFAULT_OPTS='--reverse'
 nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
 
 " fzf checkout
-nnoremap <leader>gc :GCheckout<CR>
+nnoremap <leader>gc :GBranches<CR>
 
 " startify
 let g:startify_change_to_vcs_root = 1
