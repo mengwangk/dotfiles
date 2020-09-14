@@ -84,12 +84,12 @@ set smartindent
 set showcmd
 set noswapfile
 set incsearch
-set pyxversion=3	" Python 3 neovim
-set smarttab		" tab respects 'tabstop', 'shiftwidth', and 'softtabstop'
-set tabstop=4		" the visible width of tabs
-set softtabstop=4	" edit as if the tabs are 4 characters wide 
-set shiftwidth=4	" number of spaces to use for indent and unindent
-set shiftround		" round indent to a multiple of 'shiftwidth'
+set pyxversion=3	
+set expandtab smarttab
+set tabstop=4		
+set softtabstop=4
+set shiftwidth=4
+set shiftround
 set splitright splitbelow
 set statusline=%#warningmsg#
 set statusline+=%*
@@ -164,19 +164,12 @@ colorscheme gruvbox
 set background=dark cursorline termguicolors
 
 " limelight
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
-let g:limelight_conceal_guifg = 'DarkGray'
-let g:limelight_conceal_guifg = '#777777'
-let g:limelight_default_coefficient = 0.7
 let g:limelight_paragraph_span = 1
-let g:limelight_bop = '^\s'
-let g:limelight_eop = '\ze\n^\s'
 let g:limelight_priority = -1
 
 " color column
 highlight ColorColumn ctermbg=lightcyan guibg=blue
-call matchadd('ColorColumn', '\%81v\s*\zs\S', 120)
+call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
 
 " quick-scope
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
