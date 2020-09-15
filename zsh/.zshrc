@@ -126,6 +126,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 alias vim='/usr/local/bin/nvim'
+alias dot='cd $HOME/workspace/development/dotfiles'
+alias notes='cd $HOME/workspace/development/wiki-notes'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -141,4 +143,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-

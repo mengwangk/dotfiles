@@ -64,7 +64,6 @@ Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
 
-
 " Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Plug 'tpope/vim-obsession'
 " Plug 'junegunn/vim-emoji'
@@ -106,6 +105,8 @@ set statusline+=%*
 set laststatus=2
 set cursorline
 set textwidth=100
+set pastetoggle=<F2>
+set mouse=a
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
 set path+=**
@@ -154,7 +155,8 @@ if has('nvim')
   tnoremap <C-w>k <C-\><C-n><C-w>k
   tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
-inoremap <C-s>  <C-O>:update<cr>
+inoremap <C-s> <C-O>:update<cr>
+nnoremap <C-l> :nohl<CR>
 
 " airline
 let g:airline_theme='solarized'
