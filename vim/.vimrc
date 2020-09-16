@@ -148,6 +148,12 @@ endif
 autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 
+" rust
+autocmd FileType rust map <buffer> <leader>d :w<CR>:RustRun<CR>
+
+" go
+autocmd FileType go map <buffer> <leader>d :w<CR>:GoRun<CR>
+
 " terminal 
 if has('nvim')
   tnoremap <C-w>h <C-\><C-n><C-w>h
