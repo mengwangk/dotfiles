@@ -9,7 +9,7 @@
 	},
 	"diagnostic.displayByAle": true,
 	"python.jediEnabled": false,
-	"python.formatting.provider": "yapf",
+	"python.formatting.provider": "black",
 	"coc.preferences.formatOnType": true,
 	"coc.preferences.formatOnSaveFiletypes": ["python"],
 	"explorer.previewAction.onHover": false
