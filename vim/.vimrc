@@ -228,11 +228,11 @@ let g:startify_bookmarks = [
 nnoremap <silent><nowait> <space>t  :<C-u>FloatermNew<cr>
 
 " vim-test
-nmap <silent> <leader>tn :TestNearest<CR>
-nmap <silent> <leader>tf :TestFile<CR>
-nmap <silent> <leader>ts :TestSuite<CR>
-nmap <silent> <leader>tl :TestLast<CR>
-nmap <silent> <leader>tv :TestVisit<CR>
+nmap <silent> <leader>tn :w<CR>:TestNearest<CR>
+nmap <silent> <leader>tf :w<CR>:TestFile<CR>
+nmap <silent> <leader>ts :w<CR>:TestSuite<CR>
+nmap <silent> <leader>tl :w<CR>:TestLast<CR>
+nmap <silent> <leader>tv :w<CR>:TestVisit<CR>
 if has('nvim')
   let test#strategy = "neovim"
   let test#neovim#term_position = "belowright"
