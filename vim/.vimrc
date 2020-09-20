@@ -265,10 +265,25 @@ nmap ga <Plug>(EasyAlign)
 let g:pymode_options_colorcolumn = 0
 let g:pymode_lint_cwindow = 0
 
-" source coc file
+" coc.nvim
 call SourceIfExists("~/.vim/coc.vim")
+let g:coc_global_extensions = [
+	\ 'coc-python',
+	\ 'coc-java',
+	\ 'coc-go',
+	\ 'coc-snippets',
+	\ 'coc-marketplace',
+	\ 'coc-prettier',
+	\ 'coc-explorer',
+	\ 'coc-highlight',
+	\ 'coc-rls',
+	\ 'coc-omni',
+	\ 'coc-omnisharp',
+	\ 'coc-tsserver',
+	\ 'coc-json'
+	\ ]
 
-" source java.vim
+" java
 call SourceIfExists("~/.vim/java.vim")
 
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
