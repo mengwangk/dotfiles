@@ -63,8 +63,8 @@ Plug 'vimwiki/vimwiki'
 Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
+Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
-" Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 " Plug 'tpope/vim-obsession'
 " Plug 'junegunn/vim-emoji'
 " Plug 'itchyny/lightline.vim'
