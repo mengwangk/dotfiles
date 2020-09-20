@@ -82,6 +82,13 @@ Plug 'mhinz/vim-startify'
 
 call plug#end()
 
+" Function to source only if file exists 
+function! SourceIfExists(file)
+  if filereadable(expand(a:file))
+    exe 'source' a:file
+  endif
+endfunction
+
 syntax enable
 filetype plugin indent on
 
@@ -163,6 +170,7 @@ if has('nvim')
 endif
 inoremap <C-s> <C-O>:update<cr>
 nnoremap <C-l> :nohl<CR>
+inoremap jk <Esc>
 
 " airline
 let g:airline_theme='solarized'
@@ -257,15 +265,11 @@ nmap ga <Plug>(EasyAlign)
 let g:pymode_options_colorcolumn = 0
 let g:pymode_lint_cwindow = 0
 
-" Function to source only if file exists 
-function! SourceIfExists(file)
-  if filereadable(expand(a:file))
-    exe 'source' a:file
-  endif
-endfunction
-
-" Source coc file
+" source coc file
 call SourceIfExists("~/.vim/coc.vim")
+
+" source java.vim
+call SourceIfExists("~/.vim/java.vim")
 
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
 autocmd Filetype gitcommit setlocal spell textwidth=72
