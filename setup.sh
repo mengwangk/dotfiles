@@ -13,3 +13,4 @@ stow -v ranger -t ~/.config/ranger
 stow -v yabai -t ~/
 stow -v skhd -t ~/
 stow -v kitty -t ~/.config/kitty
+stow -v fish -t ~/.config
