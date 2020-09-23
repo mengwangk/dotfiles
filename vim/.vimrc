@@ -65,6 +65,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 
+" Plug 'ludovicchabant/vim-gutentags'
 " Plug 'machakann/vim-highlightedyank'
 " Plug 'tpope/vim-obsession'
 " Plug 'junegunn/vim-emoji'
@@ -115,6 +116,7 @@ set cursorline
 set textwidth=100
 set pastetoggle=<F2>
 set mouse=a
+set undofile
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
 set path+=**
@@ -179,7 +181,7 @@ if has('nvim')
   tnoremap <C-w>k <C-\><C-n><C-w>k
   tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
-inoremap <C-s> <C-O>:update<cr>
+inoremap <C-u> <C-O>:update<cr>
 nnoremap <C-l> :nohl<CR>
 inoremap jk <Esc>
 

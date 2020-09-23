@@ -1,3 +1,7 @@
+:: passthrough
+cmd + shift - p ; passthrough
+passthrough < cmd + shift - p ; default
+
 # open terminal
 cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance --instance-group ig -d ~ &> /dev/null
 
