@@ -182,7 +182,7 @@ if has('nvim')
   tnoremap <C-w>k <C-\><C-n><C-w>k
   tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
-inoremap <C-u> <C-O>:update<cr>
+nnoremap <Space>w :w<CR>
 nnoremap <C-l> :nohl<CR>
 inoremap jk <Esc>
 
@@ -308,7 +308,7 @@ let g:coc_global_extensions = [
 	\ ]
 
 " java
-call SourceIfExists("~/.vim/java.vim")
+" call SourceIfExists("~/.vim/java.vim")
 
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
 autocmd Filetype gitcommit setlocal spell textwidth=72
