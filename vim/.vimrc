@@ -182,7 +182,7 @@ if has('nvim')
   tnoremap <C-w>k <C-\><C-n><C-w>k
   tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
-nnoremap <Space>w :w<CR>
+nnoremap <Space>w :update<CR>
 nnoremap <C-l> :nohl<CR>
 inoremap jk <Esc>
 
