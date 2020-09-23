@@ -25,3 +25,16 @@
 ;; Enable Evil
 (require 'evil)
 (evil-mode 1)
+
+;; Load Theme
+(load-theme 'tango-dark t)
+
+;; Full screen
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+;; Relative number
+(setq-default display-line-numbers 'relative
+      display-line-numbers-current-absolute t)
+
+;; Enable org mode
+(require 'org)
