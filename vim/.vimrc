@@ -307,6 +307,9 @@ let g:coc_global_extensions = [
 	\ 'coc-json'
 	\ ]
 
+" markdown
+autocmd BufRead *.org set ft=markdown
+
 " java
 " call SourceIfExists("~/.vim/java.vim")
 
