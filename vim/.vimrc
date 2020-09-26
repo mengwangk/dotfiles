@@ -67,6 +67,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-rooter'
 
+" Plug 'AndrewRadev/splitjoin'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'tpope/vim-obsession'
 " Plug 'junegunn/vim-emoji'

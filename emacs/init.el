@@ -3,6 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(org-agenda-files '("/tmp/2.org"))
  '(package-selected-packages '(evil org ##)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -35,6 +36,9 @@
 ;; Relative number
 (setq-default display-line-numbers 'relative
       display-line-numbers-current-absolute t)
+
+;; Disable the splash screen (to enable it agin, replace the t with 0)
+; (setq inhibit-splash-screen t)
 
 ;; Enable org mode
 (require 'org)

@@ -6,22 +6,25 @@ passthrough < cmd + shift - p ; default
 cmd - return : /Applications/Kitty.app/Contents/MacOS/kitty --single-instance --instance-group ig -d ~ &> /dev/null
 
 # open vim
-cmd + shift - e : open /usr/local/bin/nvim
+cmd + shift - v : open /usr/local/bin/nvim
+
+# open emacs
+cmd + shift - e : open /usr/local/bin/emacs
 
 # open chrome
-cmd + shift - g : open /Applications/Google\ Chrome.app
+# cmd + shift - g : open /Applications/Google\ Chrome.app
 
 # open vscode
-cmd + shift - v : open /Applications/Visual\ Studio\ Code.app
+cmd + shift - c : open /Applications/Visual\ Studio\ Code.app
 
 # open ranger
 cmd + shift - r : open ~/miniconda3/bin/ranger
 
 # open qutebrowser
-cmd + shift - q : ~/workspace/development/dotfiles/scripts/qtb.sh
+# cmd + shift - q : ~/workspace/development/dotfiles/scripts/qtb.sh
 
 # open tor
-cmd + shift - t : open /Applications/Tor\ Browser.app
+# cmd + shift - t : open /Applications/Tor\ Browser.app
 
 # focus window
 alt - x : yabai -m window --focus recent
