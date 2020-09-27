@@ -320,7 +320,7 @@ let g:coc_global_extensions = [
 autocmd BufRead *.org set ft=markdown
 
 " presentation
-call SourceIfExists("~/.vim/slide.vim")
+" call SourceIfExists("~/.vim/slide.vim")
 
 " java
 " call SourceIfExists("~/.vim/java.vim")
