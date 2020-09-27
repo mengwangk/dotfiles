@@ -48,7 +48,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'stsewd/fzf-checkout.vim'
 
 Plug 'pechorin/any-jump.vim'
-Plug 'unblevable/quick-scope'       
+Plug 'unblevable/quick-scope'
 Plug 'easymotion/vim-easymotion'
 Plug 'dyng/ctrlsf.vim'
 Plug 'voldikss/vim-floaterm'
@@ -78,7 +78,7 @@ Plug 'airblade/vim-rooter'
 " Plug 'tpope/vim-endwise'
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'puremourning/vimspector'
-" Plug 'kien/ctrlp.vim' 
+" Plug 'kien/ctrlp.vim'
 " Plug 'preservim/nerdtree'
 " Plug 'christoomey/vim-titlecase'
 " Plug 'lifepillar/vim-solarized8'
@@ -86,7 +86,7 @@ Plug 'airblade/vim-rooter'
 
 call plug#end()
 
-" Function to source only if file exists 
+" Function to source only if file exists
 function! SourceIfExists(file)
   if filereadable(expand(a:file))
     exe 'source' a:file
@@ -108,7 +108,7 @@ set showcmd
 set noshowmode
 set noswapfile
 set incsearch
-set pyxversion=3	
+set pyxversion=3
 set expandtab smarttab tabstop=4 softtabstop=4 shiftwidth=4 shiftround
 set splitright splitbelow
 set statusline=%#warningmsg#
@@ -120,7 +120,7 @@ set pastetoggle=<F2>
 set mouse=a
 set undofile
 
-" https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim 
+" https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim
 set path+=**
 set wildignore+=**/node_modules/**
 set wildignore+=**/debug/**
@@ -140,7 +140,7 @@ endif
 
 " Cursor settings:
 "  1 -> blinking block
-"  2 -> solid block 
+"  2 -> solid block
 "  3 -> blinking underscore
 "  4 -> solid underscore
 "  5 -> blinking vertical bar
@@ -176,7 +176,7 @@ augroup gosupport
   autocmd FileType go map <buffer> <leader>r :GoRun<CR>
 augroup end
 
-" terminal 
+" terminal
 if has('nvim')
   tnoremap <C-w>h <C-\><C-n><C-w>h
   tnoremap <C-w>j <C-\><C-n><C-w>j
@@ -277,7 +277,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " vimwiki
 let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/wiki',
-			\ 'syntax': 'markdown', 'ext': '.wiki'}]
+      \ 'syntax': 'markdown', 'ext': '.wiki'}]
 let g:vimwiki_global_ext = 0
 
 " easy-align
@@ -301,20 +301,20 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 " coc.nvim
 call SourceIfExists("~/.vim/coc.vim")
 let g:coc_global_extensions = [
-	\ 'coc-python',
-	\ 'coc-java',
-	\ 'coc-go',
-	\ 'coc-snippets',
-	\ 'coc-marketplace',
-	\ 'coc-prettier',
-	\ 'coc-explorer',
-	\ 'coc-highlight',
-	\ 'coc-rls',
-	\ 'coc-omni',
-	\ 'coc-omnisharp',
-	\ 'coc-tsserver',
-	\ 'coc-json'
-	\ ]
+      \ 'coc-python',
+      \ 'coc-java',
+      \ 'coc-go',
+      \ 'coc-snippets',
+      \ 'coc-marketplace',
+      \ 'coc-prettier',
+      \ 'coc-explorer',
+      \ 'coc-highlight',
+      \ 'coc-rls',
+      \ 'coc-omni',
+      \ 'coc-omnisharp',
+      \ 'coc-tsserver',
+      \ 'coc-json'
+      \ ]
 
 " markdown
 autocmd BufRead *.org set ft=markdown
