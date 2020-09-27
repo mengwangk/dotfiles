@@ -67,6 +67,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-rooter'
 
+" Plug 'lervag/vimtex'
 " Plug 'AndrewRadev/splitjoin'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'tpope/vim-obsession'
@@ -157,6 +158,7 @@ if has('nvim')
   tnoremap <C-w>l <C-\><C-n><C-w>l
 endif
 nnoremap <Space>w :update<CR>
+nnoremap <Space>q :q<CR>
 nnoremap <C-l> :nohl<CR>
 inoremap jk <Esc>
 
