@@ -190,15 +190,23 @@ inoremap jk <Esc>
 " airline
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#buffer_idx_mode = 0
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#show_close_button = 0
-let g:airline#extensions#tabline#ignore_bufadd_pat = 'defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
+let g:airline#extensions#tabline#enabled=1
+let g:airline#extensions#tabline#buffer_idx_mode=0
+let g:airline#extensions#tabline#buffer_nr_show=1
+let g:airline#extensions#tabline#show_close_button=0
+let g:airline#extensions#tabline#ignore_bufadd_pat='defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
 
 " ale
-let g:ale_disable_lsp = 1
-let g:airline#extensions#ale#enabled = 1
+let g:ale_disable_lsp=1
+let g:airline#extensions#ale#enabled=1
+let g:ale_lint_on_save=1
+let g:ale_linters_explicit=1
+let g:ale_linters = {
+      \ 'markdown': ['writegood']
+      \}
+let g:ale_fixers = {
+      \ '*': ['remove_trailing_lines', 'trim_whitespace']
+      \}
 
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
@@ -310,6 +318,9 @@ let g:coc_global_extensions = [
 
 " markdown
 autocmd BufRead *.org set ft=markdown
+
+" presentation
+call SourceIfExists("~/.vim/slide.vim")
 
 " java
 " call SourceIfExists("~/.vim/java.vim")

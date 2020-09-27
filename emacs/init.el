@@ -3,8 +3,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(org-agenda-files '("/tmp/2.org"))
- '(package-selected-packages '(evil org ##)))
+ '(package-selected-packages '(exec-path-from-shell flycheck pkg-info org evil dash)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -16,8 +15,8 @@
 (require 'package)
 (add-to-list 'package-archives
              '("melpa" . "https://melpa.org/packages/"))
-; (package-initialize)
-; (package-refresh-contents)
+(package-initialize)
+(package-refresh-contents)
 
 ;; evil
 (unless (package-installed-p 'evil)
@@ -42,3 +41,10 @@
 
 ;; Enable org mode
 (require 'org)
+
+;; flycheck
+(package-install 'flycheck)
+(global-flycheck-mode)
+
+(package-install 'exec-path-from-shell)
+(exec-path-from-shell-initialize)
