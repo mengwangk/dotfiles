@@ -149,33 +149,6 @@ let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
-" python
-augroup pythonsupport
-  autocmd!
-  if has('nvim')
-    autocmd FileType python map <buffer> <F9> :w<CR>:sp term://nodemon -e py %<CR>
-    autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:sp term://nodemon -e py %<CR>
-  else
-    autocmd FileType python map <buffer> <F9> :w<CR>:term nodemon -e py %<CR>
-    autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:term nodemon -e py %<CR>
-  endif
-  autocmd FileType python map <buffer> <F5> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-  autocmd FileType python imap <buffer> <F5> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-augroup end
-
-
-" rust
-augroup rustsupport
-  autocmd!
-  autocmd FileType rust map <buffer> <leader>r :RustRun<CR>
-augroup end
-
-" go
-augroup gosupport
-  autocmd!
-  autocmd FileType go map <buffer> <leader>r :GoRun<CR>
-augroup end
-
 " terminal
 if has('nvim')
   tnoremap <C-w>h <C-\><C-n><C-w>h
@@ -319,10 +292,11 @@ let g:coc_global_extensions = [
 " markdown
 autocmd BufRead *.org set ft=markdown
 
-" presentation
+" languages
+call SourceIfExists("~/.vim/go.vim")
+call SourceIfExists("~/.vim/python.vim")
+call SourceIfExists("~/.vim/rust.vim")
 " call SourceIfExists("~/.vim/slide.vim")
-
-" java
 " call SourceIfExists("~/.vim/java.vim")
 
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
