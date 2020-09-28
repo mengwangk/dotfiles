@@ -20,8 +20,6 @@ Plug 'tpope/vim-dadbod'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/gv.vim'
-Plug 'junegunn/goyo.vim'
-Plug 'junegunn/limelight.vim'
 Plug 'junegunn/vim-easy-align'
 Plug 'junegunn/vim-peekaboo'
 
@@ -31,12 +29,10 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 Plug 'vim-test/vim-test'
 
 Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
-Plug 'metakirby5/codi.vim'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'konfekt/fastfold'
 
@@ -59,7 +55,6 @@ Plug 'arcticicestudio/nord-vim'
 
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'vimwiki/vimwiki'
 Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
@@ -67,7 +62,12 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-rooter'
 
+" Plug 'junegunn/goyo.vim'
+" Plug 'junegunn/limelight.vim'
 " Plug 'lervag/vimtex'
+" Plug 'metakirby5/codi.vim'
+" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" Plug 'vimwiki/vimwiki'
 " Plug 'AndrewRadev/splitjoin'
 " Plug 'ludovicchabant/vim-gutentags'
 " Plug 'tpope/vim-obsession'
@@ -195,8 +195,8 @@ colorscheme gruvbox
 set background=dark cursorline termguicolors
 
 " limelight
-let g:limelight_paragraph_span = 1
-let g:limelight_priority = -1
+" let g:limelight_paragraph_span = 1
+" let g:limelight_priority = -1
 
 " color column
 highlight ColorColumn ctermbg=lightcyan guibg=blue
@@ -251,17 +251,17 @@ endif
 let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " vimwiki
-let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/wiki',
-      \ 'syntax': 'markdown', 'ext': '.wiki'}]
-let g:vimwiki_global_ext = 0
+" let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/wiki',
+"       \ 'syntax': 'markdown', 'ext': '.wiki'}]
+" let g:vimwiki_global_ext = 0
 
 " easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " python-mode
-let g:pymode_options_colorcolumn = 0
-let g:pymode_lint_cwindow = 0
+" let g:pymode_options_colorcolumn = 0
+" let g:pymode_lint_cwindow = 0
 
 " ctrsf
 nmap     <C-F>f <Plug>CtrlSFPrompt
