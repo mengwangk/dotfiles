@@ -214,6 +214,7 @@ nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
 
 " fzf checkout
 nnoremap <leader>gc :GBranches<CR>
+nnoremap <Space>g :Gstatus<CR>
 
 " startify
 let g:startify_change_to_vcs_root = 1
