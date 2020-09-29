@@ -120,6 +120,7 @@ set textwidth=100
 set pastetoggle=<F2>
 set mouse=a
 set undofile
+set undodir=~/.vimdid
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim
 set path+=**
