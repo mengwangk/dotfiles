@@ -15,3 +15,4 @@ stow -v skhd -t ~/
 stow -v kitty -t ~/.config/kitty
 stow -v fish -t ~/.config
 stow -v emacs -t ~/.emacs.d
+stow -v lf -t ~/.config/lf
