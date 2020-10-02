@@ -166,7 +166,6 @@ nnoremap <leader>gc :GBranches<CR>
 nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
 
-
 " airline
 let g:airline_theme='solarized'
 let g:airline_solarized_bg='dark'
