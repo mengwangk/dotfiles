@@ -162,6 +162,10 @@ nnoremap <Space>w :update<CR>
 nnoremap <Space>q :q<CR>
 nnoremap <C-l> :nohl<CR>
 inoremap jk <Esc>
+nnoremap <leader>gc :GBranches<CR>
+nnoremap <Space>g :Gstatus<CR>
+nnoremap <Space>d :Gvdiffsplit<CR>
+
 
 " airline
 let g:airline_theme='solarized'
@@ -212,10 +216,6 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
 nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
-
-" fzf checkout
-nnoremap <leader>gc :GBranches<CR>
-nnoremap <Space>g :Gstatus<CR>
 
 " startify
 let g:startify_change_to_vcs_root = 1
