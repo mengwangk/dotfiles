@@ -292,6 +292,7 @@ let g:coc_global_extensions = [
       \ 'coc-tsserver',
       \ 'coc-json'
       \ ]
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " markdown
 autocmd BufRead *.org set ft=markdown
