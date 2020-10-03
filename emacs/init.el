@@ -49,17 +49,16 @@
 (doom-initialize)
 
 (doom! 
-       :editor
-       (evil +everywhere); come to the dark side, we have cookies
-       :lang
-       org
-       :emacs
-       dired             ; making dired pretty [functional]
-       (default +bindings +smartparens))
+  :editor
+  (evil +everywhere); come to the dark side, we have cookies
+  :lang
+  org
+  :emacs
+  dired             ; making dired pretty [functional]
+  (default +bindings +smartparens))
 
 ;; Relative number
-(setq-default display-line-numbers 'relative
-                    display-line-numbers-current-absolute t)
+(setq display-line-numbers-type 'relative)
 
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
@@ -68,4 +67,4 @@
 (global-set-key (kbd "C-x C-f") 'counsel-fzf)
 
 ;; Load Theme
-(load-theme 'tango-dark t)
+(load-theme 'doom-gruvbox t)
