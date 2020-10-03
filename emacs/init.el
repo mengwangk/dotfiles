@@ -64,5 +64,8 @@
 ;; magit
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; fzf
+(global-set-key (kbd "C-x C-f") 'counsel-fzf)
+
 ;; Load Theme
 (load-theme 'tango-dark t)
