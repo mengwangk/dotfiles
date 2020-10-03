@@ -1,49 +1,49 @@
-;; Set up package.el to work with MELPA
-(require 'package)
-(package-initialize)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+;;; init.el -*- lexical-binding: t; -*-
+;;
+;; Author:  Henrik Lissner <henrik@lissner.net>
+;; URL:     https://github.com/hlissner/doom-emacs
+;;
+;;   =================     ===============     ===============   ========  ========
+;;   \\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //
+;;   ||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||
+;;   || . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||
+;;   ||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||
+;;   || . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||
+;;   ||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||
+;;   || . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||
+;;   ||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||
+;;   ||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||
+;;   ||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||
+;;   ||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||
+;;   ||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||
+;;   ||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||
+;;   ||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||
+;;   ||.=='    _-'                                                     `' |  /==.||
+;;   =='    _-'                                                            \/   `==
+;;   \   _-'                                                                `-_   /
+;;    `''                                                                      ``'
+;;
+;; These demons are not part of GNU Emacs.
+;;
+;;; License: MIT
 
-;; Load Theme
-(load-theme 'tango-dark t)
+;; A big contributor to startup times is garbage collection. We up the gc
+;; threshold to temporarily prevent it from running, then reset it later by
+;; enabling `gcmh-mode'. Not resetting it will cause stuttering/freezes.
+(setq gc-cons-threshold most-positive-fixnum)
 
-;; Required by flycheck
-(unless (package-installed-p 'exec-path-from-shell)
-    (package-install 'exec-path-from-shell))
+;; In noninteractive sessions, prioritize non-byte-compiled source files to
+;; prevent the use of stale byte-code. Otherwise, it saves us a little IO time
+;; to skip the mtime checks on every *.elc file.
+(setq load-prefer-newer noninteractive)
 
-;; Full screen
-; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(let (file-name-handler-alist)
+  ;; Ensure Doom is running out of this file's directory
+  (setq user-emacs-directory (file-name-directory load-file-name)))
 
-;; Disable the splash screen (to enable it agin, replace the t with 0)
-; (setq inhibit-splash-screen t)
+;; Load the heart of Doom Emacs
+(load (concat user-emacs-directory "core/core")
+      nil 'nomessage)
 
-;; Relative number
-(setq-default display-line-numbers 'relative
-      display-line-numbers-current-absolute t)
-
-;; evil
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
-
-;; Enable Evil
-(require 'evil)
-(evil-mode 1)
-
-;; Enable org mode
-(require 'org)
-
-;; flycheck
-(unless (package-installed-p 'flycheck)
-    (package-install 'flycheck))
-(global-flycheck-mode)
-
-;; magit
-(unless (package-installed-p 'magit)
-  (package-install 'magit))
-(global-set-key (kbd "C-x g") 'magit-status)
-
-
-; (setq inhibit-splash-screen t
-;       initial-scratch-message nil
-;       initial-major-mode 'org-mode)
-(setq initial-major-mode 'org-mode)
+;; And let 'er rip!
+(doom-initialize)

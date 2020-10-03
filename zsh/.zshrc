@@ -114,6 +114,9 @@ export PATH=$PATH:$FLUTTER_HOME/bin
 RUST_HOME=$HOME/.cargo
 export PATH=$PATH:$RUST_HOME/bin
 
+# Doom emacs
+export PATH=$PATH:~/.emacs.d/bin
+
 set -o vi
 bindkey -v
 
