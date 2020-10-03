@@ -47,3 +47,22 @@
 
 ;; And let 'er rip!
 (doom-initialize)
+
+(doom! 
+       :editor
+       (evil +everywhere); come to the dark side, we have cookies
+       :lang
+       org
+       :emacs
+       dired             ; making dired pretty [functional]
+       (default +bindings +smartparens))
+
+;; Relative number
+(setq-default display-line-numbers 'relative
+                    display-line-numbers-current-absolute t)
+
+;; magit
+(global-set-key (kbd "C-x g") 'magit-status)
+
+;; Load Theme
+(load-theme 'tango-dark t)
