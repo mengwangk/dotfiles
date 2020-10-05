@@ -153,7 +153,7 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 " terminal
 if has('nvim')
-  tnoremap <Esc> <C-\><C-n>
+  " tnoremap <Esc> <C-\><C-n>
   tnoremap <C-w>h <C-\><C-n><C-w>h
   tnoremap <C-w>j <C-\><C-n><C-w>j
   tnoremap <C-w>k <C-\><C-n><C-w>k
