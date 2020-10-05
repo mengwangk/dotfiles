@@ -166,6 +166,12 @@ inoremap jk <Esc>
 nnoremap <leader>gc :GBranches<CR>
 nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
+nnoremap <C-c-j> :m .+1<CR>==
+nnoremap <C-c-k> :m .-2<CR>==
+inoremap <C-c-j> <Esc>:m .+1<CR>==gi
+inoremap <C-c-k> <Esc>:m .-2<CR>==gi
+vnoremap <C-c-j> :m '>+1<CR>gv=gv
+vnoremap <C-c-k> :m '<-2<CR>gv=gv
 
 " airline
 let g:airline_theme='solarized'
