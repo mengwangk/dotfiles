@@ -172,6 +172,8 @@ inoremap <C-c-j> <Esc>:m .+1<CR>==gi
 inoremap <C-c-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-c-j> :m '>+1<CR>gv=gv
 vnoremap <C-c-k> :m '<-2<CR>gv=gv
+vnoremap X "_d
+vnoremap p "_dP
 
 " airline
 let g:airline_theme='solarized'

@@ -14,5 +14,17 @@ Plug 'junegunn/fzf.vim'
 
 Plug 'sheerun/vim-polyglot'
 
+" Neovim lsp Plugins
+Plug 'neovim/nvim-lspconfig'
+Plug 'nvim-lua/completion-nvim'
+Plug 'tjdevries/nlua.nvim'
+Plug 'tjdevries/lsp_extensions.nvim'
+
+Plug 'sainnhe/gruvbox-material'
+
 call plug#end()
+
+set nu rnu
+vnoremap p "_dP
+nnoremap <leader>v :e ~/.config/nvim/init.exp.vim<CR>
 
