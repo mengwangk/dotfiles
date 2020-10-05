@@ -10,6 +10,7 @@
   "terminal.external.linuxExec": "iterm",
   "terminal.external.osxExec": "iTerm.app",
   "git.autofetch": true,
+  "files.autoGuessEncoding":true,
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "go.formatTool": "goimports",
@@ -20,7 +21,7 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "[yaml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }, 
+  },
   "[html]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -74,5 +75,10 @@
     "editor.suggestSelection": "first",
     "editor.tabCompletion": "onlySnippets",
     "editor.wordBasedSuggestions": false
-  }
+  },
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "python.languageServer": "Microsoft",
+  "python.pythonPath": "/Users/mengwangk/miniconda3/bin/python",
+  "terminal.integrated.inheritEnv": false
 }
