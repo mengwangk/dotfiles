@@ -174,6 +174,8 @@ vnoremap <C-c-j> :m '>+1<CR>gv=gv
 vnoremap <C-c-k> :m '<-2<CR>gv=gv
 vnoremap X "_d
 vnoremap p "_dP
+autocmd BufWritePre * %s/\s\+$//e
+" autocmd InsertEnter * norm zz
 
 " airline
 let g:airline_theme='solarized'
