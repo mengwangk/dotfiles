@@ -46,6 +46,7 @@ set cmdheight=2
 set updatetime=50
 vnoremap p "_dP
 nnoremap <leader>v :e ~/.config/nvim/init.exp.vim<CR>
+" nnoremap <A-g> :GFiles<CR>
 
 " colors
 colorscheme gruvbox-material
