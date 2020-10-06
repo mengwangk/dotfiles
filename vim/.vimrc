@@ -180,7 +180,7 @@ vnoremap <C-c-j> :m '>+1<CR>gv=gv
 vnoremap <C-c-k> :m '<-2<CR>gv=gv
 vnoremap X "_d
 vnoremap p "_dP
-autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritePre * :call TrimWhitespace()
 " autocmd InsertEnter * norm zz
 
 " airline
@@ -231,7 +231,7 @@ highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=und
 " fzf
 let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
 let $FZF_DEFAULT_OPTS='--reverse'
-nnoremap <silent><nowait> <space>f  :<C-u>Files<cr>
+nnoremap <silent><nowait> <space>f  :Files<cr>
 
 " startify
 let g:startify_change_to_vcs_root = 1
