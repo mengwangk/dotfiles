@@ -94,6 +94,12 @@ function! SourceIfExists(file)
   endif
 endfunction
 
+fun! TrimWhitespace()
+    let l:save = winsaveview()
+    keeppatterns %s/\s\+$//e
+    call winrestview(l:save)
+endfun
+
 syntax enable
 filetype plugin indent on
 
