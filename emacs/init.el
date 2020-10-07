@@ -48,7 +48,7 @@
 ;; And let 'er rip!
 (doom-initialize)
 
-(doom! 
+(doom!
   :editor
   (evil +everywhere); come to the dark side, we have cookies
   :lang
@@ -68,3 +68,6 @@
 
 ;; Load Theme
 (load-theme 'doom-gruvbox t)
+
+;; Org mode by default
+(setq-default major-mode 'org-mode)
