@@ -53,7 +53,7 @@ colorscheme gruvbox-material
 set background=dark
 
 " telescope
-nnoremap <Space>f <cmd>lua require'telescope.builtin'.find_files{}<CR>
+nnoremap <Space>f <cmd>lua require'telescope.builtin'.find_files{ find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" } }<CR>
 
 " todo
 nmap <C-S> <Plug>BujoAddnormal
