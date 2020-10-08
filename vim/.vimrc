@@ -62,6 +62,7 @@ Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-rooter'
 
+" Plug 'justinmk/vim-sneak'
 " Plug 'junegunn/goyo.vim'
 " Plug 'junegunn/limelight.vim'
 " Plug 'lervag/vimtex'

@@ -32,6 +32,8 @@ Plug 'sainnhe/gruvbox-material'
 " todo
 Plug 'vuciv/vim-bujo'
 
+Plug 'justinmk/vim-sneak'
+
 call plug#end()
 
 " terminal
