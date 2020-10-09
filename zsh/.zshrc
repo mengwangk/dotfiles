@@ -117,6 +117,7 @@ export PATH=$PATH:$RUST_HOME/bin
 # Doom emacs
 export PATH=$PATH:~/.emacs.d/bin
 
+# vim bindings
 set -o vi
 bindkey -v
 
@@ -128,6 +129,7 @@ export FZF_DEFAULT_COMMAND='fd --type f -L --hidden --exclude .git'
 # To apply the command to CTRL-T as well
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# Useful aliases
 alias vim='/usr/local/bin/nvim -c "let g:tty='\''$(tty)'\''"'
 alias nvim='/usr/local/bin/nvim -u ~/.config/nvim/init.exp.vim'
 alias vf='/usr/local/bin/nvim $(fzf)'
