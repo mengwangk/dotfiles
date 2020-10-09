@@ -15,6 +15,7 @@ Plug 'junegunn/fzf.vim'
 " programming
 Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
+Plug 'ludovicchabant/vim-gutentags'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
