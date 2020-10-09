@@ -14,6 +14,7 @@ Plug 'junegunn/fzf.vim'
 
 " programming
 Plug 'sheerun/vim-polyglot'
+Plug 'mhinz/vim-signify'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
@@ -32,6 +33,7 @@ Plug 'sainnhe/gruvbox-material'
 " todo
 Plug 'vuciv/vim-bujo'
 
+" motion
 Plug 'justinmk/vim-sneak'
 
 call plug#end()
