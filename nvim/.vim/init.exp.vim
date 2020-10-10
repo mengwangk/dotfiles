@@ -30,6 +30,7 @@ Plug 'nvim-lua/telescope.nvim'
 
 " colors
 Plug 'sainnhe/gruvbox-material'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " todo
 Plug 'vuciv/vim-bujo'
