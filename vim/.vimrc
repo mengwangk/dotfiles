@@ -30,6 +30,7 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 Plug 'vim-test/vim-test'
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
@@ -281,8 +282,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " python-mode
-" let g:pymode_options_colorcolumn = 0
-" let g:pymode_lint_cwindow = 0
+let g:pymode_options_colorcolumn = 0
+let g:pymode_lint_cwindow = 0
 
 " ctrsf
 nmap     <C-F>f <Plug>CtrlSFPrompt
@@ -318,12 +319,10 @@ autocmd BufRead *.org set ft=markdown
 
 " languages
 call SourceIfExists("~/.vim/go.vim")
-call SourceIfExists("~/.vim/python.vim")
 call SourceIfExists("~/.vim/rust.vim")
+" call SourceIfExists("~/.vim/python.vim")
 " call SourceIfExists("~/.vim/slide.vim")
 " call SourceIfExists("~/.vim/java.vim")
 
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
 autocmd Filetype gitcommit setlocal spell textwidth=72
-
-" Osc52Yank?
