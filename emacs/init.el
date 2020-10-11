@@ -47,27 +47,3 @@
 
 ;; And let 'er rip!
 (doom-initialize)
-
-(doom!
-  :editor
-  (evil +everywhere); come to the dark side, we have cookies
-  :lang
-  org
-  :emacs
-  dired             ; making dired pretty [functional]
-  (default +bindings +smartparens))
-
-;; Relative number
-(setq display-line-numbers-type 'relative)
-
-;; magit
-(global-set-key (kbd "C-x g") 'magit-status)
-
-;; fzf
-(global-set-key (kbd "C-x C-f") 'counsel-fzf)
-
-;; Load Theme
-(load-theme 'doom-gruvbox t)
-
-;; Org mode by default
-(setq-default major-mode 'org-mode)
