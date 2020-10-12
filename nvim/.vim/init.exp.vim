@@ -21,6 +21,7 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'nvim-lua/diagnostic-nvim'
 Plug 'tjdevries/nlua.nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
 
@@ -72,12 +73,23 @@ let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
 "lsp
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua require'nvim_lsp'.gopls.setup{ on_attach=require'completion'.on_attach }
-lua require'nvim_lsp'.pyls.setup{ on_attach=require'completion'.on_attach }
 autocmd BufEnter * lua require'completion'.on_attach()
 let g:completion_enable_snippet = 'UltiSnips'
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>
+lua << EOF
+local on_attach_vim = function(client)
+  require'completion'.on_attach(client)
+  require'diagnostic'.on_attach(client)
+end
+require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
+EOF
+
+let g:diagnostic_enable_virtual_text = 1
+let g:diagnostic_enable_underline = 0
+let g:diagnostic_auto_popup_while_jump = 1
+let g:diagnostic_insert_delay = 1
 
 " polyglot
 "let g:go_highlight_build_constraints = 1
