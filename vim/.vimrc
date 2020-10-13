@@ -109,7 +109,7 @@ filetype plugin indent on
 
 set encoding=utf-8
 set visualbell
-set clipboard=unnamed
+set clipboard=unnamed,unnamedplus
 set relativenumber
 set number
 set number relativenumber
