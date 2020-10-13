@@ -178,14 +178,31 @@ nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
 nnoremap <C-c-j> :m .+1<CR>==
 nnoremap <C-c-k> :m .-2<CR>==
-inoremap <C-c-j> <Esc>:m .+1<CR>==gi
-inoremap <C-c-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-c-j> :m '>+1<CR>gv=gv
 vnoremap <C-c-k> :m '<-2<CR>gv=gv
+vmap < <gv
+vmap > >gv
 vnoremap X "_d
 vnoremap p "_dP
 autocmd BufWritePre * :call TrimWhitespace()
-" autocmd InsertEnter * norm zz
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+cnoreabbrev W! w!
+cnoreabbrev Q! q!
+cnoreabbrev Qall! qall!
+cnoreabbrev Wq wq
+cnoreabbrev Wa wa
+cnoreabbrev wQ wq
+cnoreabbrev WQ wq
+cnoreabbrev W w
+cnoreabbrev Q q
+cnoreabbrev Qall qall
+
+" https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
+autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" ------- plugins config -------------------------------
 
 " airline
 let g:airline_theme='solarized'
@@ -323,6 +340,3 @@ call SourceIfExists("~/.vim/rust.vim")
 " call SourceIfExists("~/.vim/python.vim")
 " call SourceIfExists("~/.vim/slide.vim")
 " call SourceIfExists("~/.vim/java.vim")
-
-" https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
-autocmd Filetype gitcommit setlocal spell textwidth=72
