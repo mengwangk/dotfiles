@@ -46,6 +46,7 @@ Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'Raimondi/delimitMate'
+Plug 'Yggdroot/indentLine'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
@@ -172,6 +173,12 @@ let g:diagnostic_insert_delay = 1
 
 " tagbar
 nnoremap <silent> <C-K><C-T> :TagbarToggle<CR>
+
+" IndentLine
+let g:indentLine_enabled = 1
+let g:indentLine_concealcursor = 0
+let g:indentLine_char = '┆'
+let g:indentLine_faster = 1
 
 " polyglot
 "let g:go_highlight_build_constraints = 1
