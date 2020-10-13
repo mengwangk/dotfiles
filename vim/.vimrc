@@ -176,10 +176,6 @@ inoremap jk <Esc>
 nnoremap <leader>gc :GBranches<CR>
 nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
-nnoremap <C-c-j> :m .+1<CR>==
-nnoremap <C-c-k> :m .-2<CR>==
-vnoremap <C-c-j> :m '>+1<CR>gv=gv
-vnoremap <C-c-k> :m '<-2<CR>gv=gv
 vmap < <gv
 vmap > >gv
 vnoremap X "_d

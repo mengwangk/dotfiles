@@ -1,6 +1,33 @@
 set runtimepath^=~/.nvim runtimepath+=~/.nvim/after
 let &packpath = &runtimepath
 
+"---- vim-plug setup  ----
+if has('nvim')
+  let vimplug_exists=expand('~/.config/nvim/autoload/plug.vim')
+else
+  let vimplug_exists=expand('~/.vim/autoload/plug.vim')
+endif
+
+if has('win32')&&!has('win64')
+  let curl_exists=expand('C:\Windows\Sysnative\curl.exe')
+else
+  let curl_exists=expand('curl')
+endif
+
+if !filereadable(vimplug_exists)
+  if !executable(curl_exists)
+    echoerr "You have to install curl or first install vim-plug yourself!"
+    execute "q!"
+  endif
+  echo "Installing Vim-Plug..."
+  echo ""
+  silent exec "!"curl_exists" -fLo " . shellescape(vimplug_exists) . " --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim"
+  let g:not_finish_vimplug = "yes"
+
+  autocmd VimEnter * PlugInstall
+endif
+"-------- end vim-plug setup ----
+
 set nocompatible
 
 call plug#begin('~/.nvim/plugged')
@@ -17,6 +44,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'majutsushi/tagbar'
+Plug 'Raimondi/delimitMate'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
@@ -70,7 +99,7 @@ nmap <C-Q> <Plug>BujoChecknormal
 imap <C-Q> <Plug>BujoCheckinsert
 let g:bujo#todo_file_path = $HOME . "/.cache/bujo"
 
-"lsp
+" lsp
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 lua require'nvim_lsp'.gopls.setup{ on_attach=require'completion'.on_attach }
 autocmd BufEnter * lua require'completion'.on_attach()
@@ -86,10 +115,14 @@ end
 require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
 EOF
 
+" diagnostic
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_enable_underline = 0
 let g:diagnostic_auto_popup_while_jump = 1
 let g:diagnostic_insert_delay = 1
+
+" tagbar
+nnoremap <silent> <C-K><C-T> :TagbarToggle<CR>
 
 " polyglot
 "let g:go_highlight_build_constraints = 1
