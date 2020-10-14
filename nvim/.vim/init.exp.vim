@@ -34,12 +34,12 @@ call plug#begin('~/.nvim/plugged')
 
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
-Plug 'tpope/vim-fugitive'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " programming
+Plug 'lambdalisue/gina.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'mhinz/vim-signify'
 Plug 'ludovicchabant/vim-gutentags'
