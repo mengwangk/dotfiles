@@ -134,7 +134,7 @@ set undodir=~/.vimdid
 
 " utf-8 settings
 set fileencoding=utf-8
-set fileencodings=ucs-bom,utf8,prc
+set fileencodings=utf-8
 set guifont=Monaco:h11
 set guifontwide=NSimsun:h12
 
@@ -189,6 +189,9 @@ vnoremap p "_dP
 autocmd BufWritePre * :call TrimWhitespace()
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+nnoremap <silent> <S-t> :tabnew<CR>
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
