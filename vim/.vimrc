@@ -132,6 +132,12 @@ set mouse=a
 set undofile
 set undodir=~/.vimdid
 
+" utf-8 settings
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,prc
+set guifont=Monaco:h11
+set guifontwide=NSimsun:h12
+
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim
 set path+=**
 set wildignore+=**/node_modules/**
