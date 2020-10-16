@@ -47,6 +47,8 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'majutsushi/tagbar'
 Plug 'Raimondi/delimitMate'
 Plug 'Yggdroot/indentLine'
+Plug 'severin-lemaignan/vim-minimap'
+Plug 'kshenoy/vim-signature'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
