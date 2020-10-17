@@ -195,10 +195,14 @@ nnoremap <silent> <M-left> <C-w>>
 nnoremap <silent> <M-right> <C-w><
 nnoremap <silent> <M-up> <C-w>+
 nnoremap <silent> <M-down> <C-w>-
-nnoremap <silent> <M-s> :split<CR>
-nnoremap <silent> <M-v> :vsplit<CR>
-nnoremap <silent> <M-n> <C-w><C-w>
-nnoremap <silent> <M-p> <C-w><S-w>
+nnoremap <silent> <S-left> :wincmd h<CR>
+nnoremap <silent> <S-right> :wincmd l<CR>
+nnoremap <silent> <S-up> :wincmd k<CR>
+nnoremap <silent> <S-down> :wincmd j<CR>
+" nnoremap <silent> <M-s> :split<CR>
+" nnoremap <silent> <M-v> :vsplit<CR>
+" nnoremap <silent> <M-n> <C-w><C-w>
+" nnoremap <silent> <M-p> <C-w><S-w>
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
