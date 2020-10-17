@@ -133,6 +133,12 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vim='/usr/local/bin/nvim -c "let g:tty='\''$(tty)'\''"'
 alias nvim='/usr/local/bin/nvim -u ~/.config/nvim/init.exp.vim'
 alias vf='/usr/local/bin/nvim $(fzf)'
+alias ls='exa'
+alias cat='bat'
+alias ps='procs'
+alias grep='rg'
+alias find='fd'
+alias du='dust'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
