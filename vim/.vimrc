@@ -191,10 +191,14 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
-nnoremap <M-left> <C-w>>
-nnoremap <M-right> <C-w><
-nnoremap <M-up> <C-w>-
-nnoremap <M-down> <C-w>+
+nnoremap <silent> <M-left> <C-w>>
+nnoremap <silent> <M-right> <C-w><
+nnoremap <silent> <M-up> <C-w>+
+nnoremap <silent> <M-down> <C-w>-
+nnoremap <silent> <M-s> :split<CR>
+nnoremap <silent> <M-v> :vsplit<CR>
+nnoremap <silent> <M-n> <C-w><C-w>
+nnoremap <silent> <M-p> <C-w><S-w>
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
