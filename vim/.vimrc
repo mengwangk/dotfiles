@@ -195,6 +195,12 @@ nnoremap <silent> <M-left> <C-w>>
 nnoremap <silent> <M-right> <C-w><
 nnoremap <silent> <M-up> <C-w>+
 nnoremap <silent> <M-down> <C-w>-
+nnoremap <silent> <M-h> :wincmd h<CR>
+nnoremap <silent> <M-l> :wincmd l<CR>
+nnoremap <silent> <M-k> :wincmd k<CR>
+nnoremap <silent> <M-j> :wincmd j<CR>
+nnoremap <silent> <M-s> :split<CR>
+nnoremap <silent> <M-v> :vsplit<CR>
 nnoremap <silent> ,h :wincmd h<CR>
 nnoremap <silent> ,l :wincmd l<CR>
 nnoremap <silent> ,k :wincmd k<CR>
