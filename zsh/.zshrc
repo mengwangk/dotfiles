@@ -118,6 +118,7 @@ export PATH=$PATH:$RUST_HOME/bin
 export PATH=$PATH:~/.emacs.d/bin
 
 # vim bindings
+export EDITOR='nvim'
 set -o vi
 bindkey -v
 

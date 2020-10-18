@@ -1,0 +1,53 @@
+# vim mode
+set-window-option -g mode-keys vi
+
+set-option -sg escape-time 10
+
+# terminal colors
+setw -g xterm-keys on
+set -g default-terminal "screen-256color"
+set-option -sa terminal-overrides ',xterm-256color:RGB'
+
+# shortcut to source the .tmux.conf file
+bind R source-file ~/.tmux.conf \; display "~/.tmux.conf reloaded"
+
+# use vim bindings
+bind k select-pane -U
+bind j select-pane -D
+bind h select-pane -L
+bind l select-pane -R
+
+# sane window split defaults
+bind | split-window -h
+bind - split-window -v
+
+# automatically set window titles so you know what's going on
+set-window-option -g automatic-rename on
+set-option -g set-titles on
+
+# synchronize panes - send the same commands to all the open panes
+# use <prefix> Shift-e to enable/disable
+bind E setw synchronize-panes
+
+# enable mouse interaction possible
+setw -g mouse on
+
+# tmux autoread
+set-option -g focus-events on
+
+# enable UTF-8 support in status bar
+set -gq status-utf8 on
+
+# highlight current window
+setw -g window-status-style fg=cyan,bg=colour235
+setw -g window-status-current-style fg=white,bold,bg=red
+
+# set color of active pane
+set -g pane-border-style fg=colour240,bg=black
+set -g pane-active-border-style fg=green,bg=black
+
+
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+
+run '~/.tmux/plugins/tpm/tpm'
