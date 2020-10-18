@@ -72,4 +72,10 @@ cursor:
 
 key_bindings:
   - { key: N, mods: Control, action: SpawnNewInstance }
-
+  - { key: J, mods: Alt,     chars: "\x1bj" }
+  - { key: K, mods: Alt,     chars: "\x1bk" }
+  - { key: H, mods: Alt,     chars: "\x1bh" }
+  - { key: L, mods: Alt,     chars: "\x1bl" }
+  - { key: X, mods: Alt,     chars: "\x1bx" }
+  - { key: V, mods: Alt,     chars: "\x1bv" }
+  - { key: S, mods: Alt,     chars: "\x1bs" }
