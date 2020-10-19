@@ -65,6 +65,8 @@ Plug 'tjdevries/lsp_extensions.nvim'
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
+Plug 'liuchengxu/vim-clap'
+Plug 'liuchengxu/vim-which-key'
 
 " colors
 Plug 'sainnhe/gruvbox-material'
