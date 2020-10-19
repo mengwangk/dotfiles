@@ -207,6 +207,9 @@ nnoremap <silent> ,k :wincmd k<CR>
 nnoremap <silent> ,j :wincmd j<CR>
 nnoremap <silent> ,s :split<CR>
 nnoremap <silent> ,v :vsplit<CR>
+nnoremap <silent> ,n :bn<CR>
+nnoremap <silent> ,p :bp<CR>
+nnoremap <silent> ,d :bd<CR>
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
