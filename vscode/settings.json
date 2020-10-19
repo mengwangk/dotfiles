@@ -85,7 +85,6 @@
   "vscode-neovim.neovimInitVimPaths.darwin": "~/.vimrc",
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vscode-neovim.highlightGroups.highlights": {
-  
     "Directory": "vim",
     "IncSearch": {
       "backgroundColor": "theme.editor.findMatchBackground",
