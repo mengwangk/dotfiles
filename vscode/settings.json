@@ -11,7 +11,7 @@
   "terminal.external.osxExec": "iTerm.app",
   "git.autofetch": true,
   "files.autoGuessEncoding":true,
-  "editor.minimap.enabled": false,
+  "editor.minimap.enabled": true,
   "breadcrumbs.enabled": false,
   "go.formatTool": "goimports",
   "go.useLanguageServer": true,
@@ -82,7 +82,7 @@
   "python.pythonPath": "/Users/mengwangk/miniconda3/bin/python",
   "terminal.integrated.inheritEnv": false,
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
-  "vscode-neovim.neovimInitVimPaths.darwin": "~/config/nvim/init.vim",
+  "vscode-neovim.neovimInitVimPaths.darwin": "~/.vimrc",
   "vim.neovimPath": "/usr/local/bin/nvim",
   "vscode-neovim.highlightGroups.highlights": {
   
@@ -100,5 +100,7 @@
     },
     "Conceal": "vim",
     "Substitute": "vim"
-  }
+  },
+  "vscode-neovim.neovimExecutablePaths.darwin": "/usr/local/bin/nvim",
+  "oneDarkPro.editorTheme": "oneDarkPro"
 }
