@@ -11,7 +11,7 @@
     "python.jediEnabled": false,
     "python.formatting.provider": "black",
     "coc.preferences.formatOnType": true,
-    "coc.preferences.formatOnSaveFiletypes": ["python"],
+    "coc.preferences.formatOnSaveFiletypes": ["python", "go", "rust"],
     "explorer.previewAction.onHover": false,
     "explorer.icon.enableNerdfont": true,
     "explorer.keyMappings": {
