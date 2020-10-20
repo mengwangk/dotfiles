@@ -35,8 +35,21 @@ call plug#begin('~/.nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
+Plug 'Shougo/deol.nvim'
+Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
+if has('nvim')
+  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/denite.nvim'
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'Shougo/defx.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'deoplete-plugins/deoplete-jedi'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 
 " programming
 Plug 'lambdalisue/gina.vim'
@@ -53,6 +66,9 @@ Plug 'vim-utils/vim-man'
 Plug 'vim-pandoc/vim-pandoc'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'mattn/emmet-vim'
+Plug 'cohama/lexima.vim'
+Plug 't9md/vim-choosewin'
+Plug 'AndrewRadev/splitjoin'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
@@ -67,14 +83,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-lua/telescope.nvim'
 Plug 'liuchengxu/vim-clap'
 Plug 'liuchengxu/vim-which-key'
-
-if has('nvim')
-  Plug 'Shougo/denite.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/denite.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
 
 " colors
 Plug 'sainnhe/gruvbox-material'
@@ -181,6 +189,9 @@ end
 require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
 EOF
 
+" deoplete
+let g:deoplete#enable_at_startup = 1
+
 " diagnostic
 let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_enable_underline = 0
@@ -219,6 +230,9 @@ function! s:denite_my_settings() abort
   nnoremap <silent><buffer><expr> <Space>
   \ denite#do_map('toggle_select').'j'
 endfunction
+
+" choosewin
+nmap  -  <Plug>(choosewin)
 
 " polyglot
 "let g:go_highlight_build_constraints = 1

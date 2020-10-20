@@ -157,3 +157,4 @@ unset __conda_setup
 # <<< conda initialize <<<
 
 source /Users/mengwangk/.config/broot/launcher/bash/br
+export PATH="/Users/mengwangk/miniconda3/bin:$PATH"
