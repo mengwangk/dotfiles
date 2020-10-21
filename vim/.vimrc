@@ -180,6 +180,7 @@ nnoremap <Space>q :q<CR>
 nnoremap <C-l> :nohl<CR>
 inoremap jk <Esc>
 nnoremap <leader>gc :GBranches<CR>
+nnoremap <leader>s :CocSearch <C-R><C-W><CR>
 nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
 vmap < <gv

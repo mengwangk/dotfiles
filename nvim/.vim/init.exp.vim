@@ -68,7 +68,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'mattn/emmet-vim'
 Plug 'cohama/lexima.vim'
 Plug 't9md/vim-choosewin'
-Plug 'AndrewRadev/splitjoin'
+Plug 'AndrewRadev/splitjoin.vim'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'

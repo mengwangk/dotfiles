@@ -131,6 +131,7 @@ export FZF_DEFAULT_COMMAND='fd --type f -L --hidden --exclude .git'
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # Useful aliases
+alias vi='/usr/local/bin/nvim -c "let g:tty='\''$(tty)'\''"'
 alias vim='/usr/local/bin/nvim -c "let g:tty='\''$(tty)'\''"'
 alias nvim='/usr/local/bin/nvim -u ~/.config/nvim/init.exp.vim'
 alias vf='/usr/local/bin/nvim $(fzf)'
