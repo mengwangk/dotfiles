@@ -71,7 +71,7 @@ cursor:
   unfocused_hollow: true
 
 key_bindings:
-  - { key: T, mods: Control, action: SpawnNewInstance }
+  - { key: T, mods: Alt,     action: SpawnNewInstance }
   - { key: A, mods: Alt,     chars: "\x1ba" }
   - { key: J, mods: Alt,     chars: "\x1bj" }
   - { key: K, mods: Alt,     chars: "\x1bk" }
