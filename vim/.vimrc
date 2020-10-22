@@ -50,6 +50,7 @@ Plug 'unblevable/quick-scope'
 Plug 'easymotion/vim-easymotion'
 Plug 'dyng/ctrlsf.vim'
 Plug 'voldikss/vim-floaterm'
+Plug 't9md/vim-choosewin'
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
@@ -335,6 +336,9 @@ nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
+" choosewin
+nmap  -  <Plug>(choosewin)
 
 " coc.nvim
 call SourceIfExists("~/.vim/coc.vim")
