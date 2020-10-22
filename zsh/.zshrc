@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git autojump tmux zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git vi-mode autojump tmux zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -119,8 +119,8 @@ export PATH=$PATH:~/.emacs.d/bin
 
 # vim bindings
 export EDITOR='nvim'
-set -o vi
-bindkey -v
+# set -o vi
+# bindkey -v
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

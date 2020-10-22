@@ -90,15 +90,20 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " todo
 Plug 'vuciv/vim-bujo'
+Plug 'takac/vim-hardtime'
 
 " motion
-Plug 'justinmk/vim-sneak'
+" Plug 'justinmk/vim-sneak'
 
 " themes
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+let g:hardtime_default_on = 1
+"let g:hardtime_timeout = 5000
+"let g:hardtime_showmsg = 1
 
 " terminal
 set nu rnu
