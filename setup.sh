@@ -19,3 +19,5 @@ stow -v emacs -t ~/.emacs.d
 stow -v lf -t ~/.config/lf
 stow -v vifm -t ~/.config/vifm
 stow -v doom -t ~/.doom.d
+stow -v karabiner -t ~/.config
+stow -v hammerspoon -t ~/.hammerspoon
