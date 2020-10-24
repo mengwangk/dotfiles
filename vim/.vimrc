@@ -327,6 +327,7 @@ let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 " easy-align
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
+let g:easy_align_ignore_groups = []
 
 " python-mode
 let g:pymode_options_colorcolumn = 0
@@ -370,6 +371,6 @@ autocmd BufRead *.org set ft=markdown
 " languages
 call SourceIfExists("~/.vim/go.vim")
 call SourceIfExists("~/.vim/rust.vim")
-" call SourceIfExists("~/.vim/python.vim")
+call SourceIfExists("~/.vim/python.vim")
 " call SourceIfExists("~/.vim/slide.vim")
 " call SourceIfExists("~/.vim/java.vim")
