@@ -212,6 +212,11 @@ nnoremap <silent> ,v :vsplit<CR>
 nnoremap <silent> ,n :bn<CR>
 nnoremap <silent> ,p :bp<CR>
 nnoremap <silent> ,d :bd<CR>
+if has('nvim')
+  nnoremap <silent> ,t :15sp +term<CR>a
+else
+  nnoremap <silent> ,t :term ++rows=15<CR>
+endif
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
