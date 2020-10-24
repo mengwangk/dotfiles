@@ -135,9 +135,6 @@ set undodir=~/.vimdid
 
 " utf-8 settings
 set fileencoding=utf-8
-set fileencodings=utf-8
-set guifont=Monaco:h11
-set guifontwide=NSimsun:h12
 
 " https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim
 set path+=**
@@ -217,6 +214,7 @@ if has('nvim')
 else
   nnoremap <silent> ,t :term ++rows=15<CR>
 endif
+cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
