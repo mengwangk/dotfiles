@@ -6,7 +6,7 @@
   "window.zoomLevel": 1,
   "latex-workshop.view.pdf.viewer": "tab",
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "Gray Matter Dark",
   "terminal.external.linuxExec": "iterm",
   "terminal.external.osxExec": "iTerm.app",
   "git.autofetch": true,
