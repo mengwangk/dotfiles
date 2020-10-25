@@ -198,6 +198,7 @@ local on_attach_vim = function(client)
 end
 require'nvim_lsp'.pyls.setup{on_attach=on_attach_vim}
 EOF
+autocmd BufEnter,BufWinEnter,TabEnter *.go :lua require'lsp_extensions'.inlay_hints{}
 
 " deoplete
 let g:deoplete#enable_at_startup = 1

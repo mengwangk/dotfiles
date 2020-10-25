@@ -63,8 +63,16 @@ Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
-Plug 'machakann/vim-highlightedyank'
 Plug 'airblade/vim-rooter'
+
+if has('nvim')
+  augroup highlight_yank
+    autocmd!
+    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+  augroup END
+else
+  Plug 'machakann/vim-highlightedyank'
+endif
 
 " Plug 'justinmk/vim-sneak'
 " Plug 'junegunn/goyo.vim'
