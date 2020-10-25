@@ -90,7 +90,7 @@ Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " todo
 Plug 'vuciv/vim-bujo'
-Plug 'takac/vim-hardtime'
+"Plug 'takac/vim-hardtime'
 
 " motion
 " Plug 'justinmk/vim-sneak'
@@ -118,6 +118,11 @@ set updatetime=50
 vnoremap p "_dP
 nnoremap <leader>v :e ~/.config/nvim/init.exp.vim<CR>
 nnoremap <A-g> :GFiles<CR>
+
+augroup highlight_yank
+  autocmd!
+  autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
+augroup END
 
 " colors
 colorscheme gruvbox-material
