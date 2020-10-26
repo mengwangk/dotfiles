@@ -176,14 +176,13 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 " terminal
 if has('nvim')
   " tnoremap <Esc> <C-\><C-n>
-  tnoremap <C-w>h <C-\><C-n><C-w>h
-  tnoremap <C-w>j <C-\><C-n><C-w>j
-  tnoremap <C-w>k <C-\><C-n><C-w>k
-  tnoremap <C-w>l <C-\><C-n><C-w>l
+  tnoremap <C-h> <C-\><C-n><C-w>h
+  tnoremap <C-j> <C-\><C-n><C-w>j
+  tnoremap <C-k> <C-\><C-n><C-w>k
+  tnoremap <C-l> <C-\><C-n><C-w>l
 endif
 nnoremap <Space>w :update<CR>
 nnoremap <Space>q :q<CR>
-nnoremap <C-l> :nohl<CR>
 inoremap jk <Esc>
 nnoremap <leader>gc :GBranches<CR>
 nnoremap <leader>s :CocSearch <C-R><C-W><CR>
@@ -202,12 +201,6 @@ nnoremap <silent> <M-left> <C-w>>
 nnoremap <silent> <M-right> <C-w><
 nnoremap <silent> <M-up> <C-w>+
 nnoremap <silent> <M-down> <C-w>-
-nnoremap <silent> <M-h> :wincmd h<CR>
-nnoremap <silent> <M-l> :wincmd l<CR>
-nnoremap <silent> <M-k> :wincmd k<CR>
-nnoremap <silent> <M-j> :wincmd j<CR>
-nnoremap <silent> <M-s> :split<CR>
-nnoremap <silent> <M-v> :vsplit<CR>
 nnoremap <silent> ,h :wincmd h<CR>
 nnoremap <silent> ,l :wincmd l<CR>
 nnoremap <silent> ,k :wincmd k<CR>
@@ -217,6 +210,8 @@ nnoremap <silent> ,v :vsplit<CR>
 nnoremap <silent> ,n :bn<CR>
 nnoremap <silent> ,p :bp<CR>
 nnoremap <silent> ,d :bd<CR>
+nnoremap <silent> ,b :.Gbrowse<CR>
+
 if has('nvim')
   nnoremap <silent> ,t :15sp +term<CR>a
 else
