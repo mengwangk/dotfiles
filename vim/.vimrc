@@ -50,7 +50,6 @@ Plug 'unblevable/quick-scope'
 Plug 'easymotion/vim-easymotion'
 Plug 'dyng/ctrlsf.vim'
 Plug 'voldikss/vim-floaterm'
-Plug 't9md/vim-choosewin'
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
@@ -74,6 +73,7 @@ else
   Plug 'machakann/vim-highlightedyank'
 endif
 
+" Plug 't9md/vim-choosewin'
 " Plug 'justinmk/vim-sneak'
 " Plug 'junegunn/goyo.vim'
 " Plug 'junegunn/limelight.vim'
@@ -331,8 +331,8 @@ nmap ga <Plug>(EasyAlign)
 let g:easy_align_ignore_groups = []
 
 " python-mode
-let g:pymode_options_colorcolumn = 0
-let g:pymode_lint_cwindow = 0
+" let g:pymode_options_colorcolumn = 0
+" let g:pymode_lint_cwindow = 0
 
 " ctrsf
 nmap     <C-F>f <Plug>CtrlSFPrompt
@@ -345,7 +345,7 @@ nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
 " choosewin
-nmap  -  <Plug>(choosewin)
+" nmap  -  <Plug>(choosewin)
 
 " coc.nvim
 call SourceIfExists("~/.vim/coc.vim")
