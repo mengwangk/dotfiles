@@ -61,3 +61,6 @@
 
 ;; Org mode by default
 (setq-default major-mode 'org-mode)
+
+;; projectile
+(setq projectile-project-search-path '("~/workspace/development"))

@@ -99,6 +99,10 @@ Plug 'vuciv/vim-bujo'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" plugin development
+Plug '$HOME/workspace/development/vim-plugins/nvim-recent'
+
+
 call plug#end()
 
 let g:hardtime_default_on = 1
