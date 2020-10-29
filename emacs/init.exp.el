@@ -1,49 +1,61 @@
-;; Set up package.el to work with MELPA
+(setq inhibit-startup-message t)
+
+(scroll-bar-mode -1)        ; Disable visible scrollbar
+(tool-bar-mode -1)          ; Disable the toolbar
+(tooltip-mode -1)           ; Disable tooltips
+(set-fringe-mode 10)        ; Give some breathing room
+
+(menu-bar-mode -1)            ; Disable the menu bar
+
+;; Set up the visible bell
+(setq visible-bell t)
+
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 280)
+
+(load-theme 'wombat)
+
+;; Make ESC quit prompts
+(global-set-key (kbd "<escape>") 'keyboard-escape-quit)
+
+;; Initialize package sources
 (require 'package)
+
+(setq package-archives '(("melpa" . "https://melpa.org/packages/")
+                         ("org" . "https://orgmode.org/elpa/")
+                         ("elpa" . "https://elpa.gnu.org/packages/")))
+
 (package-initialize)
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+(unless package-archive-contents
+ (package-refresh-contents))
 
-;; Load Theme
-(load-theme 'tango-dark t)
+;; Initialize use-package on non-Linux platforms
+(unless (package-installed-p 'use-package)
+   (package-install 'use-package))
 
-;; Required by flycheck
-(unless (package-installed-p 'exec-path-from-shell)
-    (package-install 'exec-path-from-shell))
+(require 'use-package)
+(set use-package-always-ensure t)
 
-;; Full screen
-; (add-to-list 'default-frame-alist '(fullscreen . maximized))
+(use-package command-log-mode)
 
-;; Disable the splash screen (to enable it agin, replace the t with 0)
-; (setq inhibit-splash-screen t)
+(use-package ivy
+  :diminish
+  :bind (("C-s" . swiper)
+         :map ivy-minibuffer-map
+         ("TAB" . ivy-alt-done)
+         ("C-l" . ivy-alt-done)
+         ("C-j" . ivy-next-line)
+         ("C-k" . ivy-previous-line)
+         :map ivy-switch-buffer-map
+         ("C-k" . ivy-previous-line)
+         ("C-l" . ivy-done)
+         ("C-d" . ivy-switch-buffer-kill)
+         :map ivy-reverse-i-search-map
+         ("C-k" . ivy-previous-line)
+         ("C-d" . ivy-reverse-i-search-kill))
+  :config
+  (ivy-mode 1))
 
-;; Relative number
-(setq-default display-line-numbers 'relative
-      display-line-numbers-current-absolute t)
-
-;; evil
-(unless (package-installed-p 'evil)
-  (package-install 'evil))
-
-;; Enable Evil
-(require 'evil)
-(evil-mode 1)
-
-;; Enable org mode
-(require 'org)
-
-;; flycheck
-(unless (package-installed-p 'flycheck)
-    (package-install 'flycheck))
-(global-flycheck-mode)
-
-;; magit
-(unless (package-installed-p 'magit)
-  (package-install 'magit))
-(global-set-key (kbd "C-x g") 'magit-status)
-
-
-; (setq inhibit-splash-screen t
-;       initial-scratch-message nil
-;       initial-major-mode 'org-mode)
-(setq initial-major-mode 'org-mode)
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1)
+  :custom ((doom-modeline-height 15)))q
