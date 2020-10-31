@@ -63,7 +63,6 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'airblade/vim-rooter'
-Plug 'kevinhwang91/rnvimr'
 
 if has('nvim')
   augroup highlight_yank
@@ -189,6 +188,7 @@ nnoremap <leader>gc :GBranches<CR>
 nnoremap <leader>s :CocSearch <C-R><C-W><CR>
 nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
+nnoremap <Space>r :FloatermNew ranger<CR>
 vmap < <gv
 vmap > >gv
 vnoremap X "_d
@@ -344,9 +344,6 @@ nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-
-" ranger
-nnoremap <Space>r :RnvimrToggle<CR>
 
 " choosewin
 " nmap  -  <Plug>(choosewin)
