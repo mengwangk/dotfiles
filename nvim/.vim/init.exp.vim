@@ -69,6 +69,18 @@ Plug 'mattn/emmet-vim'
 Plug 'cohama/lexima.vim'
 Plug 't9md/vim-choosewin'
 Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/tagalong.vim'
+Plug 'jiangmiao/auto-pairs'
+Plug 'alvan/vim-closetag'
+Plug 'kevinhwang91/rnvimr'
+Plug 'rhysd/git-messenger.vim'
+Plug 'liuchengxu/vista.vim'
+Plug 'romgrk/barbar.nvim'
+Plug 'wesQ3/vim-windowswap'
+Plug 'skywind3000/asynctasks.vim'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'turbio/bracey.vim'
+Plug 'mattn/vim-gist'
 
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
@@ -87,6 +99,8 @@ Plug 'liuchengxu/vim-which-key'
 " colors
 Plug 'sainnhe/gruvbox-material'
 Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'nvim-treesitter/nvim-treesitter'
 
 " todo
 Plug 'vuciv/vim-bujo'
@@ -96,14 +110,21 @@ Plug 'vuciv/vim-bujo'
 " Plug 'justinmk/vim-sneak'
 
 " themes
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'glepnir/galaxyline.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " lua
+Plug 'ryanoasis/vim-devicons' " vimscript
 
 " plugin development
 Plug '$HOME/workspace/development/vim-plugins/nvim-recent'
 
-
 call plug#end()
+
+" Automatically install missing plugins on startup
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
+
 
 let g:hardtime_default_on = 1
 "let g:hardtime_timeout = 5000
@@ -133,49 +154,7 @@ colorscheme gruvbox-material
 set background=dark
 
 " themes
-let g:airline_theme = 'powerlineish'
-let g:airline#extensions#branch#enabled = 1
-let g:airline#extensions#ale#enabled = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tagbar#enabled = 1
-let g:airline_skip_empty_sections = 1
-
-let g:airline#extensions#virtualenv#enabled = 1
-
-if !exists('g:airline_symbols')
-  let g:airline_symbols = {}
-endif
-
-if !exists('g:airline_powerline_fonts')
-  let g:airline#extensions#tabline#left_sep = ' '
-  let g:airline#extensions#tabline#left_alt_sep = '|'
-  let g:airline_left_sep          = '▶'
-  let g:airline_left_alt_sep      = '»'
-  let g:airline_right_sep         = '◀'
-  let g:airline_right_alt_sep     = '«'
-  let g:airline#extensions#branch#prefix     = '⤴' "➔, ➥, ⎇
-  let g:airline#extensions#readonly#symbol   = '⊘'
-  let g:airline#extensions#linecolumn#prefix = '¶'
-  let g:airline#extensions#paste#symbol      = 'ρ'
-  let g:airline_symbols.linenr    = '␊'
-  let g:airline_symbols.branch    = '⎇'
-  let g:airline_symbols.paste     = 'ρ'
-  let g:airline_symbols.paste     = 'Þ'
-  let g:airline_symbols.paste     = '∥'
-  let g:airline_symbols.whitespace = 'Ξ'
-else
-  let g:airline#extensions#tabline#left_sep = ''
-  let g:airline#extensions#tabline#left_alt_sep = ''
-
-  " powerline symbols
-  let g:airline_left_sep = ''
-  let g:airline_left_alt_sep = ''
-  let g:airline_right_sep = ''
-  let g:airline_right_alt_sep = ''
-  let g:airline_symbols.branch = ''
-  let g:airline_symbols.readonly = ''
-  let g:airline_symbols.linenr = ''
-endif
+luafile $HOME/.nvim/lua/eviline.lua
 
 " telescope
 nnoremap <Space>f <cmd>lua require'telescope.builtin'.find_files{ find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" } }<CR>

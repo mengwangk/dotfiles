@@ -78,7 +78,7 @@
   },
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "python.languageServer": "Microsoft",
+  "python.languageServer": "Pylance",
   "python.pythonPath": "/Users/mengwangk/miniconda3/bin/python",
   "terminal.integrated.inheritEnv": false,
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/local/bin/nvim",
