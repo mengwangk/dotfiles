@@ -63,6 +63,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'airblade/vim-rooter'
+Plug 'kevinhwang91/rnvimr'
 
 if has('nvim')
   augroup highlight_yank
@@ -343,6 +344,9 @@ nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+
+" ranger
+nnoremap <Space>r :RnvimrToggle<CR>
 
 " choosewin
 " nmap  -  <Plug>(choosewin)
