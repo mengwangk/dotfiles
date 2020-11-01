@@ -210,7 +210,7 @@ nnoremap <silent> ,s :split<CR>
 nnoremap <silent> ,v :vsplit<CR>
 nnoremap <silent> ,n :bn<CR>
 nnoremap <silent> ,p :bp<CR>
-nnoremap <silent> ,d :bd<CR>
+nnoremap <silent> ,d :bd!<CR>
 nnoremap <silent> ,b :.Gbrowse<CR>
 
 if has('nvim')
