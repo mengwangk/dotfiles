@@ -196,7 +196,7 @@ vnoremap p "_dP
 autocmd BufWritePre * :call TrimWhitespace()
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
-nnoremap <Tab> gt
+" nnoremap <Tab> gt  - conflict with <C-I> completion
 nnoremap <S-Tab> gT
 nnoremap <silent> <M-left> <C-w>>
 nnoremap <silent> <M-right> <C-w><
