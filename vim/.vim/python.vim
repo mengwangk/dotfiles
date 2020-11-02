@@ -14,6 +14,7 @@ augroup pythonsupport
     autocmd FileType python imap <buffer> <F9> <esc>:update<CR>:term nodemon -e py %<CR>
   endif
 
-  autocmd FileType python map <buffer> <leader>r :update<CR>:exec '!python3' shellescape(@%, 1)<CR>
+  autocmd FileType python map <buffer> <leader>rr :update<CR>:exec '!python3' shellescape(@%, 1)<CR>
+  autocmd FileType python map <buffer> <leader>rd :update<CR>:exec '!python3 -m pdb' shellescape(@%, 1)<CR>
 
 augroup end
