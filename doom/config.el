@@ -64,3 +64,7 @@
 
 ;; projectile
 (setq projectile-project-search-path '("~/workspace/development"))
+
+;; evil mode terminal
+(use-package! evil-terminal-cursor-changer
+  :hook (tty-setup . evil-terminal-cursor-changer-activate))
