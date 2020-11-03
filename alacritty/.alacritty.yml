@@ -1,3 +1,5 @@
+# https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+
 # Window Customization
 window:
   dimensions:
@@ -71,6 +73,17 @@ colors:
 cursor:
   style: Block
   unfocused_hollow: true
+
+# Startup Mode (changes require restart)
+#
+# Values for `startup_mode`:
+#   - Windowed
+#   - Maximized
+#   - Fullscreen
+#
+# Values for `startup_mode` (macOS only):
+#   - SimpleFullscreen
+startup_mode: Fullscreen
 
 key_bindings:
   - { key: T, mods: Alt,     action: SpawnNewInstance }

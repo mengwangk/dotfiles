@@ -6,19 +6,19 @@ passthrough < cmd + shift - r ; default
 cmd - return : /Applications/Alacritty.app/Contents/MacOS/alacritty
 
 # open vim
-cmd + shift - v : open /usr/local/bin/nvim
+# cmd + shift - v : open /usr/local/bin/nvim
 
 # open emacs
-cmd + shift - e : open /usr/local/bin/emacs
+# cmd + shift - e : open /usr/local/bin/emacs
 
 # open chrome
 # cmd + shift - g : open /Applications/Google\ Chrome.app
 
 # open vscode
-cmd + shift - c : open /Applications/Visual\ Studio\ Code.app
+# cmd + shift - c : open /Applications/Visual\ Studio\ Code.app
 
 # open ranger
-cmd + shift - r : open ~/miniconda3/bin/ranger
+# cmd + shift - r : open ~/miniconda3/bin/ranger
 
 # open qutebrowser
 # cmd + shift - q : ~/workspace/development/dotfiles/scripts/qtb.sh
