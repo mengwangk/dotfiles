@@ -63,6 +63,7 @@ Plug 'mzlogin/vim-markdown-toc'
 Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'airblade/vim-rooter'
+Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 
 if has('nvim')
   augroup highlight_yank
@@ -348,6 +349,9 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
 " choosewin
 " nmap  -  <Plug>(choosewin)
+
+" whichkey
+nnoremap <silent> <leader> :WhichKey '<Space>'<CR>
 
 " coc.nvim
 call SourceIfExists("~/.vim/coc.vim")

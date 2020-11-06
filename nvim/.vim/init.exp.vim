@@ -81,7 +81,9 @@ Plug 'skywind3000/asynctasks.vim'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'turbio/bracey.vim'
 Plug 'mattn/vim-gist'
-
+Plug 'puremourning/vimspector'
+Plug 'szw/vim-maximizer'
+  
 " neovim lsp plugins
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
