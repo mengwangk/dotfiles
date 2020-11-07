@@ -62,6 +62,11 @@ Plug 'tweekmonster/startuptime.vim'
 Plug 'mizlan/termbufm'
 Plug 'mhinz/vim-signify'
 
+Plug 'glepnir/galaxyline.nvim'
+Plug 'romgrk/barbar.nvim'
+Plug 'kyazdani42/nvim-web-devicons' " lua
+Plug 'ryanoasis/vim-devicons' " vimscript
+
 "Plug 'Shougo/deol.nvim'
 "Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
 "if has('nvim')
@@ -120,10 +125,6 @@ Plug 'mhinz/vim-signify'
 " motion
 " Plug 'justinmk/vim-sneak'
 
-" themes
-"Plug 'glepnir/galaxyline.nvim'
-"Plug 'kyazdani42/nvim-web-devicons' " lua
-"Plug 'ryanoasis/vim-devicons' " vimscript
 
 " plugin development
 " Plug '$HOME/workspace/development/vim-plugins/nvim-recent'
@@ -241,6 +242,8 @@ EOF
   }
 EOF
 
+luafile $HOME/.nvim/lua/eviline.lua
+
 "let g:which_key_map['\<Space>'] = {
 "      \ 'name' : '+windows' ,
 "      \ 'x' : [':Clap'     , 'other-window'] ,
@@ -248,7 +251,7 @@ EOF
 
 "lua require'nvim_lsp'.gopls.setup{ on_attach=require'completion'.on_attach }
 "autocmd BufEnter * lua require'completion'.on_attach()
-"
+
 "nnoremap <leader>rn :lua vim.lsp.buf.rename()<CR>
 "lua << EOF
 "local on_attach_vim = function(client)
@@ -276,9 +279,6 @@ EOF
 "colorscheme gruvbox-material
 "colorscheme gruvbox8
 "set background=dark
-
-" themes
-"luafile $HOME/.nvim/lua/eviline.lua
 
 " todo
 "nmap <C-S> <Plug>BujoAddnormal
