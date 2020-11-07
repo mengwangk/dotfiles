@@ -369,7 +369,8 @@ let g:coc_global_extensions = [
       \ 'coc-omni',
       \ 'coc-omnisharp',
       \ 'coc-tsserver',
-      \ 'coc-json'
+      \ 'coc-json',
+      \ 'coc-rust-analyzer'
       \ ]
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
