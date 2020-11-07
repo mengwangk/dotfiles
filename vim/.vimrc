@@ -175,13 +175,14 @@ let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
 " terminal
-if has('nvim')
+" if has('nvim')
   " tnoremap <Esc> <C-\><C-n>
   tnoremap <C-h> <C-\><C-n><C-w>h
   tnoremap <C-j> <C-\><C-n><C-w>j
   tnoremap <C-k> <C-\><C-n><C-w>k
   tnoremap <C-l> <C-\><C-n><C-w>l
-endif
+" endif
+
 nnoremap <Space>w :update<CR>
 nnoremap <Space>q :q<CR>
 inoremap jk <Esc>

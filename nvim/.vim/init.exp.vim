@@ -110,7 +110,7 @@ Plug 'ryanoasis/vim-devicons' " vimscript
 "Plug 'skywind3000/asyncrun.vim'
 "Plug 'turbio/bracey.vim'
 "Plug 'mattn/vim-gist'
-  
+
 
 " colors
 "Plug 'sainnhe/gruvbox-material'
@@ -169,6 +169,10 @@ nnoremap <Space>s :lua require('telescope.builtin').grep_string({ search = vim.f
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
 nnoremap <silent> <Leader> :WhichKey '<Leader>'<CR>
 "nnoremap <C-w-o> :MaximizerToggle!<CR>
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 
 augroup highlight_yank
   autocmd!
