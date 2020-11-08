@@ -351,6 +351,9 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
+" ultisnip - avoid conflict with coc tab navigation
+let g:UltiSnipsExpandTrigger = "<nop>"
+
 " choosewin
 " nmap  -  <Plug>(choosewin)
 
