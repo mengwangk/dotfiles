@@ -66,6 +66,7 @@ Plug 'glepnir/galaxyline.nvim'
 Plug 'romgrk/barbar.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " lua
 Plug 'ryanoasis/vim-devicons' " vimscript
+Plug 'kyazdani42/nvim-tree.lua'
 
 "Plug 'Shougo/deol.nvim'
 "Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -166,6 +167,7 @@ nnoremap <Space>c :Clap<CR>
 nnoremap <Space>f <cmd>lua require'telescope.builtin'.find_files{ find_command = { "rg", "-i", "--hidden", "--files", "-g", "!.git" } }<CR>
 nnoremap <Space>g :lua require('telescope.builtin').git_files()<CR>
 nnoremap <Space>s :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
+nnoremap <Space>e :LuaTreeToggle<CR>
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
 nnoremap <silent> <Leader> :WhichKey '<Leader>'<CR>
 "nnoremap <C-w-o> :MaximizerToggle!<CR>
