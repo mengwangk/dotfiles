@@ -354,6 +354,7 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 " whichkey
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
 nnoremap <silent> <Leader> :WhichKey '<Leader>'<CR>
+nnoremap <silent> , :WhichKey ','<CR>
 
 " coc.nvim
 call SourceIfExists("~/.vim/coc.vim")
