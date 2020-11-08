@@ -141,6 +141,9 @@ set pastetoggle=<F2>
 set mouse=a
 set undofile
 set undodir=~/.vimdid
+set completeopt=menuone,noinsert,noselect
+set complete+=t
+set spell
 
 " utf-8 settings
 set fileencoding=utf-8
