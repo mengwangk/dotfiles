@@ -252,6 +252,51 @@ EOF
 
 luafile $HOME/.nvim/lua/eviline.lua
 
+" nvim dap
+:lua << EOF
+local dap = require('dap')
+dap.adapters.python = {
+  type = 'executable';
+  command = 'python';
+  args = { '-m', 'debugpy.adapter' };
+}
+EOF
+
+:lua << EOF
+local dap = require('dap')
+dap.configurations.python = {
+  {
+    type = 'python';
+    request = 'launch';
+    name = "Launch file";
+    program = "${file}";
+    pythonPath = function(adapter)
+      local cwd = vim.fn.getcwd()
+      if vim.fn.executable(cwd .. '/venv/bin/python') then
+        return cwd .. '/venv/bin/python'
+      elseif vim.fn.executable(cwd .. '/.venv/bin/python') then
+        return cwd .. '/.venv/bin/python'
+      else
+        return 'python'
+      end
+    end;
+  },
+}
+EOF
+
+nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
+nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
+nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
+nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
+nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
+nnoremap <silent> <leader>dl :lua require'dap'.repl.run_last()<CR>
+
+"--- end nvim-dap
+
+
 "let g:which_key_map['\<Space>'] = {
 "      \ 'name' : '+windows' ,
 "      \ 'x' : [':Clap'     , 'other-window'] ,
