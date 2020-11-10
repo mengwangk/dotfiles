@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: orgheader
+# key: orh
+# --
+
+#+TITLE:     $0
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+STARTUP: showall

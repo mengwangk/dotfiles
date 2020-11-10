@@ -194,7 +194,7 @@ let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 let g:completion_enable_snippet = 'UltiSnips'
 
 "inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-"inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Trigger completion with <Tab>
 inoremap <silent><expr> <TAB>
@@ -206,6 +206,7 @@ function! s:check_back_space() abort
     let col = col('.') - 1
     return !col || getline('.')[col - 1]  =~ '\s'
 endfunction
+let g:UltiSnipsExpandTrigger = "<nop>"
 
 nnoremap <silent> g[ <cmd>PrevDiagnosticCycle<cr>
 nnoremap <silent> g] <cmd>NextDiagnosticCycle<cr>
@@ -272,13 +273,7 @@ dap.configurations.python = {
     program = "${file}";
     pythonPath = function(adapter)
       local cwd = vim.fn.getcwd()
-      if vim.fn.executable(cwd .. '/venv/bin/python') then
-        return cwd .. '/venv/bin/python'
-      elseif vim.fn.executable(cwd .. '/.venv/bin/python') then
-        return cwd .. '/.venv/bin/python'
-      else
-        return 'python'
-      end
+      return 'python'
     end;
   },
 }
