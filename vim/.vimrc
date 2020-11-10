@@ -64,6 +64,7 @@ Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'airblade/vim-rooter'
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+Plug 'szw/vim-maximizer'
 
 if has('nvim')
   augroup highlight_yank
@@ -180,10 +181,12 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 " terminal
 " if has('nvim')
   " tnoremap <Esc> <C-\><C-n>
-  tnoremap <C-h> <C-\><C-n><C-w>h
-  tnoremap <C-j> <C-\><C-n><C-w>j
-  tnoremap <C-k> <C-\><C-n><C-w>k
-  tnoremap <C-l> <C-\><C-n><C-w>l
+nnoremap <C-w><C-o> :MaximizerToggle!<CR>
+tnoremap <C-w><C-o> <C-\><C-n> :MaximizerToggle!<CR>
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
 " endif
 
 nnoremap <Space>w :update<CR>

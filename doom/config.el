@@ -54,10 +54,10 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 
 ;; magit
-(global-set-key (kbd "C-x g") 'magit-status)
+;(global-set-key (kbd "C-x g") 'magit-status)
 
 ;; fzf
-(global-set-key (kbd "C-x C-f") 'counsel-fzf)
+;(global-set-key (kbd "C-x C-f") 'counsel-fzf)
 
 ;; Org mode by default
 (setq-default major-mode 'org-mode)
@@ -68,3 +68,15 @@
 ;; evil mode terminal
 (use-package! evil-terminal-cursor-changer
   :hook (tty-setup . evil-terminal-cursor-changer-activate))
+
+;; abbrev
+(add-hook 'org-mode-hook (lambda () (abbrev-mode 1)))
+
+(define-skeleton skel-org-header
+  "Insert an org block, querying for type."
+  "Type: "
+  "#+begin_" str "\n"
+  _ - \n
+  "#+end_" str "\n")
+
+(define-abbrev org-mode-abbrev-table "<h" "" 'skel-org-header)

@@ -55,13 +55,14 @@ Plug 'liuchengxu/vim-clap'
 Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
 Plug 'puremourning/vimspector'
+Plug 'mfussenegger/nvim-dap'
 Plug 'szw/vim-maximizer'
 
-Plug 'sainnhe/edge'
 Plug 'tweekmonster/startuptime.vim'
-Plug 'mizlan/termbufm'
 Plug 'mhinz/vim-signify'
+Plug 'mizlan/termbufm'
 
+Plug 'sainnhe/edge'
 Plug 'glepnir/galaxyline.nvim'
 Plug 'romgrk/barbar.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " lua
@@ -170,7 +171,8 @@ nnoremap <Space>s :lua require('telescope.builtin').grep_string({ search = vim.f
 nnoremap <Space>e :LuaTreeToggle<CR>
 nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
 nnoremap <silent> <Leader> :WhichKey '<Leader>'<CR>
-"nnoremap <C-w-o> :MaximizerToggle!<CR>
+nnoremap <C-w><C-o> :MaximizerToggle!<CR>
+tnoremap <C-w><C-o> <C-\><C-n> :MaximizerToggle!<CR>
 tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
