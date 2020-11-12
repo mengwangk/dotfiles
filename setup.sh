@@ -21,5 +21,6 @@ stow -v vifm -t ~/.config/vifm
 stow -v doom -t ~/.doom.d
 stow -v karabiner -t ~/.config
 stow -v hammerspoon -t ~/.hammerspoon
+stow -v commitizen -t ~/
 
 ln -s  ~/workspace/development/dotfiles/emacs/init.exp.el ~/.emacs.d/exp/.emacs.d/init.el
