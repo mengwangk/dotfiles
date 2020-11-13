@@ -41,6 +41,7 @@ Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'ludovicchabant/vim-gutentags'
+Plug 'puremourning/vimspector'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'stsewd/fzf-checkout.vim'
@@ -393,5 +394,6 @@ autocmd BufRead *.org set ft=markdown
 call SourceIfExists("~/.vim/go.vim")
 call SourceIfExists("~/.vim/rust.vim")
 call SourceIfExists("~/.vim/python.vim")
+call SourceIfExists("~/.vim/vimspector.vim")
 " call SourceIfExists("~/.vim/slide.vim")
 " call SourceIfExists("~/.vim/java.vim")
