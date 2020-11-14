@@ -68,3 +68,15 @@
 ;; evil mode terminal
 (use-package! evil-terminal-cursor-changer
   :hook (tty-setup . evil-terminal-cursor-changer-activate))
+
+
+(defun insertline-before ()             ;; Every extension is a function
+  "Inserts a line prior to the cursor." ;; Describe the function for fun.
+  (interactive)                         ;; This can be called from M-x
+  (let ( (current-spot (point) ) )      ;; Store the position of the cursor
+    (move-beginning-of-line 1)          ;; Move cursor to front of line, Duh.
+    (newline)                           ;; New line
+    (goto-char current-spot)            ;; Go back to where we were... Oh no.
+    (forward-char)))                    ;; We need to move forward since we
+                                        ;; inserted a new line.
+(global-set-key (kbd "C-S-o")  'insertline-before)

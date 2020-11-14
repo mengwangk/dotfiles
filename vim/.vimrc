@@ -198,6 +198,7 @@ nnoremap <leader>s :CocSearch <C-R><C-W><CR>
 nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
 nnoremap <Space>r :FloatermNew ranger<CR>
+nnoremap <leader>e !!$SHELL<CR>
 vmap < <gv
 vmap > >gv
 vnoremap X "_d
