@@ -51,6 +51,7 @@ Plug 'unblevable/quick-scope'
 Plug 'easymotion/vim-easymotion'
 Plug 'dyng/ctrlsf.vim'
 Plug 'voldikss/vim-floaterm'
+Plug 'kshenoy/vim-signature'
 
 Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
