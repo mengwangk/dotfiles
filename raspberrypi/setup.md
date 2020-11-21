@@ -3,7 +3,7 @@
 ## Upgrade Packages
 
 ```
-# sudo pacman -Ss
+# sudo pacman -Syu
 ```
 
 ## Upgrade Boot Loader
@@ -24,6 +24,17 @@ Validate
 
 ```
 # sudo rpi-eeprom-update
+```
+
+## Software
+
+```
+# sudo pacman -S neovim
+# sudo pacman -S emacs
+# sudo pacman -S alacritty
+
+# bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+
 ```
 
 ## Wifi
