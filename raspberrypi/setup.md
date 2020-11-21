@@ -28,4 +28,4 @@ Validate
 
 ## Wifi
 
-
+https://archived.forum.manjaro.org/t/raspberry-pi-4-manjaro-kde-20-06-unable-to-connect-to-any-wifi-not-just-5-ghz/155610/9
