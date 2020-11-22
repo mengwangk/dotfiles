@@ -150,6 +150,8 @@ let g:edge_enable_italic = 1
 let g:edge_disable_italic_comment = 1
 colorscheme edge
 
+set guicursor=n-v-c:block-Cursor/lCursor-blinkon0,i-ci:ver25-Cursor/lCursor,r-cr:hor20-Cursor/lCursor
+
 " terminal
 syntax enable
 filetype plugin indent on
