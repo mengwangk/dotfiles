@@ -3,7 +3,7 @@
   "git.confirmSync": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "latex-workshop.view.pdf.viewer": "tab",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro",
