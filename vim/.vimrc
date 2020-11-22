@@ -36,6 +36,7 @@ Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'konfekt/fastfold'
+Plug 'andymass/vim-matchup'
 
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
