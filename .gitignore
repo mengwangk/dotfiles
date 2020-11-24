@@ -1,3 +1,5 @@
 *.swp
 tags
 swap-pane
+elpa/
+*~
