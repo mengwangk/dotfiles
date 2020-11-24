@@ -103,4 +103,6 @@ source $OSH/oh-my-bash.sh
 alias ohmybash="mate ~/.oh-my-bash"
 alias vim='nvim'
 
+set -o vi
+
 [[ -s /home/mengwangk/.autojump/etc/profile.d/autojump.sh ]] && source /home/mengwangk/.autojump/etc/profile.d/autojump.sh
