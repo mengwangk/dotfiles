@@ -108,5 +108,13 @@ set -o vi
 [[ -s /home/mengwangk/.autojump/etc/profile.d/autojump.sh ]] && source /home/mengwangk/.autojump/etc/profile.d/autojump.sh
 
 
+# Setting fd as the default source for fzf
+export FZF_DEFAULT_COMMAND='fd --type f -L --hidden --exclude .git'
+
+# To apply the command to CTRL-T as well
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 export PATH=$PATH:$HOME/.local/bin
 source "$HOME/.cargo/env"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

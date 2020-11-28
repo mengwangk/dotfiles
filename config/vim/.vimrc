@@ -396,9 +396,9 @@ autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | end
 autocmd BufRead *.org set ft=markdown
 
 " languages
-call SourceIfExists("~/.vim/go.vim")
-call SourceIfExists("~/.vim/rust.vim")
-call SourceIfExists("~/.vim/python.vim")
-call SourceIfExists("~/.vim/vimspector.vim")
-" call SourceIfExists("~/.vim/slide.vim")
-" call SourceIfExists("~/.vim/java.vim")
+call SourceIfExists("~/.config/vim-addons/go.vim")
+call SourceIfExists("~/.config/vim-addons/rust.vim")
+call SourceIfExists("~/.config/vim-addons/python.vim")
+call SourceIfExists("~/.config/vim-addons/vimspector.vim")
+" call SourceIfExists("~/.config/vim-addons/slide.vim")
+" call SourceIfExists("~/.config/vim-addons/java.vim")

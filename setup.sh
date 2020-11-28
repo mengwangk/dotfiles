@@ -5,7 +5,6 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 # Symlinks using GNU stow
-stow -v config/vim -t ~/
 stow -v tmux -t ~/
 stow -v zsh -t ~/
 stow -v alacritty -t ~/
@@ -24,3 +23,5 @@ stow -v commitizen -t ~/
 stow -v config -t ~/.config
 
 ln -s  ~/workspace/development/dotfiles/emacs/init.exp.el ~/.emacs.d/exp/.emacs.d/init.el
+cd config && stow -v vim -t ~/
+cd config && stow -v vim-config -t ~/.config
