@@ -106,3 +106,7 @@ alias vim='nvim'
 set -o vi
 
 [[ -s /home/mengwangk/.autojump/etc/profile.d/autojump.sh ]] && source /home/mengwangk/.autojump/etc/profile.d/autojump.sh
+
+
+export PATH=$PATH:$HOME/.local/bin
+source "$HOME/.cargo/env"

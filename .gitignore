@@ -3,3 +3,4 @@ tags
 swap-pane
 elpa/
 *~
+#init.el#
