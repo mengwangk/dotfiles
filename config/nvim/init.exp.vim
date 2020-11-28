@@ -256,7 +256,7 @@ EOF
   }
 EOF
 
-luafile $HOME/.nvim/lua/eviline.lua
+luafile $HOME/.config/nvim/lua/eviline.lua
 
 " nvim dap
 :lua << EOF

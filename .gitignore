@@ -4,3 +4,5 @@ swap-pane
 elpa/
 *~
 #init.el#
+config/nvim/autoload/
+
