@@ -14,7 +14,7 @@
     "coc.preferences.formatOnSaveFiletypes": ["python", "go", "rust"],
     "explorer.previewAction.onHover": false,
     "explorer.icon.enableNerdfont": true,
-    "explorer.keyMappings": {
+    "explorer.keyMappings.global": {
         "<cr>": ["expandable?", "expand", "open"],
         "v": "open:vsplit"
     },

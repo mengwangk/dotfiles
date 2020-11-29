@@ -364,6 +364,7 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 
 " ultisnips - avoid conflict with coc tab navigation
 let g:UltiSnipsExpandTrigger = "<nop>"
+" inoremap <expr> <CR> pumvisible() ? "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>" : "\<CR>"
 
 " choosewin
 " nmap  -  <Plug>(choosewin)
@@ -374,7 +375,7 @@ nnoremap <silent> <Leader> :WhichKey '<Leader>'<CR>
 nnoremap <silent> , :WhichKey ','<CR>
 
 " coc.nvim
-call SourceIfExists("~/.vim/coc.vim")
+call SourceIfExists("~/.config/vim-addons/coc.vim")
 let g:coc_global_extensions = [
       \ 'coc-python',
       \ 'coc-java',
