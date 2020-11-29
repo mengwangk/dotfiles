@@ -70,6 +70,11 @@ Plug 'romgrk/barbar.nvim'
 Plug 'kyazdani42/nvim-web-devicons' " lua
 Plug 'ryanoasis/vim-devicons' " vimscript
 Plug 'kyazdani42/nvim-tree.lua'
+Plug 'tommcdo/vim-exchange'
+Plug 'brooth/far.vim'
+Plug 'wellle/targets.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'AndrewRadev/switch.vim'
 
 "Plug 'Shougo/deol.nvim'
 "Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }

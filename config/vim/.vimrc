@@ -38,6 +38,7 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'konfekt/fastfold'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
+Plug 'wellle/targets.vim'
 
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -206,7 +207,8 @@ nnoremap <leader>e !!$SHELL<CR>
 vmap < <gv
 vmap > >gv
 vnoremap X "_d
-vnoremap p "_dP
+vnoremap p "_dp
+vnoremap P "_dP
 autocmd BufWritePre * :call TrimWhitespace()
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
