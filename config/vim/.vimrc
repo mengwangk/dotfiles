@@ -377,7 +377,7 @@ nnoremap <silent> , :WhichKey ','<CR>
 " coc.nvim
 call SourceIfExists("~/.config/vim-addons/coc.vim")
 let g:coc_global_extensions = [
-      \ 'coc-python',
+      \ 'coc-pyright',
       \ 'coc-java',
       \ 'coc-go',
       \ 'coc-snippets',
