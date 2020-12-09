@@ -58,7 +58,6 @@ Plug 'puremourning/vimspector'
 Plug 'mfussenegger/nvim-dap'
 Plug 'szw/vim-maximizer'
 Plug 'wesQ3/vim-windowswap'
-Plug 'psliwka/vim-smoothie'
 
 Plug 'tweekmonster/startuptime.vim'
 Plug 'mhinz/vim-signify'
@@ -91,6 +90,8 @@ Plug 'AndrewRadev/switch.vim'
 "endif
 "Plug 'deoplete-plugins/deoplete-jedi'
 "Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+
+"Plug 'psliwka/vim-smoothie'
 
 " programming
 "Plug 'lambdalisue/gina.vim'
