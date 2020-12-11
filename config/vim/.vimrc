@@ -97,7 +97,7 @@ endif
 " Plug 'vim-syntastic/syntastic'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'tpope/vim-endwise'
-" Plug 'ryanoasis/vim-devicons'
+Plug 'ryanoasis/vim-devicons'
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim'
 " Plug 'preservim/nerdtree'
@@ -260,6 +260,7 @@ let g:airline#extensions#tabline#buffer_idx_mode=0
 let g:airline#extensions#tabline#buffer_nr_show=1
 let g:airline#extensions#tabline#show_close_button=0
 let g:airline#extensions#tabline#ignore_bufadd_pat='defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
+let g:airline_powerline_fonts=1
 
 " ale
 let g:ale_disable_lsp=1
