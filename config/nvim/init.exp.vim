@@ -35,6 +35,7 @@ call plug#begin('~/.nvim/plugged')
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'scrooloose/nerdcommenter'
+Plug 'tpope/vim-obsession'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
