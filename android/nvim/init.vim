@@ -63,13 +63,11 @@ set shortmess+=c
 set expandtab
 set smartindent
 set tabstop=4 softtabstop=4
-set termguicolors
 set cmdheight=2
 set signcolumn=yes
 set hidden
 set nobackup
 set nowritebackup
-set cmdheight=2
 set updatetime=300
 
 vnoremap p "_dP
