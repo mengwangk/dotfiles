@@ -76,7 +76,6 @@ vnoremap p "_dP
 
 let g:coc_global_extensions = [
       \ 'coc-pyright',
-      \ 'coc-java',
       \ 'coc-go',
       \ 'coc-snippets',
       \ 'coc-marketplace',
@@ -88,7 +87,6 @@ let g:coc_global_extensions = [
       \ 'coc-omnisharp',
       \ 'coc-tsserver',
       \ 'coc-json',
-      \ 'coc-rust-analyzer',
       \ 'coc-fzf-preview'
       \ ]
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
