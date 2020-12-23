@@ -386,7 +386,6 @@ let g:coc_global_extensions = [
       \ 'coc-prettier',
       \ 'coc-explorer',
       \ 'coc-highlight',
-      \ 'coc-rls',
       \ 'coc-omni',
       \ 'coc-omnisharp',
       \ 'coc-tsserver',

@@ -76,6 +76,8 @@ Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'AndrewRadev/switch.vim'
 
+Plug 'enomsg/vim-haskellConcealPlus'
+
 "Plug 'Shougo/deol.nvim'
 "Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
 "if has('nvim')
