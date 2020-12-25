@@ -28,9 +28,9 @@ font:
     family: Fira Code
     style: Bold
   italic:
-    family: MesloLGS NF
+    family: Fira Code
     style: Italic
-  size: 16
+  size: 17
   offset:
     x: 0
     y: 0
@@ -87,6 +87,8 @@ cursor:
 # Values for `startup_mode` (macOS only):
 #   - SimpleFullscreen
 startup_mode: Fullscreen
+
+ligature: true
 
 key_bindings:
   - { key: T, mods: Alt,     action: SpawnNewInstance }

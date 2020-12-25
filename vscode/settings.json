@@ -3,7 +3,7 @@
   "git.confirmSync": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.confirmDelete": false,
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 2,
   "latex-workshop.view.pdf.viewer": "tab",
   "workbench.iconTheme": "material-icon-theme",
   "workbench.colorTheme": "One Dark Pro",
@@ -158,5 +158,5 @@
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
   },
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "Cascadia Code, Menlo, Monaco, 'Courier New', monospace"
 }
