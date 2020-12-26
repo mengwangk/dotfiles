@@ -43,7 +43,7 @@ Plug 'wellle/targets.vim'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'ludovicchabant/vim-gutentags'
+" Plug 'ludovicchabant/vim-gutentags'
 Plug 'puremourning/vimspector'
 
 Plug 'airblade/vim-gitgutter'
@@ -60,6 +60,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'ryanoasis/vim-devicons'
 
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
@@ -97,7 +98,6 @@ endif
 " Plug 'vim-syntastic/syntastic'
 " Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 " Plug 'tpope/vim-endwise'
-Plug 'ryanoasis/vim-devicons'
 " Plug 'puremourning/vimspector'
 " Plug 'kien/ctrlp.vim'
 " Plug 'preservim/nerdtree'
