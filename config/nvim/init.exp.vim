@@ -55,8 +55,8 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'liuchengxu/vim-clap'
 Plug 'liuchengxu/vim-which-key'
 Plug 'jiangmiao/auto-pairs'
-Plug 'puremourning/vimspector'
-Plug 'mfussenegger/nvim-dap'
+" Plug 'puremourning/vimspector'
+" Plug 'mfussenegger/nvim-dap'
 Plug 'szw/vim-maximizer'
 Plug 'wesQ3/vim-windowswap'
 
@@ -67,8 +67,8 @@ Plug 'mizlan/termbufm'
 Plug 'sainnhe/edge'
 Plug 'glepnir/galaxyline.nvim'
 Plug 'romgrk/barbar.nvim'
-Plug 'kyazdani42/nvim-web-devicons' " lua
-Plug 'ryanoasis/vim-devicons' " vimscript
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'ryanoasis/vim-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'tommcdo/vim-exchange'
 Plug 'brooth/far.vim'
@@ -76,7 +76,7 @@ Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'AndrewRadev/switch.vim'
 
-Plug 'enomsg/vim-haskellConcealPlus'
+" Plug 'enomsg/vim-haskellConcealPlus'
 
 "Plug 'Shougo/deol.nvim'
 "Plug 'Shougo/deoppet.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -268,40 +268,40 @@ EOF
 luafile $HOME/.config/nvim/lua/eviline.lua
 
 " nvim dap
-:lua << EOF
-local dap = require('dap')
-dap.adapters.python = {
-  type = 'executable';
-  command = 'python';
-  args = { '-m', 'debugpy.adapter' };
-}
-EOF
-
-:lua << EOF
-local dap = require('dap')
-dap.configurations.python = {
-  {
-    type = 'python';
-    request = 'launch';
-    name = "Launch file";
-    program = "${file}";
-    pythonPath = function(adapter)
-      local cwd = vim.fn.getcwd()
-      return 'python'
-    end;
-  },
-}
-EOF
-
-nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
-nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
-nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
-nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
-nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
-nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
-nnoremap <silent> <leader>dl :lua require'dap'.repl.run_last()<CR>
+" :lua << EOF
+" local dap = require('dap')
+" dap.adapters.python = {
+"   type = 'executable';
+"   command = 'python';
+"   args = { '-m', 'debugpy.adapter' };
+" }
+" EOF
+"
+" :lua << EOF
+" local dap = require('dap')
+" dap.configurations.python = {
+"   {
+"     type = 'python';
+"     request = 'launch';
+"     name = "Launch file";
+"     program = "${file}";
+"     pythonPath = function(adapter)
+"       local cwd = vim.fn.getcwd()
+"       return 'python'
+"     end;
+"   },
+" }
+" EOF
+"
+" nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
+" nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
+" nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
+" nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
+" nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
+" nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
+" nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
+" nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
+" nnoremap <silent> <leader>dl :lua require'dap'.repl.run_last()<CR>
 
 "--- end nvim-dap
 

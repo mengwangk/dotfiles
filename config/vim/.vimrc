@@ -45,6 +45,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 " Plug 'ludovicchabant/vim-gutentags'
 Plug 'puremourning/vimspector'
+Plug 'dbeniamine/cheat.sh-vim'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'stsewd/fzf-checkout.vim'
