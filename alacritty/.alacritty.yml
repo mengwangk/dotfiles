@@ -22,13 +22,13 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: Fira Code
+    family: Cascadia Code
     style: Regular
   bold:
-    family: Fira Code
+    family: Cascadia Code
     style: Bold
   italic:
-    family: Fira Code
+    family: Cascadia Code
     style: Italic
   size: 17
   offset:
