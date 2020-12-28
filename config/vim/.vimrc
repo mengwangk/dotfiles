@@ -61,6 +61,7 @@ Plug 'gruvbox-community/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/gruvbox-material'
+Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
 
 Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
