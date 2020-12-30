@@ -75,6 +75,9 @@ Plug 'brooth/far.vim'
 Plug 'wellle/targets.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'AndrewRadev/switch.vim'
+Plug 'cometsong/CommentFrame.vim'
+
+Plug '/Users/mengwangk/workspace/development/alpha2phi/vim-fancy-text/'
 
 " Plug 'enomsg/vim-haskellConcealPlus'
 
