@@ -206,6 +206,7 @@ nnoremap <Space>g :Gstatus<CR>
 nnoremap <Space>d :Gvdiffsplit<CR>
 nnoremap <Space>r :FloatermNew ranger<CR>
 nnoremap <leader>e !!$SHELL<CR>
+nnoremap <leader>v :vsplit $MYVIMRC<CR>
 vmap < <gv
 vmap > >gv
 vnoremap X "_d
