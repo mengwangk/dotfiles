@@ -39,7 +39,7 @@ Plug 'tpope/vim-obsession'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
-Plug 'nvim-lua/diagnostic-nvim'
+"Plug 'nvim-lua/diagnostic-nvim'
 Plug 'tjdevries/nlua.nvim'
 Plug 'tjdevries/lsp_extensions.nvim'
 
@@ -206,7 +206,7 @@ let g:diagnostic_enable_virtual_text = 1
 let g:diagnostic_enable_underline = 0
 let g:diagnostic_auto_popup_while_jump = 1
 let g:diagnostic_insert_delay = 1
-autocmd CursorHold * lua vim.lsp.util.show_line_diagnostics()
+autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 let g:completion_enable_snippet = 'UltiSnips'
 
@@ -232,7 +232,7 @@ autocmd CursorMoved,InsertLeave,BufEnter,BufWinEnter,TabEnter,BufWritePost *
 \ lua require'lsp_extensions'.inlay_hints{ prefix = '', highlight = "Comment" }
 
 :lua << EOF
-  local nvim_lsp = require('nvim_lsp')
+  local nvim_lsp = require('lspconfig')
   local on_attach = function(_, bufnr)
     require('diagnostic').on_attach()
     require('completion').on_attach()
