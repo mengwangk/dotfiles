@@ -24,7 +24,7 @@ set nocompatible
 
 call plug#begin('~/.config/nvim/plugged')
 
-" Sensible default 
+" Sensible default
 Plug 'tpope/vim-sensible'
 
 " Color schemes
@@ -78,6 +78,7 @@ colorscheme edge
 syntax enable
 filetype plugin indent on
 
+set exrc
 set nu rnu
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c

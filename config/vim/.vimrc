@@ -125,6 +125,7 @@ endfun
 syntax enable
 filetype plugin indent on
 
+set exrc
 set encoding=utf-8
 set visualbell
 set clipboard=unnamed,unnamedplus
@@ -135,7 +136,6 @@ set ignorecase smartcase
 set autoindent smartindent
 set showcmd
 set noshowmode
-set noswapfile
 set incsearch
 set pyxversion=3
 set expandtab smarttab tabstop=4 softtabstop=4 shiftwidth=4 shiftround
@@ -147,11 +147,14 @@ set cursorline
 set textwidth=100
 set pastetoggle=<F2>
 set mouse=a
+set noswapfile
+set nobackup
 set undofile
 set undodir=~/.vimdid
 set completeopt=menuone,noinsert,noselect
 set complete+=t
 set spell
+set scrolloff=8
 
 " utf-8 settings
 set fileencoding=utf-8
