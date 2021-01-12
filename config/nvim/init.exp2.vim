@@ -59,6 +59,12 @@ Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'mfussenegger/nvim-dap'
 Plug 'mfussenegger/nvim-dap-python'
 
+" Search highglighting
+Plug 'junegunn/vim-slash'
+
+" Documentation
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+
 call plug#end()
 
 " Automatically install missing plugins on startup
@@ -197,6 +203,9 @@ nnoremap <leader>tn :NvimTreeFindFile<CR>
 
 " Status line
 luafile ~/.config/nvim/eviline.lua
+
+" Doc generator
+let g:doge_mapping = "<Leader>gd"
 
 " Debugging
 lua <<EOF
