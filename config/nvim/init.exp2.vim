@@ -65,6 +65,9 @@ Plug 'junegunn/vim-slash'
 " Documentation
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
+" Github integration
+Plug 'pwntester/octo.nvim'
+
 call plug#end()
 
 " Automatically install missing plugins on startup

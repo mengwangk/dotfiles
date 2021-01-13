@@ -34,8 +34,6 @@
   },
   "editor.renderControlCharacters": false,
   "editor.renderWhitespace": "all",
-
-  "vim.easymotion": true,
   "vim.incsearch": true,
   "vim.useSystemClipboard": true,
   "vim.useCtrlKeys": true,
@@ -158,5 +156,6 @@
     "fortran": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
   },
   "editor.fontLigatures": true,
-  "editor.fontFamily": "Cascadia Code, Menlo, Monaco, 'Courier New', monospace"
+  "editor.fontFamily": "Cascadia Code, Menlo, Monaco, 'Courier New', monospace",
+  "vim.easymotion": true
 }
