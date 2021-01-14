@@ -65,8 +65,26 @@ Plug 'junegunn/vim-slash'
 " Documentation
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
+" Cheatsheet
+Plug 'dbeniamine/cheat.sh-vim'
+
 " Github integration
 Plug 'pwntester/octo.nvim'
+
+" Testing
+Plug 'vim-test/vim-test'
+
+" Alignment
+Plug 'junegunn/vim-easy-align'
+
+" Motion
+Plug 'easymotion/vim-easymotion'
+
+" Comment
+Plug 'cometsong/CommentFrame.vim'
+
+" Split join
+Plug 'AndrewRadev/splitjoin.vim'
 
 call plug#end()
 
@@ -227,3 +245,19 @@ nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
 nnoremap <silent> <leader>dl :lua require'dap'.repl.run_last()<CR>`
 nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
 vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
+
+" Testing
+nmap <silent> <leader>tn :w<CR>:TestNearest<CR>
+nmap <silent> <leader>tf :w<CR>:TestFile<CR>
+nmap <silent> <leader>ts :w<CR>:TestSuite<CR>
+nmap <silent> <leader>tl :w<CR>:TestLast<CR>
+nmap <silent> <leader>tv :w<CR>:TestVisit<CR>
+let test#strategy = "neovim"
+let test#neovim#term_position = "belowright"
+
+" Alignment
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
+
+" Motion
+nmap s <Plug>(easymotion-overwin-f)
