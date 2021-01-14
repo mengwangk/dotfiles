@@ -125,6 +125,8 @@ augroup END
 
 nnoremap <Space>v :e ~/.config/nvim/init.exp2.vim<CR>
 
+nnoremap <leader>e !!$SHELL<CR>
+
 " -------------------- LSP ---------------------------------
 :lua << EOF
   local nvim_lsp = require('lspconfig')
