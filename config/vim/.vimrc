@@ -30,7 +30,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
 Plug 'racer-rust/vim-racer'
 Plug 'vim-test/vim-test'
-" Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
@@ -43,9 +42,9 @@ Plug 'wellle/targets.vim'
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-" Plug 'ludovicchabant/vim-gutentags'
 Plug 'puremourning/vimspector'
 Plug 'dbeniamine/cheat.sh-vim'
+Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
 
 Plug 'airblade/vim-gitgutter'
 Plug 'stsewd/fzf-checkout.vim'
@@ -234,6 +233,7 @@ nnoremap <silent> ,n :bn<CR>
 nnoremap <silent> ,p :bp<CR>
 nnoremap <silent> ,d :bd!<CR>
 nnoremap <silent> ,b :.Gbrowse<CR>
+let g:doge_mapping = ",g"
 
 if has('nvim')
   nnoremap <silent> ,t :15sp +term<CR>a
