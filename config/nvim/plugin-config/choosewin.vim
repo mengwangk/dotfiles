@@ -1,0 +1,3 @@
+" choosewin
+" nmap  -  <Plug>(choosewin)
+

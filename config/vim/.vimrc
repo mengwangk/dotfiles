@@ -273,8 +273,6 @@ source $HOME/.config/nvim/plugin-config/quickscope.vim
 source $HOME/.config/nvim/plugin-config/whichkey.vim
 
 
-
-
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
 if exists('+termguicolors')
@@ -289,18 +287,6 @@ set background=dark cursorline termguicolors
 " color column
 highlight ColorColumn ctermbg=lightcyan guibg=blue
 call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
-
-" vimwiki
-" let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/wiki',
-"       \ 'syntax': 'markdown', 'ext': '.wiki'}]
-" let g:vimwiki_global_ext = 0
-
-" python-mode
-" let g:pymode_options_colorcolumn = 0
-" let g:pymode_lint_cwindow = 0
-
-" choosewin
-" nmap  -  <Plug>(choosewin)
 
 " coc.nvim
 call SourceIfExists("~/.config/vim-addons/coc.vim")
