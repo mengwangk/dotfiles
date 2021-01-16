@@ -49,7 +49,7 @@
     end
   end
 
-  local servers = {'pyright', 'gopls', 'rust_analyzer'}
+  local servers = {'pyright', 'gopls', 'rust_analyzer', 'tsserver'}
   for _, lsp in ipairs(servers) do
     nvim_lsp[lsp].setup {
       on_attach = on_attach,
