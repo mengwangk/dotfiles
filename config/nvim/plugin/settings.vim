@@ -93,6 +93,10 @@ let &t_SI.="\e[5 q" "SI = INSERT mode
 let &t_SR.="\e[4 q" "SR = REPLACE mode
 let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 
+" color column
+highlight ColorColumn ctermbg=lightcyan guibg=blue
+call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
+
 cnoreabbrev W! w!
 cnoreabbrev Q! q!
 cnoreabbrev Qall! qall!
