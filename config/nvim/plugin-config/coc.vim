@@ -137,3 +137,21 @@ let g:coc_snippet_prev = '<c-k>'
 
 " Use <C-j> for both expand and jump (make expand higher priority.)
 imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+let g:coc_global_extensions = [
+      \ 'coc-pyright',
+      \ 'coc-java',
+      \ 'coc-go',
+      \ 'coc-snippets',
+      \ 'coc-marketplace',
+      \ 'coc-prettier',
+      \ 'coc-explorer',
+      \ 'coc-highlight',
+      \ 'coc-omni',
+      \ 'coc-omnisharp',
+      \ 'coc-tsserver',
+      \ 'coc-json',
+      \ 'coc-rust-analyzer',
+      \ 'coc-fzf-preview'
+      \ ]
+autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif

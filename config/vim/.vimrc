@@ -289,33 +289,16 @@ highlight ColorColumn ctermbg=lightcyan guibg=blue
 call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
 
 " coc.nvim
-call SourceIfExists("~/.config/vim-addons/coc.vim")
-let g:coc_global_extensions = [
-      \ 'coc-pyright',
-      \ 'coc-java',
-      \ 'coc-go',
-      \ 'coc-snippets',
-      \ 'coc-marketplace',
-      \ 'coc-prettier',
-      \ 'coc-explorer',
-      \ 'coc-highlight',
-      \ 'coc-omni',
-      \ 'coc-omnisharp',
-      \ 'coc-tsserver',
-      \ 'coc-json',
-      \ 'coc-rust-analyzer',
-      \ 'coc-fzf-preview'
-      \ ]
-autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
+call SourceIfExists("$HOME/.config/nvim/plugin-config/coc.vim")
 
 " markdown
 autocmd BufRead *.org set ft=markdown
 
 " languages
-call SourceIfExists("~/.config/vim-addons/go.vim")
-call SourceIfExists("~/.config/vim-addons/rust.vim")
-call SourceIfExists("~/.config/vim-addons/python.vim")
-call SourceIfExists("~/.config/vim-addons/vimspector.vim")
-call SourceIfExists("~/.config/vim-addons/boxes.vim")
-" call SourceIfExists("~/.config/vim-addons/slide.vim")
-" call SourceIfExists("~/.config/vim-addons/java.vim")
+call SourceIfExists("$HOME/.config/nvim/plugin-config/go.vim")
+call SourceIfExists("$HOME/.config/nvim/plugin-config/rust.vim")
+call SourceIfExists("$HOME/.config/nvim/plugin-config/python.vim")
+call SourceIfExists("$HOME/.config/nvim/plugin-config/vimspector.vim")
+call SourceIfExists("$HOME/.config/nvim/plugin-config/boxes.vim")
+" call SourceIfExists("$HOME/.config/nvim/plugin-config/slide.vim")
+" call SourceIfExists("$HOME/.config/nvim/plugin-config/java.vim")
