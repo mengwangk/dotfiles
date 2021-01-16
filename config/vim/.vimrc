@@ -258,27 +258,22 @@ autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " ------- plugins config -------------------------------
 
-" airline
-let g:airline_theme='solarized'
-let g:airline_solarized_bg='dark'
-let g:airline#extensions#tabline#enabled=1
-let g:airline#extensions#tabline#buffer_idx_mode=0
-let g:airline#extensions#tabline#buffer_nr_show=1
-let g:airline#extensions#tabline#show_close_button=0
-let g:airline#extensions#tabline#ignore_bufadd_pat='defx|gundo|nerd_tree|startify|tagbar|undotree|vimfiler'
-let g:airline_powerline_fonts=1
+source $HOME/.config/nvim/plugin-config/airline.vim
+source $HOME/.config/nvim/plugin-config/ale.vim
+source $HOME/.config/nvim/plugin-config/startify.vim
+source $HOME/.config/nvim/plugin-config/fzf.vim
+source $HOME/.config/nvim/plugin-config/test.vim
+source $HOME/.config/nvim/plugin-config/easyalign.vim
+source $HOME/.config/nvim/plugin-config/ctrsf.vim
+source $HOME/.config/nvim/plugin-config/floaterm.vim
+source $HOME/.config/nvim/plugin-config/editorconfig.vim
+source $HOME/.config/nvim/plugin-config/easymotion.vim
+source $HOME/.config/nvim/plugin-config/ultisnips.vim
+source $HOME/.config/nvim/plugin-config/quickscope.vim
+source $HOME/.config/nvim/plugin-config/whichkey.vim
 
-" ale
-let g:ale_disable_lsp=1
-let g:airline#extensions#ale#enabled=1
-let g:ale_lint_on_save=1
-let g:ale_linters_explicit=1
-let g:ale_linters = {
-      \ 'markdown': ['writegood']
-      \}
-let g:ale_fixers = {
-      \ '*': ['remove_trailing_lines', 'trim_whitespace']
-      \}
+
+
 
 " gruvbox
 let g:gruvbox_contrast_dark='hard'
@@ -291,87 +286,21 @@ let g:gruvbox_invert_selection='0'
 colorscheme gruvbox
 set background=dark cursorline termguicolors
 
-" limelight
-" let g:limelight_paragraph_span = 1
-" let g:limelight_priority = -1
-
 " color column
 highlight ColorColumn ctermbg=lightcyan guibg=blue
 call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
-
-" quick-scope
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
-
-" fzf
-let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8 } }
-let $FZF_DEFAULT_OPTS='--reverse'
-nnoremap <silent><nowait> <space>f  :Files<cr>
-nnoremap <silent><nowait> <space>b  :Buffers<cr>
-
-" startify
-let g:startify_change_to_vcs_root = 1
-let g:startify_session_persistence = 1
-let g:startify_lists = [
-      \ { 'type': 'files',     'header': ['   Files']            },
-      \ { 'type': 'dir',       'header': ['   Current Directory '. getcwd()] },
-      \ { 'type': 'sessions',  'header': ['   Sessions']       },
-      \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
-      \ ]
-let g:startify_bookmarks = [
-      \ { 'b': '~/.bashrc' },
-      \ { 'v': '~/.vimrc' },
-      \ { 'z': '~/.zshrc' },
-      \ ]
-
-" floaterm
-nnoremap <silent><nowait> <space>t  :<C-u>FloatermNew<cr>
-
-" vim-test
-source $HOME/.config/nvim/plugin-config/test.vim
-
-" editorconfig
-let g:EditorConfig_exclude_patterns = ['fugitive://.*', 'scp://.*']
 
 " vimwiki
 " let g:vimwiki_list = [{'path': '~/workspace/development/wiki-notes/wiki',
 "       \ 'syntax': 'markdown', 'ext': '.wiki'}]
 " let g:vimwiki_global_ext = 0
 
-" easy-align
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
-let g:easy_align_ignore_groups = []
-
-" easy-motion
-nmap s <Plug>(easymotion-overwin-f)
-
 " python-mode
 " let g:pymode_options_colorcolumn = 0
 " let g:pymode_lint_cwindow = 0
 
-" ctrsf
-nmap     <C-F>f <Plug>CtrlSFPrompt
-vmap     <C-F>f <Plug>CtrlSFVwordPath
-vmap     <C-F>F <Plug>CtrlSFVwordExec
-nmap     <C-F>n <Plug>CtrlSFCwordPath
-nmap     <C-F>p <Plug>CtrlSFPwordPath
-nnoremap <C-F>o :CtrlSFOpen<CR>
-nnoremap <C-F>t :CtrlSFToggle<CR>
-inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-
-" ultisnips - avoid conflict with coc tab navigation
-let g:UltiSnipsExpandTrigger = "<nop>"
-" inoremap <expr> <CR> pumvisible() ? "<C-R>=UltiSnips#ExpandSnippetOrJump()<CR>" : "\<CR>"
-
 " choosewin
 " nmap  -  <Plug>(choosewin)
-
-" whichkey
-nnoremap <silent> <Space> :WhichKey '<Space>'<CR>
-nnoremap <silent> <Leader> :WhichKey '<Leader>'<CR>
-nnoremap <silent> , :WhichKey ','<CR>
 
 " coc.nvim
 call SourceIfExists("~/.config/vim-addons/coc.vim")
