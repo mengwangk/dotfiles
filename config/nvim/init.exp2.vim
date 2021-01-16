@@ -94,38 +94,16 @@ autocmd VimEnter *
   \|   PlugInstall --sync | q
   \| endif
 
-if has('termguicolors')
-  set termguicolors
-endif
-let g:edge_style = 'aura'
-let g:edge_enable_italic = 1
-let g:edge_disable_italic_comment = 1
-colorscheme edge
-
-syntax enable
-filetype plugin indent on
-
-set exrc
-set nu rnu
-set completeopt=menuone,noinsert,noselect
-set shortmess+=c
-set expandtab
-set smartindent
-set tabstop=4 softtabstop=4
-set termguicolors
-set cmdheight=2
-set updatetime=50
-set signcolumn=yes
-set clipboard=unnamed,unnamedplus
-
 augroup highlight_yank
   autocmd!
   autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank()
 augroup END
 
 nnoremap <Space>v :e ~/.config/nvim/init.exp2.vim<CR>
-
 nnoremap <leader>e !!$SHELL<CR>
+
+" Colors
+source /Users/mengwangk/.config/nvim/plugin-config/colors.vim
 
 " LSP
 source $HOME/.config/nvim/plugin-config/lsp.vim
