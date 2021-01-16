@@ -102,36 +102,14 @@ augroup END
 nnoremap <Space>v :e ~/.config/nvim/init.exp2.vim<CR>
 nnoremap <leader>e !!$SHELL<CR>
 
-" Colors
-source /Users/mengwangk/.config/nvim/plugin-config/colors.vim
-
-" LSP
+source $HOME/.config/nvim/plugin-config/colors.vim
 source $HOME/.config/nvim/plugin-config/lsp.vim
-
-" Treesitter
 source $HOME/.config/nvim/plugin-config/treesitter.vim
-
-" Telescope
 source $HOME/.config/nvim/plugin-config/telescope.vim
-
-" File explorer
 source $HOME/.config/nvim/plugin-config/nvim-tree.vim
-
-" Status line
-luafile ~/.config/nvim/plugin-config/eviline.lua
-
-" Debugging
+luafile $HOME/.config/nvim/plugin-config/eviline.lua
 source $HOME/.config/nvim/plugin-config/dap.vim
-
-" Doc generator
 source $HOME/.config/nvim/plugin-config/doge.vim
-
-" Test
 source $HOME/.config/nvim/plugin-config/test.vim
-
-" Easy align
 source $HOME/.config/nvim/plugin-config/easyalign.vim
-
-" Easy motion
 source $HOME/.config/nvim/plugin-config/easymotion.vim
-

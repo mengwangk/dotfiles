@@ -1,4 +1,3 @@
-
 " Debugging
 lua <<EOF
 require('telescope').load_extension('dap')

@@ -108,146 +108,10 @@ endif
 
 call plug#end()
 
-" Function to source only if file exists
-function! SourceIfExists(file)
-  if filereadable(expand(a:file))
-    exe 'source' a:file
-  endif
-endfunction
-
-fun! TrimWhitespace()
-    let l:save = winsaveview()
-    keeppatterns %s/\s\+$//e
-    call winrestview(l:save)
-endfun
-
-syntax enable
-filetype plugin indent on
-
-set exrc
-set encoding=utf-8
-set visualbell
-set clipboard=unnamed,unnamedplus
-set relativenumber
-set number
-set number relativenumber
-set ignorecase smartcase
-set autoindent smartindent
-set showcmd
-set noshowmode
-set incsearch
-set pyxversion=3
-set expandtab smarttab tabstop=4 softtabstop=4 shiftwidth=4 shiftround
-set splitright splitbelow
-set statusline=%#warningmsg#
-set statusline+=%*
-set laststatus=2
-set cursorline
-set textwidth=100
-set pastetoggle=<F2>
-set mouse=a
-set noswapfile
-set nobackup
-set undofile
-set undodir=~/.vimdid
-set completeopt=menuone,noinsert,noselect
-set complete+=t
-set spell
-set scrolloff=8
-
-" utf-8 settings
-set fileencoding=utf-8
-
-" https://github.com/changemewtf/no_plugins/blob/master/no_plugins.vim
-set path+=**
-set wildignore+=**/node_modules/**
-set wildignore+=**/debug/**
-set wildignore+=**/target/**
-set wildignore+=**/bin/**
-set wildignore+=*.a,*.o
-set wildignore+=*.bmp,*.gif,*.ico,*.jpg,*.png
-set wildignore+=.DS_Store,.git,.hg,.svn
-set wildignore+=*~,*.swp,*.tmp
-
-" Display all matching files when we tab complete
-set wildmenu
-if has("wildmenu")
-  set wildmenu
-  set wildmode=longest,list
-endif
-
-" Cursor settings:
-"  1 -> blinking block
-"  2 -> solid block
-"  3 -> blinking underscore
-"  4 -> solid underscore
-"  5 -> blinking vertical bar
-"  6 -> solid vertical bar
-let &t_SI.="\e[5 q" "SI = INSERT mode
-let &t_SR.="\e[4 q" "SR = REPLACE mode
-let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
-
-" terminal
-" tnoremap <Esc> <C-\><C-n>
-nnoremap <C-w><C-o> :MaximizerToggle!<CR>
-tnoremap <C-w><C-o> <C-\><C-n> :MaximizerToggle!<CR>
-tnoremap <C-h> <C-\><C-n><C-w>h
-tnoremap <C-j> <C-\><C-n><C-w>j
-tnoremap <C-k> <C-\><C-n><C-w>k
-tnoremap <C-l> <C-\><C-n><C-w>l
-if has('nvim')
-  autocmd TermOpen * setlocal nonumber norelativenumber
-endif
-
-nnoremap <Space>w :update<CR>
-nnoremap <Space>q :q<CR>
-inoremap jk <Esc>
-nnoremap <leader>gc :GBranches<CR>
-nnoremap <leader>s :CocSearch <C-R><C-W><CR>
-nnoremap <Space>g :Gstatus<CR>
-nnoremap <Space>d :Gvdiffsplit<CR>
-nnoremap <Space>r :FloatermNew ranger<CR>
-nnoremap <leader>e !!$SHELL<CR>
-nnoremap <leader>v :vsplit $MYVIMRC<CR>
-vmap < <gv
-vmap > >gv
-vnoremap X "_d
-vnoremap p "_dp
-vnoremap P "_dP
-autocmd BufWritePre * :call TrimWhitespace()
-vnoremap J :m '>+1<CR>gv=gv
-vnoremap K :m '<-2<CR>gv=gv
-" nnoremap <Tab> gt  - conflict with <C-I> completion - https://www.reddit.com/r/vim/comments/3dauvp/i_cant_inoremap_tab_and_ci_to_different_things/
-nnoremap <S-Tab> gT
-nnoremap <silent> <M-left> <C-w>>
-nnoremap <silent> <M-right> <C-w><
-nnoremap <silent> <M-up> <C-w>+
-nnoremap <silent> <M-down> <C-w>-
-nnoremap <silent> ,h :wincmd h<CR>
-nnoremap <silent> ,l :wincmd l<CR>
-nnoremap <silent> ,k :wincmd k<CR>
-nnoremap <silent> ,j :wincmd j<CR>
-nnoremap <silent> ,s :split<CR>
-nnoremap <silent> ,v :vsplit<CR>
-nnoremap <silent> ,n :bn<CR>
-nnoremap <silent> ,p :bp<CR>
-nnoremap <silent> ,d :bd!<CR>
-nnoremap <silent> ,b :.Gbrowse<CR>
-let g:doge_mapping = ",g"
-
-if has('nvim')
-  nnoremap <silent> ,t :15sp +term<CR>a
-else
-  nnoremap <silent> ,t :term ++rows=15<CR>
-endif
-cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
-
-" https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
-autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " ------- plugins config -------------------------------
-
 source $HOME/.config/nvim/plugin-config/mappings.vim
+source $HOME/.config/nvim/plugin-config/gruvbox.vim
 source $HOME/.config/nvim/plugin-config/airline.vim
 source $HOME/.config/nvim/plugin-config/ale.vim
 source $HOME/.config/nvim/plugin-config/startify.vim
@@ -262,28 +126,12 @@ source $HOME/.config/nvim/plugin-config/ultisnips.vim
 source $HOME/.config/nvim/plugin-config/quickscope.vim
 source $HOME/.config/nvim/plugin-config/whichkey.vim
 
-
-" gruvbox
-let g:gruvbox_contrast_dark='hard'
-if exists('+termguicolors')
-  set t_8f=[38;2;%lu;%lu;%lum " Use <Ctr-V><Esc> for actual escape
-  set t_8b=[48;2;%lu;%lu;%lum
-  set termguicolors
-endif
-let g:gruvbox_invert_selection='0'
-colorscheme gruvbox
-set background=dark cursorline termguicolors
-
-" color column
-highlight ColorColumn ctermbg=lightcyan guibg=blue
-call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
-
 call SourceIfExists("$HOME/.config/nvim/plugin-config/coc.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/org-mode.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/go.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/rust.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/python.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/vimspector.vim")
-call SourceIfExists("$HOME/.config/nvim/plugin-config/boxes.vim")
+" call SourceIfExists("$HOME/.config/nvim/plugin-config/boxes.vim")
 " call SourceIfExists("$HOME/.config/nvim/plugin-config/slide.vim")
 " call SourceIfExists("$HOME/.config/nvim/plugin-config/java.vim")
