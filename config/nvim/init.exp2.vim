@@ -127,139 +127,33 @@ nnoremap <Space>v :e ~/.config/nvim/init.exp2.vim<CR>
 
 nnoremap <leader>e !!$SHELL<CR>
 
-" -------------------- LSP ---------------------------------
-:lua << EOF
-  local nvim_lsp = require('lspconfig')
+" LSP
+source $HOME/.config/nvim/plugin-config/lsp.vim
 
-  local on_attach = function(client, bufnr)
-    require('completion').on_attach()
+" Treesitter
+source $HOME/.config/nvim/plugin-config/treesitter.vim
 
-    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
-    local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
-
-    buf_set_option('omnifunc', 'v:lua.vim.lsp.omnifunc')
-
-    -- Mappings
-    local opts = { noremap=true, silent=true }
-    buf_set_keymap('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-    buf_set_keymap('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    buf_set_keymap('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
-    buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-    buf_set_keymap('n', '<C-k>', '<cmd>lua vim.lsp.buf.signature_help()<CR>', opts)
-    buf_set_keymap('n', '<space>wa', '<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>', opts)
-    buf_set_keymap('n', '<space>wr', '<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>', opts)
-    buf_set_keymap('n', '<space>wl', '<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>', opts)
-    buf_set_keymap('n', '<space>D', '<cmd>lua vim.lsp.buf.type_definition()<CR>', opts)
-    buf_set_keymap('n', '<space>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-    buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
-    buf_set_keymap('n', '<space>e', '<cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>', opts)
-    buf_set_keymap('n', '[d', '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', opts)
-    buf_set_keymap('n', ']d', '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', opts)
-    buf_set_keymap('n', '<space>q', '<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', opts)
-
-    -- Set some keybinds conditional on server capabilities
-    if client.resolved_capabilities.document_formatting then
-        buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-    elseif client.resolved_capabilities.document_range_formatting then
-        buf_set_keymap("n", "<space>f", "<cmd>lua vim.lsp.buf.formatting()<CR>", opts)
-    end
-
-    -- Set autocommands conditional on server_capabilities
-    if client.resolved_capabilities.document_highlight then
-        require('lspconfig').util.nvim_multiline_command [[
-        :hi LspReferenceRead cterm=bold ctermbg=red guibg=LightYellow
-        :hi LspReferenceText cterm=bold ctermbg=red guibg=LightYellow
-        :hi LspReferenceWrite cterm=bold ctermbg=red guibg=LightYellow
-        augroup lsp_document_highlight
-            autocmd!
-            autocmd CursorHold <buffer> lua vim.lsp.buf.document_highlight()
-            autocmd CursorMoved <buffer> lua vim.lsp.buf.clear_references()
-        augroup END
-        ]]
-    end
-  end
-
-  local servers = {'pyright', 'gopls', 'rust_analyzer'}
-  for _, lsp in ipairs(servers) do
-    nvim_lsp[lsp].setup {
-      on_attach = on_attach,
-    }
-  end
-EOF
-
-" Completion
-let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-" -------------------- LSP ---------------------------------
-
-" Code snippets
-let g:completion_enable_snippet = 'UltiSnips'
-
-" Fuzzy finder
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-nnoremap <leader>fl <cmd>Telescope git_files<cr>
-
-" Syntax
-lua <<EOF
-require'nvim-treesitter.configs'.setup {
-  highlight = {
-    enable = true
-  },
-  playground = {
-    enable = true,
-    disable = {},
-    updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-    persist_queries = false -- Whether the query persists across vim sessions
-  }
-}
-EOF
+" Telescope
+source $HOME/.config/nvim/plugin-config/telescope.vim
 
 " File explorer
-nnoremap <leader>tt :NvimTreeToggle<CR>
-nnoremap <leader>tr :NvimTreeRefresh<CR>
-nnoremap <leader>tn :NvimTreeFindFile<CR>
-" NvimTreeOpen and NvimTreeClose are also available if you need them
+source $HOME/.config/nvim/plugin-config/nvim-tree.vim
 
 " Status line
-luafile ~/.config/nvim/eviline.lua
-
-" Doc generator
-let g:doge_mapping = "<Leader>gd"
+luafile ~/.config/nvim/plugin-config/eviline.lua
 
 " Debugging
-lua <<EOF
-require('telescope').load_extension('dap')
-require('dap-python').setup('~/miniconda3/bin/python')
-EOF
-nnoremap <silent> <F5> :lua require'dap'.continue()<CR>
-nnoremap <silent> <leader>dd :lua require('dap').continue()<CR>
-nnoremap <silent> <F10> :lua require'dap'.step_over()<CR>
-nnoremap <silent> <F11> :lua require'dap'.step_into()<CR>
-nnoremap <silent> <F12> :lua require'dap'.step_out()<CR>
-nnoremap <silent> <leader>b :lua require'dap'.toggle_breakpoint()<CR>
-nnoremap <silent> <leader>B :lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<CR>
-nnoremap <silent> <leader>lp :lua require'dap'.set_breakpoint(nil, nil, vim.fn.input('Log point message: '))<CR>
-nnoremap <silent> <leader>dr :lua require'dap'.repl.open()<CR>
-nnoremap <silent> <leader>dl :lua require'dap'.repl.run_last()<CR>`
-nnoremap <silent> <leader>dn :lua require('dap-python').test_method()<CR>
-vnoremap <silent> <leader>ds <ESC>:lua require('dap-python').debug_selection()<CR>
+source $HOME/.config/nvim/plugin-config/dap.vim
 
-" Testing
-nmap <silent> <leader>tn :w<CR>:TestNearest<CR>
-nmap <silent> <leader>tf :w<CR>:TestFile<CR>
-nmap <silent> <leader>ts :w<CR>:TestSuite<CR>
-nmap <silent> <leader>tl :w<CR>:TestLast<CR>
-nmap <silent> <leader>tv :w<CR>:TestVisit<CR>
-let test#strategy = "neovim"
-let test#neovim#term_position = "belowright"
+" Doc generator
+source $HOME/.config/nvim/plugin-config/doge.vim
 
-" Alignment
-xmap ga <Plug>(EasyAlign)
-nmap ga <Plug>(EasyAlign)
+" Test
+source $HOME/.config/nvim/plugin-config/test.vim
 
-" Motion
-nmap s <Plug>(easymotion-overwin-f)
+" Easy align
+source $HOME/.config/nvim/plugin-config/easyalign.vim
+
+" Easy motion
+source $HOME/.config/nvim/plugin-config/easymotion.vim
+
