@@ -97,16 +97,5 @@ let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
 highlight ColorColumn ctermbg=lightcyan guibg=blue
 call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
 
-cnoreabbrev W! w!
-cnoreabbrev Q! q!
-cnoreabbrev Qall! qall!
-cnoreabbrev Wq wq
-cnoreabbrev Wa wa
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Qall qall
-
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
 autocmd Filetype gitcommit setlocal spell textwidth=72

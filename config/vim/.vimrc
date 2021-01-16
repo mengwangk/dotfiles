@@ -242,22 +242,12 @@ else
 endif
 cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
-cnoreabbrev W! w!
-cnoreabbrev Q! q!
-cnoreabbrev Qall! qall!
-cnoreabbrev Wq wq
-cnoreabbrev Wa wa
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Qall qall
-
 " https://thoughtbot.com/blog/5-useful-tips-for-a-better-commit-message
 autocmd Filetype gitcommit setlocal spell textwidth=72
 
 " ------- plugins config -------------------------------
 
+source $HOME/.config/nvim/plugin-config/mappings.vim
 source $HOME/.config/nvim/plugin-config/airline.vim
 source $HOME/.config/nvim/plugin-config/ale.vim
 source $HOME/.config/nvim/plugin-config/startify.vim
@@ -288,13 +278,8 @@ set background=dark cursorline termguicolors
 highlight ColorColumn ctermbg=lightcyan guibg=blue
 call matchadd('ColorColumn', '\%101v\s*\zs\S', 120)
 
-" coc.nvim
 call SourceIfExists("$HOME/.config/nvim/plugin-config/coc.vim")
-
-" markdown
-autocmd BufRead *.org set ft=markdown
-
-" languages
+call SourceIfExists("$HOME/.config/nvim/plugin-config/org-mode.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/go.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/rust.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/python.vim")
