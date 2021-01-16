@@ -68,7 +68,6 @@ nnoremap <silent> ,n :bn<CR>
 nnoremap <silent> ,p :bp<CR>
 nnoremap <silent> ,d :bd!<CR>
 nnoremap <silent> ,b :.Gbrowse<CR>
-let g:doge_mapping = ",g"
 
 if has('nvim')
   nnoremap <silent> ,t :15sp +term<CR>a
