@@ -36,13 +36,8 @@ set spell
 set scrolloff=8
 set cmdheight=2
 set updatetime=50
-
-if has("patch-8.1.1564")
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
-
+set signcolumn=number
+" set signcolumn=yes
 set fileencoding=utf-8
 
 if exists('+termguicolors')
