@@ -125,6 +125,7 @@ source $HOME/.config/nvim/plugin-config/easymotion.vim
 source $HOME/.config/nvim/plugin-config/ultisnips.vim
 source $HOME/.config/nvim/plugin-config/quickscope.vim
 source $HOME/.config/nvim/plugin-config/whichkey.vim
+source $HOME/.config/nvim/plugin-config/doge.vim
 
 call SourceIfExists("$HOME/.config/nvim/plugin-config/coc.vim")
 call SourceIfExists("$HOME/.config/nvim/plugin-config/org-mode.vim")
