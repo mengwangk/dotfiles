@@ -11,3 +11,5 @@ else
   let test#strategy = "vimterminal"
   let test#vim#term_position = "belowright"
 endif
+
+let g:test#javascript#runner = 'jest'
