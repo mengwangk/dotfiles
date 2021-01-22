@@ -1,49 +1,44 @@
-;;; init.el -*- lexical-binding: t; -*-
+;; .emacs.d/init.el
+
+;; ===================================
+;; MELPA Package Support
+;; ===================================
+;; Enables basic packaging support
+(require 'package)
+
+;; Adds the Melpa archive to the list of available repositories
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+
+;; Initializes the package infrastructure
+(package-initialize)
+
+;; If there are no archived package contents, refresh them
+(when (not package-archive-contents)
+  (package-refresh-contents))
+
+;; Installs packages
 ;;
-;; Author:  Henrik Lissner <henrik@lissner.net>
-;; URL:     https://github.com/hlissner/doom-emacs
-;;
-;;   =================     ===============     ===============   ========  ========
-;;   \\ . . . . . . .\\   //. . . . . . .\\   //. . . . . . .\\  \\. . .\\// . . //
-;;   ||. . ._____. . .|| ||. . ._____. . .|| ||. . ._____. . .|| || . . .\/ . . .||
-;;   || . .||   ||. . || || . .||   ||. . || || . .||   ||. . || ||. . . . . . . ||
-;;   ||. . ||   || . .|| ||. . ||   || . .|| ||. . ||   || . .|| || . | . . . . .||
-;;   || . .||   ||. _-|| ||-_ .||   ||. . || || . .||   ||. _-|| ||-_.|\ . . . . ||
-;;   ||. . ||   ||-'  || ||  `-||   || . .|| ||. . ||   ||-'  || ||  `|\_ . .|. .||
-;;   || . _||   ||    || ||    ||   ||_ . || || . _||   ||    || ||   |\ `-_/| . ||
-;;   ||_-' ||  .|/    || ||    \|.  || `-_|| ||_-' ||  .|/    || ||   | \  / |-_.||
-;;   ||    ||_-'      || ||      `-_||    || ||    ||_-'      || ||   | \  / |  `||
-;;   ||    `'         || ||         `'    || ||    `'         || ||   | \  / |   ||
-;;   ||            .===' `===.         .==='.`===.         .===' /==. |  \/  |   ||
-;;   ||         .=='   \_|-_ `===. .==='   _|_   `===. .===' _-|/   `==  \/  |   ||
-;;   ||      .=='    _-'    `-_  `='    _-'   `-_    `='  _-'   `-_  /|  \/  |   ||
-;;   ||   .=='    _-'          '-__\._-'         '-_./__-'         `' |. /|  |   ||
-;;   ||.=='    _-'                                                     `' |  /==.||
-;;   =='    _-'                                                            \/   `==
-;;   \   _-'                                                                `-_   /
-;;    `''                                                                      ``'
-;;
-;; These demons are not part of GNU Emacs.
-;;
-;;; License: MIT
+;; myPackages contains a list of package names
+(defvar myPackages
+  '(better-defaults                 ;; Set up some better Emacs defaults
+    material-theme                  ;; Theme
+    )
+  )
 
-;; A big contributor to startup times is garbage collection. We up the gc
-;; threshold to temporarily prevent it from running, then reset it later by
-;; enabling `gcmh-mode'. Not resetting it will cause stuttering/freezes.
-(setq gc-cons-threshold most-positive-fixnum)
+;; Scans the list in myPackages
+;; If the package listed is not already installed, install it
+(mapc #'(lambda (package)
+          (unless (package-installed-p package)
+            (package-install package)))
+      myPackages)
 
-;; In noninteractive sessions, prioritize non-byte-compiled source files to
-;; prevent the use of stale byte-code. Otherwise, it saves us a little IO time
-;; to skip the mtime checks on every *.elc file.
-(setq load-prefer-newer noninteractive)
+;; ===================================
+;; Basic Customization
+;; ===================================
 
-(let (file-name-handler-alist)
-  ;; Ensure Doom is running out of this file's directory
-  (setq user-emacs-directory (file-name-directory load-file-name)))
+(setq inhibit-startup-message t)    ;; Hide the startup message
+(load-theme 'material t)            ;; Load material theme
+(global-linum-mode t)               ;; Enable line numbers globally
 
-;; Load the heart of Doom Emacs
-(load (concat user-emacs-directory "core/core")
-      nil 'nomessage)
-
-;; And let 'er rip!
-(doom-initialize)
+;; User-Defined init.el ends here
