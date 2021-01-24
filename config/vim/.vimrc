@@ -12,10 +12,10 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-unimpaired'
 Plug 'tpope/vim-rhubarb'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-dispatch'
-Plug 'tpope/vim-abolish'
-Plug 'tpope/vim-vinegar'
-Plug 'tpope/vim-dadbod'
+" Plug 'tpope/vim-dispatch'
+" Plug 'tpope/vim-abolish'
+" Plug 'tpope/vim-vinegar'
+" Plug 'tpope/vim-dadbod'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -26,22 +26,23 @@ Plug 'junegunn/vim-peekaboo'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
+" Plug 'racer-rust/vim-racer'
 Plug 'vim-test/vim-test'
 
-Plug 'editorconfig/editorconfig'
+" Plug 'editorconfig/editorconfig'
 Plug 'alvan/vim-closetag'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'konfekt/fastfold'
+" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+" Plug 'konfekt/fastfold'
 Plug 'andymass/vim-matchup'
 Plug 'jiangmiao/auto-pairs'
 Plug 'wellle/targets.vim'
 
 Plug 'dense-analysis/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'honza/vim-snippets'
 Plug 'puremourning/vimspector'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
@@ -57,15 +58,15 @@ Plug 'voldikss/vim-floaterm'
 Plug 'kshenoy/vim-signature'
 
 Plug 'gruvbox-community/gruvbox'
-Plug 'joshdick/onedark.vim'
-Plug 'arcticicestudio/nord-vim'
+" Plug 'joshdick/onedark.vim'
+" Plug 'arcticicestudio/nord-vim'
 Plug 'sainnhe/gruvbox-material'
-Plug 'mhartington/oceanic-next'
+" Plug 'mhartington/oceanic-next'
 Plug 'ryanoasis/vim-devicons'
 
-Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
-Plug 'mzlogin/vim-markdown-toc'
+" Plug 'godlygeek/tabular' | Plug 'plasticboy/vim-markdown'
+" Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+" Plug 'mzlogin/vim-markdown-toc'
 
 Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
@@ -120,19 +121,18 @@ source $HOME/.config/nvim/plugin-config/test.vim
 source $HOME/.config/nvim/plugin-config/easyalign.vim
 source $HOME/.config/nvim/plugin-config/ctrsf.vim
 source $HOME/.config/nvim/plugin-config/floaterm.vim
-source $HOME/.config/nvim/plugin-config/editorconfig.vim
 source $HOME/.config/nvim/plugin-config/easymotion.vim
-source $HOME/.config/nvim/plugin-config/ultisnips.vim
 source $HOME/.config/nvim/plugin-config/quickscope.vim
 source $HOME/.config/nvim/plugin-config/whichkey.vim
 source $HOME/.config/nvim/plugin-config/doge.vim
-
-call SourceIfExists("$HOME/.config/nvim/plugin-config/coc.vim")
-call SourceIfExists("$HOME/.config/nvim/plugin-config/org-mode.vim")
-call SourceIfExists("$HOME/.config/nvim/plugin-config/go.vim")
-call SourceIfExists("$HOME/.config/nvim/plugin-config/rust.vim")
-call SourceIfExists("$HOME/.config/nvim/plugin-config/python.vim")
-call SourceIfExists("$HOME/.config/nvim/plugin-config/vimspector.vim")
+source $HOME/.config/nvim/plugin-config/vimspector.vim
+source $HOME/.config/nvim/plugin-config/coc.vim
+source $HOME/.config/nvim/plugin-config/rust.vim
+source $HOME/.config/nvim/plugin-config/python.vim
+" source $HOME/.config/nvim/plugin-config/go.vim
+" source $HOME/.config/nvim/plugin-config/ultisnips.vim
+" source $HOME/.config/nvim/plugin-config/editorconfig.vim
+" call SourceIfExists("$HOME/.config/nvim/plugin-config/org-mode.vim")
 " call SourceIfExists("$HOME/.config/nvim/plugin-config/boxes.vim")
 " call SourceIfExists("$HOME/.config/nvim/plugin-config/slide.vim")
 " call SourceIfExists("$HOME/.config/nvim/plugin-config/java.vim")
