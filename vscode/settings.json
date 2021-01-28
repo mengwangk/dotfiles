@@ -5,7 +5,7 @@
   "explorer.confirmDelete": false,
   "window.zoomLevel": 2,
   "latex-workshop.view.pdf.viewer": "tab",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "One Dark Pro",
   "terminal.external.linuxExec": "iterm",
   "terminal.external.osxExec": "iTerm.app",
