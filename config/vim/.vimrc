@@ -46,6 +46,7 @@ Plug 'honza/vim-snippets'
 Plug 'puremourning/vimspector'
 Plug 'dbeniamine/cheat.sh-vim'
 Plug 'kkoomen/vim-doge', { 'do': { -> doge#install() } }
+Plug 'jpalardy/vim-slime'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'stsewd/fzf-checkout.vim'
@@ -56,6 +57,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'dyng/ctrlsf.vim'
 Plug 'voldikss/vim-floaterm'
 Plug 'kshenoy/vim-signature'
+" Plug 'ojroques/vim-oscyank'
 
 Plug 'gruvbox-community/gruvbox'
 " Plug 'joshdick/onedark.vim'
