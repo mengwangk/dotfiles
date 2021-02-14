@@ -125,6 +125,9 @@ export PATH=$PATH:$RUST_HOME/bin
 # Doom emacs
 export PATH=$PATH:~/.emacs.d/bin
 
+# Selenium web driver
+export PATH=$PATH:~/workspace/software/webdriver
+
 # vim bindings
 export EDITOR='nvim'
 # set -o vi

@@ -14,3 +14,5 @@ else
 endif
 
 let g:test#javascript#runner = 'jest'
+let g:test#preserve_screen = 1
+let test#python#runner = 'pyunit'
