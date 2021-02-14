@@ -33,6 +33,7 @@ tnoremap <C-l> <C-\><C-n><C-w>l
 tnoremap jk <C-\><C-n>
 if has('nvim')
   autocmd TermOpen * setlocal nonumber norelativenumber
+  autocmd TermOpen * startinsert
 endif
 
 nnoremap <Space>w :update<CR>
