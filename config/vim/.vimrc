@@ -73,7 +73,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 Plug 'mbbill/undotree', { 'on': 'UndotreeToggle' }
 Plug 'airblade/vim-rooter'
-Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
+" Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'szw/vim-maximizer'
 
 if has('nvim')
@@ -125,7 +125,7 @@ source $HOME/.config/nvim/plugin-config/ctrsf.vim
 source $HOME/.config/nvim/plugin-config/floaterm.vim
 source $HOME/.config/nvim/plugin-config/easymotion.vim
 source $HOME/.config/nvim/plugin-config/quickscope.vim
-source $HOME/.config/nvim/plugin-config/whichkey.vim
+" source $HOME/.config/nvim/plugin-config/whichkey.vim
 source $HOME/.config/nvim/plugin-config/doge.vim
 source $HOME/.config/nvim/plugin-config/vimspector.vim
 source $HOME/.config/nvim/plugin-config/coc.vim
