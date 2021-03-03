@@ -122,6 +122,10 @@ export PATH=$PATH:$FLUTTER_HOME/bin
 RUST_HOME=$HOME/.cargo
 export PATH=$PATH:$RUST_HOME/bin
 
+# LLVM
+LLVM_HOME=/usr/local/Cellar/llvm/11.1.0
+export PATH=$PATH/:$LLVM_HOME/bin
+
 # Doom emacs
 export PATH=$PATH:~/.emacs.d/bin
 
