@@ -70,6 +70,7 @@ nnoremap <silent> ,n :bn<CR>
 nnoremap <silent> ,p :bp<CR>
 nnoremap <silent> ,d :bd!<CR>
 nnoremap <silent> ,b :.Gbrowse<CR>
+nnoremap <silent> ,c :cclose<CR>
 nnoremap <silent> <C-Space> :call fzf#run(fzf#wrap({'source': 'find $HOME/workspace/development -maxdepth 2 -type d'}))<CR>
 
 if has('nvim')
