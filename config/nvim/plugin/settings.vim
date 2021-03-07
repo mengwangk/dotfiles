@@ -36,8 +36,8 @@ set spell
 set scrolloff=8
 set cmdheight=2
 set updatetime=50
-set signcolumn=number
-" set signcolumn=yes
+" set signcolumn=number
+set signcolumn=yes
 set fileencoding=utf-8
 
 if exists('+termguicolors')
