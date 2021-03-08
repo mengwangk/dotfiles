@@ -16,6 +16,7 @@ Plug 'tpope/vim-dispatch'
 " Plug 'tpope/vim-abolish'
 " Plug 'tpope/vim-vinegar'
 " Plug 'tpope/vim-dadbod'
+Plug 'radenling/vim-dispatch-neovim'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
