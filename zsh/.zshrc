@@ -209,3 +209,4 @@ export PATH="$HOME/gems/bin:$PATH"
 
 # cheat.sh
 fpath=(~/.zsh.d/ $fpath)
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
