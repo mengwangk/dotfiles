@@ -1,7 +1,8 @@
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
 
 env:
-  TERM: xterm-256color
+  # TERM: xterm-256color
+  LANG: "en_US.UTF-8"
 
 # Window Customization
 window:
