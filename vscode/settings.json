@@ -160,5 +160,15 @@
   "vim.easymotion": true,
   "vsicons.dontShowNewVersionMessage": true,
   "aws.telemetry": false,
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.editorAssociations": [
+    {
+      "viewType": "jupyter.notebook.ipynb",
+      "filenamePattern": "*.ipynb"
+    }
+  ],
+  "terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\cmd.exe",
   "aws.profile": "profile:default"
 }
