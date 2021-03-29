@@ -210,3 +210,4 @@ export PATH="$HOME/gems/bin:$PATH"
 # cheat.sh
 fpath=(~/.zsh.d/ $fpath)
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
+export PATH="/usr/local/opt/lua@5.3/bin:$PATH"
