@@ -211,3 +211,6 @@ export PATH="$HOME/gems/bin:$PATH"
 fpath=(~/.zsh.d/ $fpath)
 export PATH="/usr/local/opt/mysql-client/bin:$PATH"
 export PATH="/usr/local/opt/lua@5.3/bin:$PATH"
+
+# pkg_config
+export PKG_CONFIG_PATH=/usr/local/bin/pkgconfig
