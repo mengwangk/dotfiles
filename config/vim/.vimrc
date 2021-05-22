@@ -77,6 +77,8 @@ Plug 'airblade/vim-rooter'
 " Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'szw/vim-maximizer'
 
+Plug 'alpha2phi/alpha.nvim'
+
 if has('nvim')
   augroup highlight_yank
     autocmd!
