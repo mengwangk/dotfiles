@@ -214,3 +214,11 @@ export PATH="/usr/local/opt/lua@5.3/bin:$PATH"
 
 # pkg_config
 export PKG_CONFIG_PATH=/usr/local/bin/pkgconfig
+
+eval "$(zoxide init zsh)"
+
+export NNN_FIFO=/tmp/nnn.fifo
+
+alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+
+eval $(thefuck --alias)
