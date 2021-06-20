@@ -9,9 +9,10 @@ window:
   dimensions:
     columns: 140
     lines: 38
-  padding:
-    x: 25
-    y: 25
+  # padding:
+  #   x: 25
+  #   y: 25
+  dynamic_padding: true
   decorations: none
   startup_mode: Fullscreen
 
