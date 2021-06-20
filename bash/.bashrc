@@ -101,7 +101,8 @@ source $OSH/oh-my-bash.sh
 # alias bashconfig="mate ~/.bashrc"
 #
 alias ohmybash="mate ~/.oh-my-bash"
-alias vim='nvim'
+alias v='~/workspace/software/nvim'
+export EDITOR='~/workspace/software/nvim'
 
 set -o vi
 
@@ -118,3 +119,4 @@ export PATH=$PATH:$HOME/.local/bin
 source "$HOME/.cargo/env"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+. "$HOME/.cargo/env"
