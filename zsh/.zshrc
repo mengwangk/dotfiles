@@ -149,7 +149,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias vi='/usr/local/bin/nvim -c "let g:tty='\''$(tty)'\''"'
 alias vim='/usr/local/bin/nvim -c "let g:tty='\''$(tty)'\''"'
 alias nvim='/usr/local/bin/nvim -u ~/.config/nvim/init.exp2.vim'
-alias nlua='XDG_CONFIG_HOME=$HOME/.xdg_home /usr/local/bin/nvim'
+alias v='XDG_CONFIG_HOME=$HOME/.xdg_home /usr/local/bin/nvim'
 alias vf='/usr/local/bin/nvim $(fzf)'
 alias emt='emacs -nw'
 alias emtt='env HOME=/Users/mengwangk/.emacs.d/exp/ emacs'
@@ -220,5 +220,3 @@ eval "$(zoxide init zsh)"
 export NNN_FIFO=/tmp/nnn.fifo
 
 alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
-
-eval $(thefuck --alias)
