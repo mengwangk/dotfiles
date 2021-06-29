@@ -108,6 +108,7 @@ set -o vi
 
 [[ -s /home/mengwangk/.autojump/etc/profile.d/autojump.sh ]] && source /home/mengwangk/.autojump/etc/profile.d/autojump.sh
 
+autoload -U compinit && compinit -u
 
 # Setting fd as the default source for fzf
 export FZF_DEFAULT_COMMAND='fd --type f -L --hidden --exclude .git'
