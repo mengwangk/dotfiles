@@ -104,3 +104,9 @@ source $ZSH/oh-my-zsh.sh
 
 autoload -U compinit && compinit -u
 
+set -o vi
+
+set PATH=$PATH:$HOME/workspace/software
+
+
+alias v='$HOME/workspace/software/nvim'
