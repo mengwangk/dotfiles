@@ -115,8 +115,9 @@ set -o vi
 
 set PATH=$PATH:$HOME/workspace/software
 
-
 alias v='$HOME/workspace/software/nvim'
+
+export EDITOR='$HOME/workspace/software/nvim'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
