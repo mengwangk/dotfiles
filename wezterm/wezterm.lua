@@ -9,6 +9,38 @@ for i = 1, 8 do
     })
 end
 
+table.insert(mykeys, {
+    key = "v",
+    mods = "ALT",
+    action = wezterm.action {SplitVertical = {domain = "CurrentPaneDomain"}}
+})
+table.insert(mykeys, {
+    key = "s",
+    mods = "ALT",
+    action = wezterm.action {SplitHorizontal = {domain = "CurrentPaneDomain"}}
+})
+
+table.insert(mykeys, {
+    key = "h",
+    mods = "ALT",
+    action = wezterm.action {ActivatePaneDirection = "Left"}
+})
+table.insert(mykeys, {
+    key = "l",
+    mods = "ALT",
+    action = wezterm.action {ActivatePaneDirection = "Right"}
+})
+table.insert(mykeys, {
+    key = "k",
+    mods = "ALT",
+    action = wezterm.action {ActivatePaneDirection = "Up"}
+})
+table.insert(mykeys, {
+    key = "j",
+    mods = "ALT",
+    action = wezterm.action {ActivatePaneDirection = "Down"}
+})
+
 return {
     font = wezterm.font_with_fallback({
         "Fira Code Retina", "Hack Nerd Font", "Fira Code", "JetBrains Mono"
