@@ -1,0 +1,14 @@
+[[snippets]]
+  description = "docker prune"
+  command = "docker system prune -a"
+  output = ""
+
+[[snippets]]
+  description = "process subst 1"
+  command = "vim <(ls -la)"
+  output = ""
+
+[[snippets]]
+  description = "process subst 2"
+  command = "ls -la | vim -"
+  output = ""
