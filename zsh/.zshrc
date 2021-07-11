@@ -220,3 +220,5 @@ eval "$(zoxide init zsh)"
 export NNN_FIFO=/tmp/nnn.fifo
 
 alias h='function hdi(){ howdoi $* -c -n 5; }; hdi'
+
+# eval "$(starship init zsh)"
