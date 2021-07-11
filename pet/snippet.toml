@@ -12,3 +12,18 @@
   description = "process subst 2"
   command = "ls -la | vim -"
   output = ""
+
+[[snippets]]
+  description = "npm list"
+  command = "npm list --global"
+  output = ""
+
+[[snippets]]
+  description = "pip uninstall"
+  command = "pip list | grep robot | awk '{print $1}' | xargs pip uninstall -y"
+  output = ""
+
+[[snippets]]
+  description = "ls sort size"
+  command = "ls -lSr"
+  output = ""
