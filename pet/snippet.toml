@@ -42,3 +42,8 @@
   description = "bare zsh"
   command = "zsh -df"
   output = ""
+
+[[snippets]]
+  description = "grep kill"
+  command = "\\ps -ef | grep php | awk '{print $2}' | xargs kill -9"
+  output = ""
