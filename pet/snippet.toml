@@ -27,3 +27,18 @@
   description = "ls sort size"
   command = "ls -lSr"
   output = ""
+
+[[snippets]]
+  description = "docker rm containers"
+  command = "docker rm -f $(docker ps -a -q)"
+  output = ""
+
+[[snippets]]
+  description = "docker rm images"
+  command = "docker rmi $(docker images -a -q)"
+  output = ""
+
+[[snippets]]
+  description = "bare zsh"
+  command = "zsh -df"
+  output = ""
