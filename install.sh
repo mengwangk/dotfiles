@@ -23,8 +23,12 @@ lsp_install() {
   sudo npm i -g pyright
 }
 
-# yay_install
+jump_install(){
+  yay -Sy zoxide-bin
+}
 
-# pip_install
+fzf_install(){
+  git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+  ~/.fzf/install
+}
 
-# lsp_install
