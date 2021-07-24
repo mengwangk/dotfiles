@@ -81,61 +81,11 @@ plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+export LANG=en_US.UTF-8
 
-# export MANPATH="/usr/local/man:$MANPATH"
+export EDITOR='nvim'
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
-[[ -s /home/alpha2phi/.autojump/etc/profile.d/autojump.sh ]] && source /home/alpha2phi/.autojump/etc/profile.d/autojump.sh
-
-autoload -U compinit && compinit -u
-
-set -o vi
-
-set PATH=$PATH:$HOME/workspace/software
-
-alias v='$HOME/workspace/software/nvim'
-
-export EDITOR='$HOME/workspace/software/nvim'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/alpha2phi/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/alpha2phi/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/alpha2phi/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/alpha2phi/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+alias v='nvim'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
