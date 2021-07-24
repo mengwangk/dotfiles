@@ -46,8 +46,8 @@ return {
         "Fira Code Retina", "Hack Nerd Font", "Fira Code", "JetBrains Mono"
     }),
     font_dirs = {"/Users/mengwangk/Library/fonts"},
-    font_size = 15.0,
-    line_height = 1.2,
+    font_size = 12.0,
+    line_height = 1.0,
 
     bold_brightens_ansi_colors = true,
     inactive_pane_hsb = {hue = 1.0, saturation = 0.7, brightness = 0.8},

@@ -9,7 +9,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/mengwangk/.oh-my-zsh"
+export ZSH="/home/alpha2phi/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[[ -s /home/mengwangk/.autojump/etc/profile.d/autojump.sh ]] && source /home/mengwangk/.autojump/etc/profile.d/autojump.sh
+[[ -s /home/alpha2phi/.autojump/etc/profile.d/autojump.sh ]] && source /home/alpha2phi/.autojump/etc/profile.d/autojump.sh
 
 autoload -U compinit && compinit -u
 
@@ -121,14 +121,14 @@ export EDITOR='$HOME/workspace/software/nvim'
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mengwangk/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/alpha2phi/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/mengwangk/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mengwangk/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/home/alpha2phi/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/alpha2phi/miniconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/mengwangk/miniconda3/bin:$PATH"
+        export PATH="/home/alpha2phi/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
