@@ -111,3 +111,5 @@ unset __conda_setup
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 eval "$(zoxide init zsh)"
+
+alias luamake=/home/alpha2phi/workspace/software/lua-language-server/3rd/luamake/luamake
