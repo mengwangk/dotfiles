@@ -58,7 +58,7 @@ return {
 
     keys = mykeys,
 
-    window_background_opacity = 0.8,
+    window_background_opacity = 0.85,
     text_background_opacity = 1.0,
 
     exit_behavior = "Close"
