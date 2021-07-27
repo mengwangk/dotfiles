@@ -113,3 +113,18 @@ unset __conda_setup
 eval "$(zoxide init zsh)"
 
 alias luamake=/home/alpha2phi/workspace/software/lua-language-server/3rd/luamake/luamake
+
+function prev() {
+  PREV=$(fc -lrn | head -n 1)
+  sh -c "pet new `printf %q "$PREV"`"
+}
+
+function pet-select() {
+  BUFFER=$(pet search --query "$LBUFFER")
+  CURSOR=$#BUFFER
+  zle redisplay
+}
+zle -N pet-select
+stty -ixon
+bindkey '^s' pet-select
+
