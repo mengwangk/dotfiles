@@ -125,6 +125,6 @@ function pet-select() {
   zle redisplay
 }
 zle -N pet-select
-stty -ixon
+# stty -ixon
 bindkey '^s' pet-select
 
