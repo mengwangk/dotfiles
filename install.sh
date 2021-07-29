@@ -11,12 +11,12 @@ p10k_install() {
 }
 
 yay_install() {
-  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet
+  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta
 }
 
 pip_install() {
   # Install miniconda first
-  pip install pynvim
+  pip install pynvim pyfunky
 }
 
 lsp_install() {
