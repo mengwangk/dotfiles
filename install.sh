@@ -19,8 +19,8 @@ pip_install() {
   pip install pynvim pyfunky
 }
 
-lsp_install() {
-  sudo npm i -g pyright
+npm_install() {
+  sudo npm i -g pyright typescript  typescript-language-server vim-language-server
 }
 
 jump_install(){
@@ -45,4 +45,13 @@ golang_install(){
 
 rust_install(){
   curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+}
+
+gopls_install(){
+  GO111MODULE=on go get golang.org/x/tools/gopls@latest
+}
+
+rustanalyzer_install(){
+  git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
+  cargo xtask install --server
 }

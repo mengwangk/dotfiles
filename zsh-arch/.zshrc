@@ -131,7 +131,8 @@ bindkey '^s' pet-select
 source /home/alpha2phi/.config/broot/launcher/bash/br
 
 # Golang
-export PATH=$PATH:/usr/local/go/bin
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # Rust
 source $HOME/.cargo/env
