@@ -36,3 +36,13 @@ git_config() {
   git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
   git config --global interactive.diffFilter "diff-so-fancy --patch"
 }
+
+golang_install(){
+  wget https://golang.org/dl/go1.16.6.linux-amd64.tar.gz
+  sudo mkdir -p /usr/local/go && sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go1.16.6.linux-amd64.tar.gz
+  # TODO - set the path
+}
+
+rust_install(){
+  curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+}
