@@ -11,7 +11,7 @@ p10k_install() {
 }
 
 yay_install() {
-  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta
+  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy
 }
 
 pip_install() {
@@ -32,3 +32,7 @@ fzf_install(){
   ~/.fzf/install
 }
 
+git_config() {
+  git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+  git config --global interactive.diffFilter "diff-so-fancy --patch"
+}
