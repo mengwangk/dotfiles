@@ -16,7 +16,7 @@ yay_install() {
 
 pip_install() {
   # Install miniconda first
-  pip install pynvim pyfunky
+  pip install pynvim pyfunky csvkit
 }
 
 npm_install() {
