@@ -11,7 +11,7 @@ p10k_install() {
 }
 
 yay_install() {
-  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy lldb
+  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy lldb visual-studio-code-bin
 }
 
 pip_install() {
@@ -20,7 +20,7 @@ pip_install() {
 }
 
 npm_install() {
-  sudo npm i -g pyright typescript  typescript-language-server vim-language-server nodemon
+  sudo npm i -g pyright typescript  typescript-language-server vim-language-server nodemon yarn
 }
 
 jump_install(){
