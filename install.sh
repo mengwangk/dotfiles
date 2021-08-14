@@ -11,12 +11,12 @@ p10k_install() {
 }
 
 yay_install() {
-  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy lldb visual-studio-code-bin
+  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy lldb visual-studio-code-bin aria2 watchman-bin
 }
 
 pip_install() {
   # Install miniconda first
-  pip install pynvim pyfunky csvkit jupyter jupyterlab
+  pip install pynvim pyfunky csvkit jupyter jupyterlab setuptools pyre_check wheel fb-sapp
 }
 
 npm_install() {
