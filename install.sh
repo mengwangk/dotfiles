@@ -55,3 +55,9 @@ rustanalyzer_install(){
   git clone https://github.com/rust-analyzer/rust-analyzer.git && cd rust-analyzer
   cargo xtask install --server
 }
+
+conventional_commit(){
+  sudo npm install -g commitizen
+  sudo npm install -g cz-conventional-changelog
+  echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+}
