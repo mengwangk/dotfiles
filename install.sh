@@ -61,3 +61,4 @@ conventional_commit(){
   sudo npm install -g cz-conventional-changelog
   echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 }
+
