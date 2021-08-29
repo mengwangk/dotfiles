@@ -62,3 +62,7 @@ conventional_commit(){
   echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
 }
 
+conda_install(){
+  conda install -c conda-forge xorg-libxext
+  conda install -c conda-forge xorg-libx11
+}
