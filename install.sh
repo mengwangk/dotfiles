@@ -16,11 +16,11 @@ yay_install() {
 
 pip_install() {
   # Install miniconda first
-  pip install pynvim pyfunky csvkit jupyter jupyterlab setuptools pyre_check wheel fb-sapp
+  pip install pynvim pyfunky csvkit jupyter jupyterlab setuptools pyre_check wheel fb-sapp black flake8 isort
 }
 
 npm_install() {
-  sudo npm i -g pyright typescript  typescript-language-server vim-language-server nodemon yarn
+  sudo npm i -g pyright typescript  typescript-language-server vim-language-server nodemon yarn write-good
 }
 
 jump_install(){
