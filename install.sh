@@ -20,7 +20,7 @@ pip_install() {
 }
 
 npm_install() {
-  sudo npm i -g pyright typescript  typescript-language-server vim-language-server nodemon yarn write-good prettier eslint pnpm
+  sudo npm i -g pyright typescript  typescript-language-server vim-language-server nodemon yarn write-good prettier eslint pnpm @mermaid-js/mermaid-cli
 }
 
 jump_install(){
