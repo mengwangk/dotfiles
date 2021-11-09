@@ -136,3 +136,10 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 
 # Rust
 source $HOME/.cargo/env
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# Deno
+export DENO_INSTALL="$HOME/.deno"
+export PATH="$DENO_INSTALL/bin:$PATH"
