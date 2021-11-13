@@ -3,7 +3,7 @@ zsh_install() {
 }
 
 miniconda_install() {
-  # Install miniconda
+  echo "Install miniconda" 
 }
 
 p10k_install() {
@@ -24,7 +24,7 @@ npm_install() {
 }
 
 jump_install(){
-  yay -Sy zoxide-bin
+  sudo pacman -S zoxide
 }
 
 fzf_install(){
