@@ -16,7 +16,7 @@ yay_install() {
 
 pip_install() {
   # Install miniconda first
-  pip install pynvim pyfunky csvkit jupyter jupyterlab setuptools pyre_check wheel fb-sapp black flake8 isort ranger-fm
+  pip install pynvim pyfunky csvkit jupyter jupyterlab setuptools pyre_check wheel fb-sapp black flake8 isort ranger-fm neovim-remote
 }
 
 npm_install() {
