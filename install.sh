@@ -14,6 +14,10 @@ yay_install() {
   yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy lldb visual-studio-code-bin aria2 watchman-bin xclip xsel lazygit ueberzug neovide-git ffmpegthumbnailer github-cli waybar alacritty tmux dmenu
 }
 
+sway_install(){
+  yay -S wl-clipboard waybar mako light
+}
+
 pip_install() {
   # Install miniconda first
   pip install pynvim pyfunky csvkit jupyter jupyterlab setuptools pyre_check wheel fb-sapp black flake8 isort ranger-fm neovim-remote
