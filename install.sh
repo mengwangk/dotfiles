@@ -11,7 +11,7 @@ p10k_install() {
 }
 
 yay_install() {
-  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy lldb visual-studio-code-bin aria2 watchman-bin xclip xsel lazygit ueberzug neovide-git ffmpegthumbnailer github-cli waybar
+  yay -S fakeroot tree-sitter stow binutils neovim-nightly-bin ttf-fira-code nerd-fonts-fira-code gcc make nodejs npm brave-bin google-chrome wezterm shfmt peek screenkey ripgrep fd unzip cmake flameshot neofetch ninja tldr tealdeer pet sway broot mcfly git-delta diff-so-fancy lldb visual-studio-code-bin aria2 watchman-bin xclip xsel lazygit ueberzug neovide-git ffmpegthumbnailer github-cli waybar alacritty tmux dmenu
 }
 
 pip_install() {
