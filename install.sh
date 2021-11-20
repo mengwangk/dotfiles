@@ -15,7 +15,7 @@ yay_install() {
 }
 
 sway_install(){
-  yay -S wl-clipboard waybar mako light mpd mpv ncmpcpp pavucontrol ranger rofi swaylock maim nnn grim slurp alacritty grim slurp light 
+  yay -S wl-clipboard waybar mako mpd mpv ncmpcpp pavucontrol ranger rofi swaylock maim nnn grim slurp alacritty grim slurp acpilight xorg-xrandr
 }
 
 pip_install() {

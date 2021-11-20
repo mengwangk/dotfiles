@@ -82,8 +82,8 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     bindsym $mod+Shift+Print exec /usr/bin/grim -g "$(/usr/bin/slurp)" $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
 
     # Brightness
-    bindsym XF86MonBrightnessUp exec light -A 5
-    bindsym XF86MonBrightnessDown exec light -U 5
+    bindsym XF86MonBrightnessUp exec xbacklight -inc 5
+    bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 
     # Kill focused window
     bindsym $mod+Shift+q kill

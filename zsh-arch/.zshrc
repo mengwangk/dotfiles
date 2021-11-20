@@ -143,3 +143,6 @@ export PATH="$HOME/.serverless/bin:$PATH"
 # Deno
 export DENO_INSTALL="$HOME/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
+
+alias c='clear'
+alias b='echo -e "enter brightness:\n"; read val; xrandr  --output XWAYLAND0 --brightness "${val}"'
