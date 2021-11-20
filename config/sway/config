@@ -40,10 +40,10 @@ output * bg `find $wallpapers_path -type f | shuf -n 1` fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+         timeout 160 'swaylock -f -c 000000' \
+         timeout 360 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+         before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -78,12 +78,16 @@ input "1:1:AT_Translated_Set_2_keyboard" {
     # Start a browser
     bindsym $mod+i exec brave
 
+    # Screen capture
     bindsym $mod+Print exec /usr/bin/grim -o $(swaymsg -t get_outputs | jq -r '.[] | select(.focused) | .name') $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
     bindsym $mod+Shift+Print exec /usr/bin/grim -g "$(/usr/bin/slurp)" $(xdg-user-dir PICTURES)/$(date +'%Y-%m-%d-%H%M%S_grim.png')
 
     # Brightness
     bindsym XF86MonBrightnessUp exec xbacklight -inc 5
     bindsym XF86MonBrightnessDown exec xbacklight -dec 5
+
+    # Suspend
+    bindsym $mod+z exec systemctl suspend
 
     # Kill focused window
     bindsym $mod+Shift+q kill
