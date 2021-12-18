@@ -116,24 +116,24 @@ call plug#end()
 
 
 " ------- plugins config -------------------------------
-source $HOME/.config/nvim/plugin-config/mappings.vim
-source $HOME/.config/nvim/plugin-config/gruvbox.vim
-source $HOME/.config/nvim/plugin-config/airline.vim
-source $HOME/.config/nvim/plugin-config/ale.vim
-source $HOME/.config/nvim/plugin-config/startify.vim
-source $HOME/.config/nvim/plugin-config/fzf.vim
-source $HOME/.config/nvim/plugin-config/test.vim
-source $HOME/.config/nvim/plugin-config/easyalign.vim
-source $HOME/.config/nvim/plugin-config/ctrsf.vim
-source $HOME/.config/nvim/plugin-config/floaterm.vim
-source $HOME/.config/nvim/plugin-config/easymotion.vim
-source $HOME/.config/nvim/plugin-config/quickscope.vim
-" source $HOME/.config/nvim/plugin-config/whichkey.vim
-source $HOME/.config/nvim/plugin-config/doge.vim
-source $HOME/.config/nvim/plugin-config/vimspector.vim
-source $HOME/.config/nvim/plugin-config/coc.vim
-source $HOME/.config/nvim/plugin-config/rust.vim
-source $HOME/.config/nvim/plugin-config/python.vim
+source $HOME/.vim/plugin-config/mappings.vim
+source $HOME/.vim/plugin-config/gruvbox.vim
+source $HOME/.vim/plugin-config/airline.vim
+source $HOME/.vim/plugin-config/ale.vim
+source $HOME/.vim/plugin-config/startify.vim
+source $HOME/.vim/plugin-config/fzf.vim
+source $HOME/.vim/plugin-config/test.vim
+source $HOME/.vim/plugin-config/easyalign.vim
+source $HOME/.vim/plugin-config/ctrsf.vim
+source $HOME/.vim/plugin-config/floaterm.vim
+source $HOME/.vim/plugin-config/easymotion.vim
+source $HOME/.vim/plugin-config/quickscope.vim
+" source $HOME/nvim/plugin-config/whichkey.vim
+source $HOME/.vim/plugin-config/doge.vim
+source $HOME/.vim/plugin-config/vimspector.vim
+source $HOME/.vim/plugin-config/coc.vim
+source $HOME/.vim/plugin-config/rust.vim
+source $HOME/.vim/plugin-config/python.vim
 " source $HOME/.config/nvim/plugin-config/go.vim
 " source $HOME/.config/nvim/plugin-config/ultisnips.vim
 " source $HOME/.config/nvim/plugin-config/editorconfig.vim
