@@ -87,8 +87,6 @@ export EDITOR='nvim'
 
 alias v='nvim'
 
-alias vv="XDG_DATA_HOME=~/.config/nvim-beginner XDG_CONFIG_HOME=~/.config/nvim-beginner nvim"
-
 set -o vi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
