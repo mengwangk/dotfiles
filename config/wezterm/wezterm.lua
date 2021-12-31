@@ -43,8 +43,9 @@ table.insert(mykeys, {
 
 return {
 	font = wezterm.font_with_fallback({
-		"Fira Code Retina",
 		"Hack Nerd Font",
+		"Fira Code Retina",
+		"Source Code Pro",
 		"JetBrains Mono",
 		"Fira Code",
 	}),
