@@ -35,7 +35,7 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
 
 # Set background
-exec --no-startup-id feh --bg-scale /home/alpha2phi/workspace/mengwangk/dotfiles/wallpapers/
+exec --no-startup-id feh --randomize --bg-scale /home/alpha2phi/workspace/mengwangk/dotfiles/wallpapers/
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -215,3 +215,6 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5
 # Transparency
 exec --no-startup-id picom -b 
 # --config ~/.config/picom/picom.conf
+
+# Notification
+exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
