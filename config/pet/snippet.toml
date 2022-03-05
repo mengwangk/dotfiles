@@ -47,3 +47,8 @@
   description = "grep kill"
   command = "\\ps -ef | grep php | awk '{print $2}' | xargs kill -9"
   output = ""
+
+[[snippets]]
+  description = "docker service"
+  command = "sudo systemctl start docker.service"
+  output = ""
