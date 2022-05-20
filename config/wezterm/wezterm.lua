@@ -40,6 +40,16 @@ table.insert(mykeys, {
 	mods = "ALT",
 	action = wezterm.action({ ActivatePaneDirection = "Down" }),
 })
+table.insert(mykeys, {
+	key = "b",
+	mods = "ALT",
+	action = "ToggleFullScreen",
+})
+table.insert(mykeys, {
+	key = "t",
+	mods = "ALT",
+	action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }),
+})
 
 return {
 	font = wezterm.font_with_fallback({
