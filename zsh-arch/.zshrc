@@ -165,3 +165,13 @@ export ANDROID_AVD_HOME="$HOME/Android/Sdk/platform-tools"
 
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)
+
+# fnm
+export PATH=/home/alpha2phi/.fnm:$PATH
+eval "`fnm env`"
+
+export PATH="$HOME/.poetry/bin:$PATH"
