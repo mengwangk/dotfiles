@@ -53,11 +53,11 @@ table.insert(mykeys, {
 
 return {
 	font = wezterm.font_with_fallback({
+		"Fira Code",
 		"Hack Nerd Font",
 		"Fira Code Retina",
 		"Source Code Pro",
 		"JetBrains Mono",
-		"Fira Code",
 	}),
 	-- font_dirs = {"/Users/mengwangk/Library/fonts"},
 	font_size = 14.0,
