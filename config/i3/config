@@ -218,3 +218,7 @@ exec --no-startup-id picom -b
 
 # Notification
 exec --no-startup-id dunst -config $HOME/.config/dunst/dunstrc
+
+exec --no-startup-id xrandr --output DVI-1-0 --auto --right-of HDMI-0 &
+workspace 1 output HDMI-0
+workspace 2 output DVI-1-0

@@ -20,7 +20,7 @@ scrolling:
   history: 10000
   multiplier: 3
 
-background_opacity: 0.8
+window.opacity: 0.8
 window.dynamic_title: true
 
 # Font Customization
@@ -34,7 +34,7 @@ font:
   italic:
     family: Fira Code Retina
     style: Italic
-  size: 13
+  size: 10
   offset:
     x: 0
     y: 0
