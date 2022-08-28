@@ -66,7 +66,9 @@ local function font_with_fallback(name, params)
 end
 
 return {
-	font = font_with_fallback("FiraCode Nerd Font"),
+	-- font = font_with_fallback("FiraCode Nerd Font"),
+	-- font = font_with_fallback("InputMono Nerd Font"),
+	font = font_with_fallback("Liga InputMono Nerd Font Ligatures"),
 	font_rules = {
 		{
 			italic = true,

@@ -28,6 +28,11 @@ window.dynamic_title: true
 font:
   normal:
     family: FiraCode Nerd Font
+    # family: Liga InputMono Nerd Font Ligatures
+    # family: OperatorMono Nerd Font
+    # family: Iosevka Nerd Font
+    # family: JetBrains Mono Nerd Font
+    # family: Source Code Pro
     style: Retina
 
   bold:
