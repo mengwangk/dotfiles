@@ -51,26 +51,46 @@ table.insert(mykeys, {
 	action = wezterm.action({ SpawnTab = "CurrentPaneDomain" }),
 })
 
-return {
-	font = wezterm.font_with_fallback({
-		-- "Fira Code",
-		-- "FiraCode Nerd Font Mono",
-		-- "Hack Nerd Font",
+-- A helper function for my fallback fonts
+local function font_with_fallback(name, params)
+	local names = {
+		name,
+		"Fira Code",
+		"FiraCode Nerd Font Mono",
+		"Hack Nerd Font",
 		"Fira Code Retina",
-		-- "Source Code Pro",
-		-- "JetBrains Mono",
-	}),
-	-- font_dirs = {"/Users/mengwangk/Library/fonts"},
-	font_size = 13.5,
+		"Source Code Pro",
+		"JetBrains Mono",
+	}
+	return wezterm.font_with_fallback(names, params)
+end
+
+return {
+	font = font_with_fallback("FiraCode Nerd Font"),
+	font_rules = {
+		{
+			italic = true,
+			bold = true,
+			intensity = "Bold",
+			font = font_with_fallback("OperatorMono Nerd Font", { italic = true, bold = true }),
+		},
+		{
+			bold = true,
+			intensity = "Bold",
+			font = font_with_fallback("OperatorMono Nerd Font", { bold = false }),
+		},
+		{
+			italic = true,
+			font = font_with_fallback("Operator Mono Book", { italic = true }),
+		},
+	},
+	font_size = 14,
 	line_height = 1.0,
 
 	bold_brightens_ansi_colors = true,
 	inactive_pane_hsb = { hue = 1.0, saturation = 0.7, brightness = 0.8 },
-
 	color_scheme = "JetBrains Darcula",
-
 	launch_menu = { { args = { "btm" } } },
-
 	keys = mykeys,
 
 	-- window_background_opacity = 0.85,

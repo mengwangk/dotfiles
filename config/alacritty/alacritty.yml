@@ -1,4 +1,5 @@
 # https://github.com/alacritty/alacritty/blob/master/alacritty.yml
+# https://gitlab.com/evertiro/dotfiles/blob/master/.config/alacritty/alacritty.yml
 
 env:
   TERM: xterm-256color
@@ -26,22 +27,33 @@ window.dynamic_title: true
 # Font Customization
 font:
   normal:
-    family: Fira Code Retina
-    style: Regular
+    family: FiraCode Nerd Font
+    style: Retina
+
   bold:
-    family: Fira Code Retina
+    family: OperatorMono Nerd Font
     style: Bold
+
+  bold_italic:
+    family: OperatorMono Nerd Font
+    style: Bold Italic
+
   italic:
-    family: Fira Code Retina
-    style: Italic
+    family: Operator Mono Book
+    style: Book Italic
+
   size: 10
+
   offset:
     x: 0
     y: 0
+
   glyph_offset:
     x: 0
     y: 0
+
   use_thin_strokes: false
+
   debug:
     persistent_logging: false
 
@@ -92,3 +104,4 @@ key_bindings:
   - { key: V, mods: Alt, chars: "\x1bv" }
   - { key: S, mods: Alt, chars: "\x1bs" }
   - { key: Z, mods: Alt, chars: "\x1bz" }
+  - { key: Return, mods: Alt, action: ToggleFullscreen }
