@@ -181,4 +181,6 @@ export NVIM_BEGINNER
 
 alias nvb='XDG_DATA_HOME=$NVIM_BEGINNER/share XDG_CACHE_HOME=$NVIM_BEGINNER XDG_CONFIG_HOME=$NVIM_BEGINNER nvim'
 
+export PATH=$PATH:$NVIM_BEGINNER/share/nvim/mason/packages/lua-language-server
+
 # eval "$(starship init zsh)"
