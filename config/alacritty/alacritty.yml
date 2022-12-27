@@ -37,18 +37,22 @@ font:
     style: Retina
 
   bold:
-    family: OperatorMono Nerd Font
+    # family: OperatorMono Nerd Font
+    family: Fira Code Nerd Font
     style: Bold
 
   bold_italic:
-    family: OperatorMono Nerd Font
+    # family: OperatorMono Nerd Font
+    family: VictorMono Nerd Font
     style: Bold Italic
 
   italic:
-    family: Operator Mono Book
-    style: Book Italic
+    # family: Operator Mono Book
+    # style: Book Italic
+    family: VictorMono Nerd Font
+    style: Medium Italic
 
-  size: 9.5
+  size: 9
 
   offset:
     x: 0
@@ -61,7 +65,7 @@ font:
   debug:
     persistent_logging: false
 
-draw_bold_text_with_bright_colors: true
+draw_bold_text_with_bright_colors: false
 
 # Color Settings (Gruvbox)
 colors:
