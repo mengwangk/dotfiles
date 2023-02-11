@@ -1,0 +1,41 @@
+[[language]]
+name = "python"
+roots = ["pyproject.toml"]
+formatter = { command = "black", args = ["--quiet", "-"] }
+language-server = { command = "pyright-langserver", args = ["--stdio"] }
+config = {} 
+auto-format = true
+
+[[language]]
+name = "rust"
+auto-format = true
+
+[[language]]
+name = "typescript"
+auto-format = true
+# pass format options according to https://github.com/typescript-language-server/typescript-language-server#workspacedidchangeconfiguration omitting the "[language].format." prefix.
+config = { format = { "semicolons" = "insert", "insertSpaceBeforeFunctionParenthesis" = true } }
+
+[[language]]
+name = "javascript"
+scope = "source.js"
+injection-regex = "(js|javascript)"
+file-types = ["js", "mjs", "cjs"]
+shebangs = ["node"]
+roots = []
+comment-token = "//"
+language-server = { command = "typescript-language-server", args = ["--stdio"], language-id = "javascript" }
+indent = { tab-width = 2, unit = "  " }
+
+[language.debugger]
+name = "node-debug2"
+command = "node"
+transport = "stdio"
+quirks = { absolute-paths = true }
+args = ["/home/alpha2phi/workspace/temp/vscode-node-debug2/out/src/nodeDebug.js"]
+
+[[language.debugger.templates]]
+name = "source"
+request = "launch"
+completion = [ { name = "main", completion = "filename", default = "index.js" } ]
+args = { program = "{0}" }

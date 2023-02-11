@@ -178,9 +178,13 @@ export PATH="$HOME/.poetry/bin:$PATH"
 
 NVIM_BEGINNER=~/.config/nvim-beginner
 export NVIM_BEGINNER
-
 alias nvb='XDG_DATA_HOME=$NVIM_BEGINNER/share XDG_CACHE_HOME=$NVIM_BEGINNER XDG_CONFIG_HOME=$NVIM_BEGINNER nvim'
 
+MODERN_NEOVIM=~/.config/modern-neovim
+export MODERN_NEOVIM
+alias mnv='XDG_DATA_HOME=$MODERN_NEOVIM/share XDG_CACHE_HOME=$MODERN_NEOVIM XDG_CONFIG_HOME=$MODERN_NEOVIM nvim'
+
 export PATH=$PATH:$NVIM_BEGINNER/share/nvim/mason/packages/lua-language-server
+export PATH=$PATH:$NVIM_BEGINNER/share/nvim/mason/packages/codelldb/
 
 # eval "$(starship init zsh)"

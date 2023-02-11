@@ -1,0 +1,28 @@
+theme = "tokyonight"
+
+[editor]
+line-number = "relative"
+true-color = true
+cursorline = true
+bufferline = "multiple"
+gutters = ["diagnostics", "spacer", "line-numbers", "spacer", "diff"]
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+display-messages = true
+
+[editor.statusline]
+left = ["mode", "spinner"]
+center = ["file-name"]
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "│"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
