@@ -17,13 +17,12 @@ window:
   dynamic_padding: true
   decorations: full
   startup_mode: Fullscreen
+  opacity: 0.8
+  dynamic_title: true
 
 scrolling:
   history: 10000
   multiplier: 3
-
-window.opacity: 0.8
-window.dynamic_title: true
 
 # Font Customization
 font:
