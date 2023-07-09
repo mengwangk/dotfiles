@@ -17,7 +17,7 @@ window:
   dynamic_padding: true
   decorations: full
   startup_mode: Fullscreen
-  opacity: 0.8
+  opacity: 1.0
   dynamic_title: true
 
 scrolling:
@@ -27,31 +27,31 @@ scrolling:
 # Font Customization
 font:
   normal:
-    family: FiraCode Nerd Font
+    family: Maple Mono NF
     # family: Liga InputMono Nerd Font Ligatures
     # family: OperatorMono Nerd Font
     # family: Iosevka Nerd Font
     # family: JetBrains Mono Nerd Font
     # family: Source Code Pro
-    style: Retina
+    style: Regular
 
   bold:
     # family: OperatorMono Nerd Font
-    family: Fira Code Nerd Font
+    family: Maple Mono NF
     style: Bold
 
   bold_italic:
     # family: OperatorMono Nerd Font
-    family: VictorMono Nerd Font
+    family: Maple Mono NF
     style: Bold Italic
 
   italic:
     # family: Operator Mono Book
     # style: Book Italic
-    family: VictorMono Nerd Font
-    style: Medium Italic
+    family: Maple Mono NF
+    style: Italic
 
-  size: 9
+  size: 10
 
   offset:
     x: 0

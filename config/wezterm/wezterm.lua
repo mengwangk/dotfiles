@@ -72,12 +72,12 @@ return {
 	font_rules = {
 		{
 			italic = true,
-			bold = true,
+			-- bold = true,
 			intensity = "Bold",
 			font = font_with_fallback("OperatorMono Nerd Font", { italic = true, bold = true }),
 		},
 		{
-			bold = true,
+			-- bold = true,
 			intensity = "Bold",
 			font = font_with_fallback("OperatorMono Nerd Font", { bold = false }),
 		},
@@ -100,5 +100,5 @@ return {
 	text_background_opacity = 1.0,
 	hide_tab_bar_if_only_one_tab = true,
 	exit_behavior = "Close",
-  enable_csi_u_key_encoding = true
+	enable_csi_u_key_encoding = true,
 }

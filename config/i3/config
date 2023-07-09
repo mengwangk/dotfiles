@@ -56,7 +56,8 @@ bindsym $mod+b exec brave
 
 
 # kill focused window
-bindsym $mod+Shift+q kill
+# bindsym $mod+Shift+q kill
+bindsym --release $mod+Shift+q exec xkill
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id dmenu_run
