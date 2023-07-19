@@ -166,10 +166,6 @@ export ANDROID_AVD_HOME="$HOME/Android/Sdk/platform-tools"
 export PATH=$PATH:$ANDROID_SDK_ROOT/emulator
 export PATH=$PATH:$ANDROID_SDK_ROOT/platform-tools
 
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)
-
 # fnm
 export PATH=/home/alpha2phi/.fnm:$PATH
 eval "`fnm env`"
@@ -180,11 +176,31 @@ NVIM_BEGINNER=~/.config/nvim-beginner
 export NVIM_BEGINNER
 alias nvb='XDG_DATA_HOME=$NVIM_BEGINNER/share XDG_CACHE_HOME=$NVIM_BEGINNER XDG_CONFIG_HOME=$NVIM_BEGINNER nvim'
 
-MODERN_NEOVIM=~/.config/modern-neovim
-export MODERN_NEOVIM
-alias mnv='XDG_DATA_HOME=$MODERN_NEOVIM/share XDG_CACHE_HOME=$MODERN_NEOVIM XDG_CONFIG_HOME=$MODERN_NEOVIM nvim'
+MNV_APP_NAME=modern-neovim
+alias mnv="NVIM_APPNAME=$MNV_APP_NAME nvim"
 
 export PATH=$PATH:$NVIM_BEGINNER/share/nvim/mason/packages/lua-language-server
 export PATH=$PATH:$NVIM_BEGINNER/share/nvim/mason/packages/codelldb/
 
 # eval "$(starship init zsh)"
+
+# bun completions
+[ -s "/home/alpha2phi/.bun/_bun" ] && source "/home/alpha2phi/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH:$HOME/.sdkman/candidates/java/current/bin"
+
+# Neovim version manager
+export PATH=$HOME/.local/share/bob/nvim-bin/:$PATH
+export PATH=$HOME/.local/share/coursier/bin:$PATH
+
+export OPENAI_API_KEY=
+export HUGGING_FACE_HUB_TOKEN=
+
+export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
+export PATH="$PATH:$GEM_HOME/bin"
+
+# Map Control and Window keys to ESC when pressed on its own
+xcape -e 'Control_L=Escape'
+xcape -e 'Super_L=Escape' -t 300_
