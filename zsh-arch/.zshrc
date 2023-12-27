@@ -195,11 +195,11 @@ export PATH="$BUN_INSTALL/bin:$PATH:$HOME/.sdkman/candidates/java/current/bin"
 export PATH=$HOME/.local/share/bob/nvim-bin/:$PATH
 export PATH=$HOME/.local/share/coursier/bin:$PATH
 
-export OPENAI_API_KEY=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
+export OPENAI_API_KEY=
 export OPENAI_API_HOST="api.openai.com"
-export HUGGING_FACE_HUB_TOKEN=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
-export ALPHA_VANTAGE_API_KEY=GA2WSW54TTCDFWD6
-export COQUI_STUDIO_TOKEN=2qYiMFvcKO8JCCjKEgEx0ygh1ca6hjAYZFjITlsNUkYOMCpUsnKuMGCmGequE9Hh
+export HUGGING_FACE_HUB_TOKEN=
+export ALPHA_VANTAGE_API_KEY=
+export COQUI_STUDIO_TOKEN=
 
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
