@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git asdf)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -195,8 +195,11 @@ export PATH="$BUN_INSTALL/bin:$PATH:$HOME/.sdkman/candidates/java/current/bin"
 export PATH=$HOME/.local/share/bob/nvim-bin/:$PATH
 export PATH=$HOME/.local/share/coursier/bin:$PATH
 
-export OPENAI_API_KEY=
-export HUGGING_FACE_HUB_TOKEN=
+export OPENAI_API_KEY=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
+export OPENAI_API_HOST="api.openai.com"
+export HUGGING_FACE_HUB_TOKEN=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
+export ALPHA_VANTAGE_API_KEY=GA2WSW54TTCDFWD6
+export COQUI_STUDIO_TOKEN=2qYiMFvcKO8JCCjKEgEx0ygh1ca6hjAYZFjITlsNUkYOMCpUsnKuMGCmGequE9Hh
 
 export GEM_HOME="$(ruby -e 'puts Gem.user_dir')"
 export PATH="$PATH:$GEM_HOME/bin"
@@ -204,3 +207,11 @@ export PATH="$PATH:$GEM_HOME/bin"
 # Map Control and Window keys to ESC when pressed on its own
 xcape -e 'Control_L=Escape'
 xcape -e 'Super_L=Escape' -t 300_
+
+# pnpm
+export PNPM_HOME="/home/alpha2phi/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
